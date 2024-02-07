@@ -1,0 +1,14 @@
+{
+    // "editor.codeActionsOnSave": {
+    //     "source.fixAll.eslint": "explicit"
+    // },
+    // "eslint.experimental.useFlatConfig": true,
+    // "eslint.validate": [
+    //     "vue",
+    //     "html",
+    //     "javascript",
+    //     "typescript",
+    //     "javascriptreact",
+    //     "typescriptreact"
+    // ]
+}
