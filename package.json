@@ -3,5 +3,14 @@
   "version": "1.0.0",
   "description": "setup for new repositories",
   "author": "Pavel Cherepanov",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "8.56.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
 }
