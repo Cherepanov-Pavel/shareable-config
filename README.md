@@ -10,7 +10,3 @@ I will be glad if it is useful to someone else.
 You need to install extensions from .vcode/extensions.json .
 After that, you need to open the settings of dbaeumer.vscode-eslint and set
 "eslint.experimental.useFlatConfig": true
-
-
-
-
