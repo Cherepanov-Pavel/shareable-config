@@ -1,8 +1,10 @@
-import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
+import js from "@eslint/js";
 
-export default tseslint.config(
-    eslint.configs.recommended,
-    ...tseslint.configs.strictTypeChecked,
-    ...tseslint.configs.stylisticTypeChecked,
-  );
+export default [
+    {
+        files: ["**/*.js"],
+        rules: {
+            ...js.configs.all.rules,
+        } 
+    }
+];
