@@ -1,9 +1,14 @@
 {
-    "recommendations": [
-      "dbaeumer.vscode-eslint",
-    //   "stylelint.vscode-stylelint",
-    //   "mrmlnc.vscode-scss",
-      // "redhat.vscode-yaml"
-    ]
-  }
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "vue.volar",
+    "johnsoncodehk.vscode-tsconfig-helper",
+    "editorconfig.editorconfig",
+    /* "syler.sass-indented", */
+    /* "simonsiefke.svg-preview" */
+    // need to check that it's working well
+    // iulian-radu-at.find-unused-exports
+  ]
+}
+
   
