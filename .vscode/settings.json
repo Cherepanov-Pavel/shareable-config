@@ -1,14 +1,26 @@
 {
-    // "editor.codeActionsOnSave": {
-    //     "source.fixAll.eslint": "explicit"
-    // },
-    // "eslint.experimental.useFlatConfig": true,
-    // "eslint.validate": [
-    //     "vue",
-    //     "html",
-    //     "javascript",
-    //     "typescript",
-    //     "javascriptreact",
-    //     "typescriptreact"
-    // ]
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "html",
+        "vue",
+        "markdown",
+        "json",
+        "jsonc",
+        "json5"
+    ],
+    "vue.inlayHints.vBindShorthand": false,
+    "vue.complete.casing.props": "camel",
+    "vue.complete.casing.tags": "pascal",
+    "vue.inlayHints.inlineHandlerLeading": false
 }
+  
