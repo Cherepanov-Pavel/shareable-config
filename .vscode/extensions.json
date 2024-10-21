@@ -1,9 +1,13 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "vue.volar",
-    "johnsoncodehk.vscode-tsconfig-helper",
     "editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"eamodio.gitlens",
+		"johnsoncodehk.vscode-tsconfig-helper",
+		"vue.volar",
+		// not a part of eslint, because of https://github.com/streetsidesoftware/cspell/issues/3233
+		"streetsidesoftware.code-spell-checker"
+
     /* "syler.sass-indented", */
     /* "simonsiefke.svg-preview" */
     // need to check that it's working well
@@ -11,4 +15,3 @@
   ]
 }
 
-  
