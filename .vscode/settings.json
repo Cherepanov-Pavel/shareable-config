@@ -1,27 +1,29 @@
 {
-    "typescript.tsdk": "./node_modules/typescript/lib",
-    "typescript.enablePromptUseWorkspaceTsdk": true,
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "javascript.preferences.importModuleSpecifier": "non-relative",
+	"explorer.fileNesting.enabled": true,
 
-    "editor.formatOnSave": false,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit"
-    },
-    "eslint.validate": [
-        "javascript",
-        "typescript",
-        "html",
-        "vue",
-        "markdown",
-        "json",
-        "jsonc",
-        "json5"
-    ],
-    "vue.complete.casing.props": "camel",
-    "vue.complete.casing.tags": "pascal",
-    "cSpell.words": [
-        "Cherepanov",
-        "Pavel"
-    ]
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"javascript.preferences.importModuleSpecifier": "non-relative",
+
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+	},
+	"eslint.validate": [
+			"javascript",
+			"typescript",
+			"html",
+			"vue",
+			"markdown",
+			"json",
+			"jsonc",
+			"json5"
+	],
+	"vue.complete.casing.props": "camel",
+	"vue.complete.casing.tags": "pascal",
+	"cSpell.words": [
+			"Cherepanov",
+			"Pavel"
+	]
 }
