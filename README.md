@@ -7,6 +7,4 @@ I will be glad if it is useful to someone else.
 
 ## IDEs that have been tested and in which correct operation with this setup is guaranteed
 ### Visual studio code(version 1.86.0+)
-You need to install extensions from .vcode/extensions.json .
-After that, you need to open the settings of dbaeumer.vscode-eslint and set
-"eslint.experimental.useFlatConfig": true
+You need to install extensions from .vscode/extensions.json

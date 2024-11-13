@@ -18,9 +18,10 @@
         "jsonc",
         "json5"
     ],
-    "vue.inlayHints.vBindShorthand": false,
     "vue.complete.casing.props": "camel",
     "vue.complete.casing.tags": "pascal",
-    "vue.inlayHints.inlineHandlerLeading": false
+    "cSpell.words": [
+        "Cherepanov",
+        "Pavel"
+    ]
 }
-  

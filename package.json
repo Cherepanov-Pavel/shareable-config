@@ -9,8 +9,8 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
-    "@eslint/js": "8.56.0",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3"
+    "@eslint/js": "9.14.0",
+    "eslint": "9.14.0",
+    "typescript": "5.6.3"
   }
 }
