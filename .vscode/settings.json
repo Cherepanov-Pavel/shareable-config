@@ -10,20 +10,17 @@
 	"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": "explicit"
 	},
-	"eslint.validate": [
-			"javascript",
-			"typescript",
-			"html",
-			"vue",
-			"markdown",
-			"json",
-			"jsonc",
-			"json5"
+	"eslint.probe": [
+		"javascript",
+		"typescript",
+		"html",
+	/* 	"vue", */
+		"markdown"
 	],
-	"vue.complete.casing.props": "camel",
-	"vue.complete.casing.tags": "pascal",
+/* 	"vue.complete.casing.props": "camel",
+	"vue.complete.casing.tags": "pascal", */
 	"cSpell.words": [
 			"Cherepanov",
 			"Pavel"
-	]
+	],
 }
