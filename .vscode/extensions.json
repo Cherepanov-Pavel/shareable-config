@@ -1,5 +1,6 @@
 {
   "recommendations": [
+		"savh.json5-kit",
     "editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
 		"eamodio.gitlens",
@@ -12,6 +13,6 @@
     /* "simonsiefke.svg-preview" */
     // need to check that it's working well
     // iulian-radu-at.find-unused-exports
-  ]
+  ],
 }
 

@@ -1,11 +1,12 @@
 {
 	"explorer.fileNesting.enabled": true,
 
+	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.preferences.importModuleSpecifier": "non-relative",
-	"javascript.preferences.importModuleSpecifier": "non-relative",
 
+	"json.validate.enable": false,
 	"editor.formatOnSave": false,
 	"editor.codeActionsOnSave": {
 			"source.fixAll.eslint": "explicit"
@@ -14,11 +15,15 @@
 		"javascript",
 		"typescript",
 		"html",
-	/* 	"vue", */
-		"markdown"
+		"markdown",
+		"json",
+		"jsonc",
+		"json5",
 	],
+
 /* 	"vue.complete.casing.props": "camel",
 	"vue.complete.casing.tags": "pascal", */
+
 	"cSpell.words": [
 			"Cherepanov",
 			"Pavel"
