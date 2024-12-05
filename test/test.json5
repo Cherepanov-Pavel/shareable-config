@@ -1,22 +1,11 @@
 {
-  // This is a comment
-  name: "John Doe", // Name of the person
-  age: 30, // Age in years
-  isEmployed: true, // Employment status
-  address: {
-    street: "123 Main St",
-    city: "Anytown",
-    state: "CA",
-    zip: "12345", // ZIP code
-  },
-  hobbies: [
-    "reading",
-    "traveling",
-    "coding", // Favorite hobby
-  ],
-  // The following field is optional
-  favoriteColor: "blue",
-	"recommendations": [],
-	"recommendations": [],
-	"": 251
+  // comment
+  "age": 30,
+  "isEmployed": true,
+  "skills": ["JavaScript", "Python", "C++"],
+	"duplicateKey": "example",
+	"duplicateKey": "example",
+	"emptyKey": {
+		"": []
+	}
 }

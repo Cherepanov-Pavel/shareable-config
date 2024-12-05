@@ -1,13 +1,11 @@
 {
-	"recommendations": [],
-	"recommendations": [],
-	"baz": [
-		{
-			"": 3
-		},
-		{
-			"": 4
-		}
-	],
-	"": 241
+	// comment
+	"age": 30,
+  "isEmployed": true,
+  "skills": ["JavaScript", "Python", "C++"],
+	"duplicateKey": "example",
+	"duplicateKey": "example",
+	"emptyKey": {
+		"": []
+	}
 }

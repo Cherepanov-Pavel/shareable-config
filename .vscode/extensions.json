@@ -8,11 +8,10 @@
 		// not a part of eslint, because of https://github.com/streetsidesoftware/cspell/issues/3233
 		"streetsidesoftware.code-spell-checker"
 
-		/* "vue.volar", */
-    /* "syler.sass-indented", */
-    /* "simonsiefke.svg-preview" */
+		// "vue.volar",
+    // "syler.sass-indented",
+    // "simonsiefke.svg-preview"
     // need to check that it's working well
     // iulian-radu-at.find-unused-exports
   ],
 }
-
