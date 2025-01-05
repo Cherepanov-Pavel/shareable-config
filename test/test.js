@@ -1,3 +1,0 @@
-const a = {
-    fwefew: 'fwefew'
-}
