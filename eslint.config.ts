@@ -1,6 +1,10 @@
 import json from "@eslint/json";
 import js from "@eslint/js";
 
+const jsonRules = {
+	...json.configs.recommended.rules
+}
+
 export default [
 	{
     ignores: ['dist/', '**/icons/', '.vscode/'],
@@ -19,22 +23,18 @@ export default [
 	{
 		files: ["**/*.json"],
 		language: "json/json",
-		rules: {
-			...json.configs.recommended.rules,
-		}
+		rules: jsonRules
 	},
 	{
 		files: ["**/*.jsonc", ".vscode/*.json"],
 		language: "json/jsonc",
-		rules: {
-			...json.configs.recommended.rules,
-		}
+		rules: jsonRules
 	},
 	{
 		files: ["**/*.json5"],
 		language: "json/json5",
-		rules: {
-			...json.configs.recommended.rules,
-		}
+		rules: jsonRules
 	},
+
+	// @stylistic/arrow-spacing
 ];

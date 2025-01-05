@@ -7,5 +7,9 @@
 	"duplicateKey": "example",
 	"emptyKey": {
 		"": []
+	},
+	"unsafeValue": {
+		"key": "\ud83d",
+		"\ud83d": "value"
 	}
 }
