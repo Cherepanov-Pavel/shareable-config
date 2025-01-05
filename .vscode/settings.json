@@ -1,5 +1,9 @@
 {
 	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		".editorconfig": "eslint.config.ts",
+		".gitattributes": ".gitignore"
+	},
 
 	"javascript.preferences.importModuleSpecifier": "non-relative",
 	"typescript.tsdk": "./node_modules/typescript/lib",

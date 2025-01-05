@@ -1,7 +1,7 @@
 {
 	"age": 30,
-  "isEmployed": true,
-  "skills": ["JavaScript", "Python", "C++"],
+	"isEmployed": true,
+	"skills": ["JavaScript", "Python", "C++"],
 	"duplicateKey": "example",
 	"duplicateKey": "example",
 	"emptyKey": {

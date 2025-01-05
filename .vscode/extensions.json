@@ -1,7 +1,7 @@
 {
-  "recommendations": [
+	"recommendations": [
 		"savh.json5-kit",
-    "editorconfig.editorconfig",
+		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
 		"eamodio.gitlens",
 		"johnsoncodehk.vscode-tsconfig-helper",
@@ -9,9 +9,9 @@
 		"streetsidesoftware.code-spell-checker"
 
 		// "vue.volar",
-    // "syler.sass-indented",
-    // "simonsiefke.svg-preview"
-    // need to check that it's working well
-    // iulian-radu-at.find-unused-exports
-  ],
+		// "syler.sass-indented",
+		// "simonsiefke.svg-preview"
+		// need to check that it's working well
+		// iulian-radu-at.find-unused-exports
+	],
 }
