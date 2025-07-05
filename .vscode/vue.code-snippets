@@ -1,0 +1,16 @@
+{
+  "template for empty vue file": {
+    "scope": "vue",
+    "prefix": "t vue file",
+    "body": [
+      "<template>",
+      "</template>",
+      "",
+      "<script setup lang=\"ts\">",
+      "</script>",
+      "",
+      "<style scoped lang=\"scss\">",
+      "</style>"
+    ],
+  },
+}

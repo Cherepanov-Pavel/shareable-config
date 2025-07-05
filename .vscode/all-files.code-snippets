@@ -1,0 +1,18 @@
+{
+	// TODO: delimit the scope in another way
+  "template for todo comments for easy search in project for HTML only": {
+    "scope": "html",
+    "prefix": "t html todo",
+    "body": [
+      "$BLOCK_COMMENT_START TODO:",
+      "$0"
+      "$BLOCK_COMMENT_END"
+    ]
+  },
+  "template for todo comments for easy search in project": {
+    "prefix": "t todo",
+    "body": [
+      "$LINE_COMMENT TODO: ",
+    ]
+  },
+}
