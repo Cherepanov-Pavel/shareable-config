@@ -1,4 +1,6 @@
 {
+	"git.blame.editorDecoration.enabled": true,
+
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
 		".editorconfig": "eslint.config.ts",

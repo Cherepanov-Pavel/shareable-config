@@ -3,7 +3,6 @@
 		"savh.json5-kit",
 		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",
-		"eamodio.gitlens",
 		"johnsoncodehk.vscode-tsconfig-helper",
 		// not a part of eslint, because of https://github.com/streetsidesoftware/cspell/issues/3233
 		"streetsidesoftware.code-spell-checker"
