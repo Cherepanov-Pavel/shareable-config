@@ -1,16 +1,25 @@
 {
-	"recommendations": [
-		"savh.json5-kit",
-		"editorconfig.editorconfig",
-		"dbaeumer.vscode-eslint",
-		"johnsoncodehk.vscode-tsconfig-helper",
-		// not a part of eslint, because of https://github.com/streetsidesoftware/cspell/issues/3233
-		"streetsidesoftware.code-spell-checker"
+  "recommendations": [
+    // "eamodio.gitlens",
 
-		// "vue.volar",
-		// "syler.sass-indented",
-		// "simonsiefke.svg-preview"
+    // typescript
+    "johnsoncodehk.vscode-tsconfig-helper",
+    // typescript
+    "yoavbls.pretty-ts-errors",
+    "vue.volar",
+    "mrmlnc.vscode-scss",
+    "ms-azuretools.vscode-containers",
+    // "redhat.vscode-yaml",
+    "savh.json5-kit",
+
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-russian"
+
 		// need to check that it's working well
 		// iulian-radu-at.find-unused-exports
-	],
+  ],
 }
