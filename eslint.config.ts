@@ -1,41 +1,50 @@
-import json from "@eslint/json";
-import js from "@eslint/js";
+import {
+  globalConfig,
+  jsConfig,
+  tsConfig,
+  vueConfig,
+} from './tools/eslint-config/index.js';
 
-const jsonRules = {
-	...json.configs.recommended.rules
-}
-
-export default [
-	{
-    ignores: ['dist/', '**/icons/', '.vscode/'],
-  },
-
-	{
-		files: ["**/*.js"],
-		...js.configs.recommended
-	},
-
-	{
-		plugins: {
-			json,
-		},
-	},
-	{
-		files: ["**/*.json"],
-		ignores: ["package-lock.json"],
-		language: "json/json",
-		rules: jsonRules
-	},
-	{
-		files: ["**/*.jsonc", ".vscode/*.json"],
-		language: "json/jsonc",
-		rules: jsonRules
-	},
-	{
-		files: ["**/*.json5"],
-		language: "json/json5",
-		rules: jsonRules
-	},
-
-	// @stylistic/arrow-spacing
+const eslintConfig = [
+  ...globalConfig,
+  jsConfig,
+  tsConfig,
+  vueConfig,
 ];
+
+export function override() {
+  // you can override some part of config here, by eslintConfig.push()
+  // for the example, uncomment this line:
+  // eslintConfig.push({
+  //   files: ['**/*.js'],
+  //   rules: {
+  //     'no-dupe-keys': 'off',
+  //   },
+  // });
+}
+override();
+
+export default eslintConfig;
+
+// add later
+// {
+// 		plugins: {
+// 			json,
+// 		},
+// 	},
+// 	{
+// 		files: ["**/*.json"],
+// 		ignores: ["package-lock.json"],
+// 		language: "json/json",
+// 		rules: jsonRules
+// 	},
+// 	{
+// 		files: ["**/*.jsonc", ".vscode/*.json"],
+// 		language: "json/jsonc",
+// 		rules: jsonRules
+// 	},
+// 	{
+// 		files: ["**/*.json5"],
+// 		language: "json/json5",
+// 		rules: jsonRules
+// 	},

@@ -1,2 +1,15 @@
 node_modules
 .idea
+*.local
+
+# vue
+dist
+
+# nuxt
+.output
+.nuxt
+
+# quasar
+dist
+.quasar
+quasar.config.*.temporary.compiled*
