@@ -1,14 +1,10 @@
 {
-	"author": "Pavel Cherepanov",
-	"license": "ISC",
-	"name": "new-repositories-setup",
+	"name": "shareable-config",
 	"description": "setup for new repositories",
 	"version": "1.0.0",
 	"type": "module",
-	"volta": {
-		"node": "22.12.0",
-		"npm": "10.9.0"
-	},
+
+	"packageManager": "npm@10.9.2",
 	"scripts": {
 		"lint": "eslint . --fix",
 		"test": "node test/test.cjs"
