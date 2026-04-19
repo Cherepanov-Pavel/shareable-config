@@ -3,14 +3,26 @@
     "scope": "vue",
     "prefix": "t vue file",
     "body": [
+			"<script setup>",
+      "</script>",
+      "",
       "<template>",
       "</template>",
-      "",
-      "<script setup lang=\"ts\">",
-      "</script>",
       "",
       "<style scoped lang=\"scss\">",
       "</style>"
     ],
+    // typescript multiline
+    "body": [
+			"<script setup lang=\"ts\">",
+      "</script>",
+      "",
+     	"<template>",
+      "</template>",
+      "",
+      "<style scoped lang=\"scss\">",
+      "</style>"
+    ],
+    // typescript multiline end
   },
 }

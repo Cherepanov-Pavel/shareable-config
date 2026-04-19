@@ -1,39 +1,39 @@
 {
+	"editor.linkedEditing": true,
+  "editor.suggestSelection": "recentlyUsed",
 	"git.blame.editorDecoration.enabled": true,
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		".editorconfig": "eslint.config.ts",
-		".gitattributes": ".gitignore"
+		"frontend-configs.env.json5": "eslint.config.*s, stylelint.config.*s, .editorconfig",
+    ".env.*.local": ".env.*",
+    ".gitignore": ".gitattributes, lefthook.yml",
+    // ".gitlab-ci.yml": "Dockerfile, .releaserc.template.yaml",
+    "package.json": ".npmrc, package-lock.json",
+    "README.md": "*.md",
+    // typescript
+    "tsconfig.json": "tsconfig.*.json, *.d.ts"
 	},
 
 	"javascript.preferences.importModuleSpecifier": "non-relative",
-	"typescript.tsdk": "./node_modules/typescript/lib",
-	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"typescript.preferences.importModuleSpecifier": "non-relative",
+  // typescript
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // typescript
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  // typescript
+  "typescript.enablePromptUseWorkspaceTsdk": true,
 
 	"json.validate.enable": false,
-	"editor.formatOnSave": false,
-	"eslint.options": {
-		"flags": [
-			"unstable_ts_config"
-		]
-	},
-	"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": "explicit"
-	},
-	"eslint.probe": [
-		"javascript",
-		"typescript",
-		"html",
-		"markdown",
-		"json",
-		"jsonc",
-		"json5",
-	],
-
-/* 	"vue.complete.casing.props": "camel",
-	"vue.complete.casing.tags": "pascal", */
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit",
+  },
+	// "stylelint.validate": [
+  //   "css",
+  //   "scss",
+  //   "vue"
+  // ],
 
 	"cSpell.words": [
 			"Cherepanov",
