@@ -1,0 +1,43 @@
+name: Update version and publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-version-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+          registry-url: 'https://registry.npmjs.org'
+
+      - run: npm ci
+
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Configure git
+      #   run: |
+      #     git config user.email "github-actions@actions.github.com"
+      #     git config user.name "GitHub Actions"
+
+      # - name: Bump patch version
+      #   run: npm version patch -m "Bump version to %s [skip ci]"
+
+      # - name: Push commit and tags
+      #   run: |
+      #     git push origin HEAD:${{ github.ref_name }}
+      #     git push origin --tags
+
+      # - name: Publish package
+      #   run: npm publish

@@ -4,6 +4,30 @@
 	"version": "1.0.0",
 	"type": "module",
 	"packageManager": "npm@10.9.2",
+	"files": [
+    "env.json5",
+    "env.json5.set.js",
+    ".editorconfig",
+    ".editorconfig-get.js",
+    ".gitattributes",
+    ".gitattributes-get.js",
+    ".gitignore",
+    ".gitignore-get.js",
+    ".vscode/",
+    "tools/",
+    "utils/",
+    "jsconfig.json"
+  ],
+  "bin": {
+    "set-env": "./env.json5.set.js",
+    "get-all": "./.get-all.js",
+    "get-editorconfig": "./.editorconfig-get.js",
+    "get-gitattributes": "./.gitattributes-get.js",
+    "get-gitignore": "./.gitignore-get.js",
+    "get-extensions": "./.vscode/extensions.json-get.js",
+    "get-settings": "./.vscode/settings.json-get.js",
+    "get-code-snippets": "./.vscode/.code-snippets-get.js"
+  },
 	"dependencies": {
 		"@eslint/compat": "^2.0.5",
 		"@stylistic/eslint-plugin": "^5.1.0",
