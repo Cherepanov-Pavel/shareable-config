@@ -1,5 +1,5 @@
 {
-	"name": "@cherepanov-pavel/shareable-config",
+	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
 	"version": "1.0.0",
 	"type": "module",
