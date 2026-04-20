@@ -3,21 +3,24 @@
 	"description": "setup for new repositories",
 	"version": "1.0.0",
 	"type": "module",
-
 	"packageManager": "npm@10.9.2",
-	"scripts": {
-		"lint": "eslint . --fix",
-		"test": "node test/test.cjs"
-	},
-	"devDependencies": {
-		"@eslint/js": "9.17.0",
-		"@eslint/json": "0.9.0",
-		"@stylistic/eslint-plugin": "2.12.1",
-		"eslint": "9.17.0",
-		"eslint-plugin-markdownlint": "0.6.0",
-		"eslint-plugin-perfectionist": "4.6.0",
+	"dependencies": {
+		"@eslint/compat": "^2.0.5",
+		"@stylistic/eslint-plugin": "^5.1.0",
+		"@stylistic/stylelint-plugin": "^3.1.3",
+		"@typescript-eslint/eslint-plugin": "^8.57.0",
+		"@typescript-eslint/parser": "^8.57.0",
+		"eslint": "^10.0.3",
+		"eslint-plugin-vue": "^10.8.0",
+		"fs-extra": "^11.3.0",
 		"jiti": "^2.4.2",
-		"typescript": "5.7.2",
-		"typescript-eslint": "8.19.0"
+		"json5": "^2.2.3",
+		"postcss-html": "^1.8.0",
+		"stylelint": "^16.21.0",
+		"stylelint-config-standard": "^38.0.0",
+		"stylelint-config-standard-scss": "^15.0.1",
+		"stylelint-config-standard-vue": "^1.0.0",
+		"stylelint-order": "^7.0.0",
+		"vue-eslint-parser": "^10.4.0"
 	}
 }
