@@ -80,12 +80,12 @@ import baseConfig from '@cherepanov.pavel/shareable-config/tools/stylelint-confi
 
 After installing the package, run:
 ```sh
-npx -p "@frontend/configs" set-env
+npx -p "@cherepanov.pavel/shareable-config" set-env
 ```
 
 Then run:
 ```sh
-npx -p "@frontend/configs" get-all
+npx -p "@cherepanov.pavel/shareable-config" get-all
 ```
 
 or run any other command if you want to update partially.
