@@ -51,7 +51,17 @@ import {
   jsConfig,
   tsConfig,
   vueConfig,
-} from '@frontend/configs/tools/eslint-config/index.js';
+} from '@cherepanov.pavel/shareable-config/tools/eslint-config/index.js';
+```
+
+Before:
+```js
+import baseConfig from './tools/stylelint-config/config.js';
+```
+
+After:
+```js
+import baseConfig from '@cherepanov.pavel/shareable-config/tools/stylelint-config/config.js';
 ```
 
 5. **Override rules via the `override` function in your own configs where needed.**
