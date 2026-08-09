@@ -5,7 +5,7 @@ export const possibleProblemRules = {
   'vue/attributes-order': [ERROR],
   'vue/block-lang': [OFF],
   'vue/block-order': [ERROR, {
-    order: ['template', 'script', 'style'],
+    order: ['script', 'template', 'style'],
   }],
   'vue/component-api-style': [ERROR, ['script-setup']],
   'vue/component-definition-name-casing': [ERROR, 'PascalCase'],
