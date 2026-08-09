@@ -1,7 +1,7 @@
 {
 	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"type": "module",
 	"devEngines": {
 		"packageManager": {
@@ -50,6 +50,7 @@
 		"eslint": "^10.8.1",
 		"eslint-plugin-vue": "^10.10.0",
 		"fs-extra": "^11.4.0",
+		"globals": "^17.9.0",
 		"jiti": "^2.7.0",
 		"json5": "^2.2.3",
 		"postcss-html": "^2.0.0",
