@@ -1,26 +1,26 @@
 import {
-  globalConfig,
-  jsConfig,
-  tsConfig,
-  vueConfig,
+	globalConfig,
+	jsConfig,
+	tsConfig,
+	vueConfig,
 } from './tools/eslint-config/index.js';
 
 const eslintConfig = [
-  ...globalConfig,
-  jsConfig,
-  tsConfig,
-  vueConfig,
+	...globalConfig,
+	jsConfig,
+	tsConfig,
+	vueConfig,
 ];
 
 export function override() {
-  // you can override some part of config here, by eslintConfig.push()
-  // for the example, uncomment this line:
-  // eslintConfig.push({
-  //   files: ['**/*.js'],
-  //   rules: {
-  //     'no-dupe-keys': 'off',
-  //   },
-  // });
+	// you can override some part of config here, by eslintConfig.push()
+	// for the example, uncomment this line:
+	// eslintConfig.push({
+	//   files: ['**/*.js'],
+	//   rules: {
+	//     'no-dupe-keys': 'off',
+	//   },
+	// });
 }
 override();
 

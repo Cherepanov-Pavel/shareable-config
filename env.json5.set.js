@@ -5,7 +5,7 @@ import { getEnvs, setEnvs } from './utils/env.js';
 
 let envs = {};
 try {
-  envs = await getEnvs();
+	envs = await getEnvs();
 } catch (err) {}
 
 envs.isRepositoryUseTypescript = await askTypescript();

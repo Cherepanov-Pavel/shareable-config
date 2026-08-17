@@ -5,9 +5,9 @@ import { suggestionRules } from './suggestions.js';
 import { formattingRules } from './formatting.js';
 
 export const vueRules = {
-  ...baseRules,
-  ...extensionRules,
-  ...possibleProblemRules,
-  ...suggestionRules,
-  ...formattingRules,
+	...baseRules,
+	...extensionRules,
+	...possibleProblemRules,
+	...suggestionRules,
+	...formattingRules,
 };

@@ -11,39 +11,39 @@ import { getEnvs } from '../utils/env.js';
 const fileNames = ['vue.code-snippets', 'all-files.code-snippets'];
 
 try {
-  const {
-    isRepositoryUseTypescript: isTs,
-  } = await getEnvs();
+	const {
+		isRepositoryUseTypescript: isTs,
+	} = await getEnvs();
 
-  fileNames.forEach(async (fileName) => {
-    const srcFileData = await getSrcJSONFileData({
-      fileName,
-      isTs,
-      removeDuplicateKeys: fileName === 'vue.code-snippets',
-    });
+	fileNames.forEach(async (fileName) => {
+		const srcFileData = await getSrcJSONFileData({
+			fileName,
+			isTs,
+			removeDuplicateKeys: fileName === 'vue.code-snippets',
+		});
 
-    const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
-    let destFileData;
-    let isDestFileHaveOverride;
-    try {
-      destFileData = await readFile(destFile, 'utf8');
-      isDestFileHaveOverride = destFileData.includes('// override');
-    } catch (err) {}
+		const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
+		let destFileData;
+		let isDestFileHaveOverride;
+		try {
+			destFileData = await readFile(destFile, 'utf8');
+			isDestFileHaveOverride = destFileData.includes('// override');
+		} catch (err) {}
 
-    let result;
-    if (isDestFileHaveOverride) {
-      result = await mergeWithOverride(srcFileData, destFileData);
-    } else {
-      result = srcFileData;
-    }
+		let result;
+		if (isDestFileHaveOverride) {
+			result = await mergeWithOverride(srcFileData, destFileData);
+		} else {
+			result = srcFileData;
+		}
 
-    await outputFile(destFile, `${getHeader()}${result}`);
-    if (isDestFileHaveOverride) {
-      console.info(`${fileName} обновлён с учётом override`);
-    } else {
-      console.info(`${fileName} пересоздан`);
-    }
-  });
+		await outputFile(destFile, `${getHeader()}${result}`);
+		if (isDestFileHaveOverride) {
+			console.info(`${fileName} обновлён с учётом override`);
+		} else {
+			console.info(`${fileName} пересоздан`);
+		}
+	});
 } catch (err) {
-  console.error('Ошибка:', err.message);
+	console.error('Ошибка:', err.message);
 }

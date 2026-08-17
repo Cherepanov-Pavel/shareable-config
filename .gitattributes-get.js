@@ -13,7 +13,7 @@ const src = path.join(dirname, fileName);
 const srcFileData = await readFile(src, 'utf8');
 
 copyWithOverride({
-  destFile,
-  srcFileData,
-  fileLabel: fileName,
+	destFile,
+	srcFileData,
+	fileLabel: fileName,
 });

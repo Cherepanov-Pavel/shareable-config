@@ -14,30 +14,30 @@ import { getEnvs } from '../../../utils/env.js';
 
 // https://github.com/sveltejs/eslint-plugin-svelte/issues/152#issuecomment-1150803175
 const {
-  isRepositoryUseTypescript: isTs,
+	isRepositoryUseTypescript: isTs,
 } = await getEnvs();
 
 export default {
-  files: ['**/*.vue'],
-  plugins: {
-    'vue': vuePlugin,
-    '@stylistic': stylisticPlugin,
+	files: ['**/*.vue'],
+	plugins: {
+		'vue': vuePlugin,
+		'@stylistic': stylisticPlugin,
 
-    ...(isTs ? { '@typescript-eslint': tsPlugin } : {}),
-  },
-  languageOptions: {
-    parser: vueParser,
-    parserOptions: {
-      parser: isTs ? tsParser : 'espree',
-      ...(isTs ? { projectService: true } : {}),
-      extraFileExtensions: ['.vue'],
-    },
-  },
-  rules: {
-    ...jsRules,
-    ...jsFormatting,
-    ...(isTs ? tsRules : {}),
-    ...(isTs ? tsFormatting : {}),
-    ...vueRules,
-  },
+		...(isTs ? { '@typescript-eslint': tsPlugin } : {}),
+	},
+	languageOptions: {
+		parser: vueParser,
+		parserOptions: {
+			parser: isTs ? tsParser : 'espree',
+			...(isTs ? { projectService: true } : {}),
+			extraFileExtensions: ['.vue'],
+		},
+	},
+	rules: {
+		...jsRules,
+		...jsFormatting,
+		...(isTs ? tsRules : {}),
+		...(isTs ? tsFormatting : {}),
+		...vueRules,
+	},
 };
