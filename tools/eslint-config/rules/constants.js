@@ -1,9 +1,10 @@
-export const INDENT_SIZE = 2;
+export const INDENT_SIZE = 'tab';
+export const TAB_WIDTH = 2;
 export const STR_LENGTH = 100;
 
 export const MAX_LEN = {
   code: STR_LENGTH,
-  tabWidth: INDENT_SIZE,
+  tabWidth: TAB_WIDTH,
 
   ignoreComments: false,
   ignoreTrailingComments: false,

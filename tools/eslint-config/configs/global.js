@@ -1,5 +1,5 @@
 import { defineConfig } from 'eslint/config';
-import { includeIgnoreFile } from '@eslint/compat';
+import { includeIgnoreFile } from '@eslint/config-helpers';
 import path from 'path';
 import globals from 'globals';
 
@@ -11,7 +11,7 @@ export default defineConfig([
     name: 'Additional .gitignore patterns',
     ignores: [
       'public/js/*',
-      '**/*.code-snippets'
+      '**/*.code-snippets',
     ],
   },
   {

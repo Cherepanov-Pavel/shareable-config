@@ -35,7 +35,7 @@ export const formattingRules = {
   'vue/padding-line-between-blocks': [ERROR, 'always'],
   'vue/padding-line-between-tags': [OFF],
   'vue/padding-lines-in-component-definition': [OFF],
-  'vue/script-indent': [OFF],
+  'vue/script-indent': ['error', INDENT_SIZE],
   'vue/singleline-html-element-content-newline': [OFF],
   'vue/v-for-delimiter-style': [ERROR, 'in'],
 };

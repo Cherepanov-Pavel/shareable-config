@@ -1,4 +1,5 @@
-const INDENT_SIZE = 2;
+import { INDENT_SIZE } from '@/tools/eslint-config/rules/constants';
+
 const MAX_EMPTY_LINES = 1;
 // const MAX_LINE_LENGTH = 80;
 

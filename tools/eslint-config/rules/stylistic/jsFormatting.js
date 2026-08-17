@@ -1,4 +1,4 @@
-import { INDENT_SIZE, MAX_LEN } from '../constants.js';
+import { TAB_WIDTH, MAX_LEN, INDENT_SIZE } from '../constants.js';
 import { ERROR, OFF } from '../severity.js';
 
 /* == formatting rules for javascript == */
@@ -36,30 +36,7 @@ export default {
   '@stylistic/generator-star-spacing': [ERROR, { before: false, after: true }],
   '@stylistic/implicit-arrow-linebreak': [ERROR, 'beside'],
   '@stylistic/indent': [ERROR, INDENT_SIZE, {
-    ArrayExpression: 1,
-    CallExpression: {
-      arguments: 1,
-    },
-    FunctionDeclaration: {
-      parameters: 1,
-      body: 1,
-    },
-    FunctionExpression: {
-      parameters: 1,
-      body: 1,
-    },
-    ImportDeclaration: 1,
-    MemberExpression: 1,
-    ObjectExpression: 1,
-    StaticBlock: {
-      body: 1,
-    },
-    SwitchCase: 1,
-    VariableDeclarator: 1,
-    outerIIFEBody: 1,
-
-    flatTernaryExpressions: false,
-    ignoreComments: false,
+    tabLength: TAB_WIDTH,
   }],
   '@stylistic/indent-binary-ops': [ERROR, INDENT_SIZE],
   '@stylistic/key-spacing': [ERROR, { beforeColon: false, afterColon: true }],
@@ -92,7 +69,7 @@ export default {
     maxBOF: 0,
     maxEOF: 0,
   }],
-  '@stylistic/no-tabs': [ERROR],
+  '@stylistic/no-tabs': [OFF],
   '@stylistic/no-trailing-spaces': [ERROR, {
     skipBlankLines: false,
     ignoreComments: false,
