@@ -39,7 +39,10 @@ export const propertyGroups = [
 	},
 	{
 		// Display mode.
-		properties: ['box-sizing', 'display'],
+		properties: [
+			'box-sizing',
+			'display',
+		],
 	},
 	{
 		// Flexible boxes.

@@ -1,32 +1,74 @@
 import { ERROR, OFF, WARN } from '../severity.js';
 
 export const possibleProblemRules = {
-	'vue/attribute-hyphenation': [ERROR, 'never'],
+	'vue/attribute-hyphenation': [
+		ERROR,
+		'never',
+	],
 	'vue/attributes-order': [ERROR],
 	'vue/block-lang': [OFF],
-	'vue/block-order': [ERROR, {
-		order: ['script', 'template', 'style'],
-	}],
-	'vue/component-api-style': [ERROR, ['script-setup']],
-	'vue/component-definition-name-casing': [ERROR, 'PascalCase'],
-	'vue/component-name-in-template-casing': [ERROR, 'PascalCase', {
-		registeredComponentsOnly: false,
-		ignores: [],
-	}],
-	'vue/component-options-name-casing': [ERROR, 'PascalCase'],
-	'vue/custom-event-name-casing': [ERROR, 'camelCase', { ignores: ['/^[a-z]+(?:-[a-z]+)*:[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?$/u'] }],
-	'vue/define-emits-declaration': [ERROR, 'type-based'],
-	'vue/define-props-declaration': [ERROR, 'type-based'],
+	'vue/block-order': [
+		ERROR,
+		{
+			order: [
+				'script',
+				'template',
+				'style',
+			],
+		},
+	],
+	'vue/component-api-style': [
+		ERROR,
+		['script-setup'],
+	],
+	'vue/component-definition-name-casing': [
+		ERROR,
+		'PascalCase',
+	],
+	'vue/component-name-in-template-casing': [
+		ERROR,
+		'PascalCase',
+		{
+			registeredComponentsOnly: false,
+			ignores: [],
+		},
+	],
+	'vue/component-options-name-casing': [
+		ERROR,
+		'PascalCase',
+	],
+	'vue/custom-event-name-casing': [
+		ERROR,
+		'camelCase',
+		{ ignores: ['/^[a-z]+(?:-[a-z]+)*:[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?$/u'] },
+	],
+	'vue/define-emits-declaration': [
+		ERROR,
+		'type-based',
+	],
+	'vue/define-props-declaration': [
+		ERROR,
+		'type-based',
+	],
 	'vue/html-button-has-type': [ERROR],
 	'vue/html-end-tags': [ERROR],
-	'vue/match-component-file-name': [ERROR, {
-		extensions: ['vue'],
-		shouldMatchCase: true,
-	}],
+	'vue/match-component-file-name': [
+		ERROR,
+		{
+			extensions: ['vue'],
+			shouldMatchCase: true,
+		},
+	],
 	'vue/multi-word-component-names': [ERROR],
-	'vue/next-tick-style': [ERROR, 'promise'],
+	'vue/next-tick-style': [
+		ERROR,
+		'promise',
+	],
 	'vue/no-bare-strings-in-template': [OFF],
-	'vue/no-boolean-default': [ERROR, 'default-false'],
+	'vue/no-boolean-default': [
+		ERROR,
+		'default-false',
+	],
 	'vue/no-deprecated-scope-attribute': [ERROR],
 	'vue/no-deprecated-slot-attribute': [ERROR],
 	'vue/no-deprecated-slot-scope-attribute': [ERROR],
@@ -38,10 +80,13 @@ export const possibleProblemRules = {
 	'vue/no-mutating-props': [ERROR],
 	'vue/no-potential-component-option-typo': [ERROR],
 	'vue/no-ref-as-operand': [ERROR],
-	'vue/no-reserved-component-names': [ERROR, {
-		disallowVueBuiltInComponents: true,
-		disallowVue3BuiltInComponents: true,
-	}],
+	'vue/no-reserved-component-names': [
+		ERROR,
+		{
+			disallowVueBuiltInComponents: true,
+			disallowVue3BuiltInComponents: true,
+		},
+	],
 	'vue/no-reserved-keys': [ERROR],
 	'vue/no-restricted-block': [OFF],
 	'vue/no-restricted-call-after-await': [OFF],
@@ -59,17 +104,26 @@ export const possibleProblemRules = {
 	// выключено в общих конфигах, может быть включено в вашем репозитории если есть необходимость.
 	'vue/no-undef-components': [OFF],
 	'vue/no-undef-properties': [ERROR],
-	'vue/no-unsupported-features': [ERROR, {
-		version: '^3.4.27',
-		ignores: [],
-	}],
+	'vue/no-unsupported-features': [
+		ERROR,
+		{
+			version: '^3.4.27',
+			ignores: [],
+		},
+	],
 	'vue/no-unused-components': [ERROR],
 	'vue/no-unused-emit-declarations': [ERROR],
-	'vue/no-unused-properties': [ERROR, {
-		groups: ['props', 'setup'],
-		deepData: true,
-		ignorePublicMembers: true,
-	}],
+	'vue/no-unused-properties': [
+		ERROR,
+		{
+			groups: [
+				'props',
+				'setup',
+			],
+			deepData: true,
+			ignorePublicMembers: true,
+		},
+	],
 	'vue/no-unused-refs': [ERROR],
 	'vue/no-unused-vars': [ERROR],
 	'vue/no-use-v-else-with-v-for': [ERROR],
@@ -84,8 +138,14 @@ export const possibleProblemRules = {
 	'vue/prefer-define-options': [ERROR],
 	'vue/prefer-import-from-vue': [ERROR],
 	'vue/prefer-separate-static-class': [ERROR],
-	'vue/prefer-true-attribute-shorthand': [ERROR, 'always'],
-	'vue/prop-name-casing': [ERROR, 'camelCase'],
+	'vue/prefer-true-attribute-shorthand': [
+		ERROR,
+		'always',
+	],
+	'vue/prop-name-casing': [
+		ERROR,
+		'camelCase',
+	],
 	'vue/require-default-prop': [OFF],
 	'vue/require-direct-export': [ERROR],
 	'vue/require-emit-validator': [ERROR],
@@ -101,13 +161,26 @@ export const possibleProblemRules = {
 	'vue/require-valid-default-prop': [ERROR],
 	'vue/sort-keys': [OFF],
 	'vue/static-class-names-order': [OFF],
-	'vue/this-in-template': [ERROR, 'never'],
+	'vue/this-in-template': [
+		ERROR,
+		'never',
+	],
 	'vue/use-v-on-exact': [ERROR],
-	'vue/v-bind-style': [ERROR, 'shorthand'],
-	'vue/v-on-event-hyphenation': [ERROR, 'never', { autofix: true }],
+	'vue/v-bind-style': [
+		ERROR,
+		'shorthand',
+	],
+	'vue/v-on-event-hyphenation': [
+		ERROR,
+		'never',
+		{ autofix: true },
+	],
 	// https://github.com/vuejs/eslint-plugin-vue/issues/2571
 	'vue/v-on-handler-style': [OFF],
-	'vue/v-on-style': [ERROR, 'shorthand'],
+	'vue/v-on-style': [
+		ERROR,
+		'shorthand',
+	],
 	'vue/v-slot-style': [ERROR],
 	'vue/valid-define-options': [ERROR],
 };

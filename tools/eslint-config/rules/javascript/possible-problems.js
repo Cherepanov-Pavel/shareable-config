@@ -1,15 +1,24 @@
 import { ERROR, WARN } from '../severity.js';
 
 export const possibleProblemRules = {
-	'array-callback-return': [WARN, { checkForEach: true }],
+	'array-callback-return': [
+		WARN,
+		{ checkForEach: true },
+	],
 	'constructor-super': [ERROR],
 	'for-direction': [ERROR],
-	'getter-return': [ERROR, { allowImplicit: true }],
+	'getter-return': [
+		ERROR,
+		{ allowImplicit: true },
+	],
 	'no-async-promise-executor': [ERROR],
 	'no-await-in-loop': [ERROR],
 	'no-class-assign': [ERROR],
 	'no-compare-neg-zero': [ERROR],
-	'no-cond-assign': [ERROR, 'always'],
+	'no-cond-assign': [
+		ERROR,
+		'always',
+	],
 	'no-const-assign': [ERROR],
 	'no-constant-binary-expression': [ERROR],
 	'no-constant-condition': [ERROR],
@@ -51,12 +60,21 @@ export const possibleProblemRules = {
 	'no-unreachable-loop': [ERROR],
 	'no-unsafe-finally': [ERROR],
 	'no-unsafe-negation': [ERROR],
-	'no-unsafe-optional-chaining': [ERROR, { disallowArithmeticOperators: true }],
+	'no-unsafe-optional-chaining': [
+		ERROR,
+		{ disallowArithmeticOperators: true },
+	],
 	'no-unused-private-class-members': [ERROR],
 	'no-unused-vars': [WARN],
-	'no-use-before-define': [ERROR, { classes: true, functions: false, variables: true }],
+	'no-use-before-define': [
+		ERROR,
+		{ classes: true, functions: false, variables: true },
+	],
 	'no-useless-backreference': [ERROR],
 	'require-atomic-updates': [ERROR],
 	'use-isnan': [ERROR],
-	'valid-typeof': [ERROR, { requireStringLiterals: true }],
+	'valid-typeof': [
+		ERROR,
+		{ requireStringLiterals: true },
+	],
 };

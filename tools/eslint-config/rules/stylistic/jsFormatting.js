@@ -4,32 +4,46 @@ import { ERROR, OFF } from '../severity.js';
 /* == formatting rules for javascript == */
 export default {
 	'@stylistic/array-bracket-newline': [
-		ERROR, { multiline: true, minItems: 2 },
+		ERROR,
+		{ multiline: true, minItems: 2 },
 	],
 	'@stylistic/array-bracket-spacing': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
-	'@stylistic/array-element-newline': [ERROR, { "multiline": true, "minItems": 2 }],
+	'@stylistic/array-element-newline': [
+		ERROR,
+		{ multiline: true, minItems: 2 },
+	],
 	'@stylistic/arrow-parens': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/arrow-spacing': [
-		ERROR, { before: true, after: true },
+		ERROR,
+		{ before: true, after: true },
 	],
 	'@stylistic/block-spacing': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/brace-style': [
-		ERROR, '1tbs', { allowSingleLine: false },
+		ERROR,
+		'1tbs',
+		{ allowSingleLine: false },
 	],
 	'@stylistic/comma-dangle': [
-		ERROR, 'always-multiline',
+		ERROR,
+		'always-multiline',
 	],
 	'@stylistic/comma-spacing': [
-		ERROR, { before: false, after: true },
+		ERROR,
+		{ before: false, after: true },
 	],
 	'@stylistic/comma-style': [
-		ERROR, 'last', {
+		ERROR,
+		'last',
+		{
 			exceptions: {
 				ArrayExpression: false,
 				ArrayPattern: false,
@@ -46,40 +60,52 @@ export default {
 		},
 	],
 	'@stylistic/computed-property-spacing': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 	'@stylistic/dot-location': [
-		ERROR, 'property',
+		ERROR,
+		'property',
 	],
 	'@stylistic/eol-last': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/function-call-argument-newline': [
-		ERROR, 'consistent',
+		ERROR,
+		'consistent',
 	],
 	'@stylistic/function-call-spacing': [ERROR],
 	'@stylistic/function-paren-newline': [
-		ERROR, 'multiline-arguments',
+		ERROR,
+		'multiline-arguments',
 	],
 	'@stylistic/generator-star-spacing': [
-		ERROR, { before: false, after: true },
+		ERROR,
+		{ before: false, after: true },
 	],
 	'@stylistic/implicit-arrow-linebreak': [
-		ERROR, 'beside',
+		ERROR,
+		'beside',
 	],
 	'@stylistic/indent': [
-		ERROR, INDENT_SIZE, {
+		ERROR,
+		INDENT_SIZE,
+		{
 			tabLength: TAB_WIDTH,
 		},
 	],
 	'@stylistic/indent-binary-ops': [
-		ERROR, INDENT_SIZE,
+		ERROR,
+		INDENT_SIZE,
 	],
 	'@stylistic/key-spacing': [
-		ERROR, { beforeColon: false, afterColon: true },
+		ERROR,
+		{ beforeColon: false, afterColon: true },
 	],
 	'@stylistic/keyword-spacing': [
-		ERROR, {
+		ERROR,
+		{
 			before: true,
 			after: true,
 			overrides: {
@@ -90,40 +116,51 @@ export default {
 		},
 	],
 	'@stylistic/linebreak-style': [
-		ERROR, 'unix',
+		ERROR,
+		'unix',
 	],
 	'@stylistic/lines-around-comment': [OFF],
 	'@stylistic/lines-between-class-members': [
-		ERROR, 'always', { exceptAfterSingleLine: false },
+		ERROR,
+		'always',
+		{ exceptAfterSingleLine: false },
 	],
 	'@stylistic/max-len': [
-		ERROR, MAX_LEN,
+		ERROR,
+		MAX_LEN,
 	],
 	'@stylistic/max-statements-per-line': [OFF],
 	'@stylistic/multiline-ternary': [
-		ERROR, 'always-multiline',
+		ERROR,
+		'always-multiline',
 	],
 	'@stylistic/new-parens': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/newline-per-chained-call': [
-		ERROR, { ignoreChainWithDepth: 2 },
+		ERROR,
+		{ ignoreChainWithDepth: 2 },
 	],
 	'@stylistic/no-confusing-arrow': [
-		ERROR, { allowParens: true },
+		ERROR,
+		{ allowParens: true },
 	],
 	'@stylistic/no-extra-parens': [OFF],
 	'@stylistic/no-extra-semi': [ERROR],
 	'@stylistic/no-floating-decimal': [ERROR],
 	'@stylistic/no-mixed-operators': [
-		OFF, { allowSamePrecedence: true },
+		OFF,
+		{ allowSamePrecedence: true },
 	],
 	'@stylistic/no-mixed-spaces-and-tabs': [ERROR],
 	'@stylistic/no-multi-spaces': [
-		ERROR, { ignoreEOLComments: false },
+		ERROR,
+		{ ignoreEOLComments: false },
 	],
 	'@stylistic/no-multiple-empty-lines': [
-		ERROR, {
+		ERROR,
+		{
 			max: 2,
 			maxBOF: 0,
 			maxEOF: 0,
@@ -131,17 +168,20 @@ export default {
 	],
 	'@stylistic/no-tabs': [OFF],
 	'@stylistic/no-trailing-spaces': [
-		ERROR, {
+		ERROR,
+		{
 			skipBlankLines: false,
 			ignoreComments: false,
 		},
 	],
 	'@stylistic/no-whitespace-before-property': [ERROR],
 	'@stylistic/nonblock-statement-body-position': [
-		ERROR, 'beside',
+		ERROR,
+		'beside',
 	],
 	'@stylistic/object-curly-newline': [
-		ERROR, {
+		ERROR,
+		{
 			ObjectExpression: {
 				minProperties: 4,
 				multiline: true,
@@ -165,16 +205,21 @@ export default {
 		},
 	],
 	'@stylistic/object-curly-spacing': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/object-property-newline': [
-		ERROR, { allowAllPropertiesOnSameLine: true },
+		ERROR,
+		{ allowAllPropertiesOnSameLine: true },
 	],
 	'@stylistic/one-var-declaration-per-line': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/operator-linebreak': [
-		ERROR, 'before', { overrides: { '=': 'none' } },
+		ERROR,
+		'before',
+		{ overrides: { '=': 'none' } },
 	],
 	'@stylistic/padded-blocks': [
 		ERROR,
@@ -189,72 +234,93 @@ export default {
 	],
 	'@stylistic/padding-line-between-statements': [OFF],
 	'@stylistic/quote-props': [
-		ERROR, 'consistent-as-needed',
+		ERROR,
+		'consistent-as-needed',
 	],
 	'@stylistic/quotes': [
-		ERROR, 'single', { avoidEscape: true },
+		ERROR,
+		'single',
+		{ avoidEscape: true },
 	],
 	'@stylistic/rest-spread-spacing': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 	'@stylistic/semi': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/semi-spacing': [
-		ERROR, { before: false, after: true },
+		ERROR,
+		{ before: false, after: true },
 	],
 	'@stylistic/semi-style': [
-		ERROR, 'last',
+		ERROR,
+		'last',
 	],
 	'@stylistic/space-before-blocks': [
-		ERROR, 'always',
+		ERROR,
+		'always',
 	],
 	'@stylistic/space-before-function-paren': [
-		ERROR, {
+		ERROR,
+		{
 			anonymous: 'always',
 			named: 'never',
 			asyncArrow: 'always',
 		},
 	],
 	'@stylistic/space-in-parens': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 	'@stylistic/space-infix-ops': [ERROR],
 	'@stylistic/space-unary-ops': [
-		ERROR, {
+		ERROR,
+		{
 			words: true,
 			nonwords: false,
 		},
 	],
 	'@stylistic/spaced-comment': [
-		ERROR, 'always', {
+		ERROR,
+		'always',
+		{
 			line: {
 				exceptions: [
-					'-', '+',
+					'-',
+					'+',
 				],
 			},
 			block: {
 				exceptions: [
-					'-', '+',
+					'-',
+					'+',
 				],
 				balanced: true,
 			},
 		},
 	],
 	'@stylistic/switch-colon-spacing': [
-		ERROR, { after: true, before: false },
+		ERROR,
+		{ after: true, before: false },
 	],
 	'@stylistic/template-curly-spacing': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 	'@stylistic/template-tag-spacing': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 	'@stylistic/wrap-iife': [
-		ERROR, 'outside', { functionPrototypeMethods: false },
+		ERROR,
+		'outside',
+		{ functionPrototypeMethods: false },
 	],
 	'@stylistic/wrap-regex': [ERROR],
 	'@stylistic/yield-star-spacing': [
-		ERROR, 'after',
+		ERROR,
+		'after',
 	],
 };

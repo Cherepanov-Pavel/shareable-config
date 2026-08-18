@@ -1,25 +1,25 @@
 {
-  "recommendations": [
-    // "eamodio.gitlens",
+	"recommendations": [
+		// "eamodio.gitlens",
 
-    // typescript
-    "johnsoncodehk.vscode-tsconfig-helper",
-    // typescript
-    "yoavbls.pretty-ts-errors",
-    "vue.volar",
-    "mrmlnc.vscode-scss",
-    "ms-azuretools.vscode-containers",
-    // "redhat.vscode-yaml",
-    "savh.json5-kit",
+		// typescript
+		"johnsoncodehk.vscode-tsconfig-helper",
+		// typescript
+		"yoavbls.pretty-ts-errors",
+		"vue.volar",
+		"mrmlnc.vscode-scss",
+		"ms-azuretools.vscode-containers",
+		// "redhat.vscode-yaml",
+		"savh.json5-kit",
 
-    "editorconfig.editorconfig",
-    "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint",
+		"editorconfig.editorconfig",
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
 
-    "streetsidesoftware.code-spell-checker",
-    "streetsidesoftware.code-spell-checker-russian"
+		"streetsidesoftware.code-spell-checker",
+		"streetsidesoftware.code-spell-checker-russian",
 
 		// need to check that it's working well
 		// iulian-radu-at.find-unused-exports
-  ],
+	],
 }

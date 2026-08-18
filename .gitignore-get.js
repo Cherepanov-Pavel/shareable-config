@@ -27,7 +27,10 @@ async function getGitignoreFileData(framework) {
 	});
 
 	if (matchedSection) {
-		const [header, ...body] = matchedSection.split('\n');
+		const [
+			header,
+			...body
+		] = matchedSection.split('\n');
 		return `${commonData.trim()}\n\n# ${header}\n${body.join('\n').trim()}`.trim();
 	}
 	// Если не найдено — только общий контент

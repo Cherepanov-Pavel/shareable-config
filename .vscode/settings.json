@@ -1,51 +1,51 @@
 {
 	"editor.linkedEditing": true,
-  "editor.suggestSelection": "recentlyUsed",
+	"editor.suggestSelection": "recentlyUsed",
 	"git.blame.editorDecoration.enabled": true,
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
 		"frontend-configs.env.json5": "eslint.config.*s, stylelint.config.*s, .editorconfig",
-    ".env.*.local": ".env.*",
-    ".gitignore": ".gitattributes, lefthook.yml",
-    // ".gitlab-ci.yml": "Dockerfile, .releaserc.template.yaml",
-    "package.json": ".npmrc, package-lock.json",
-    "README.md": "*.md",
-    // typescript
-    "tsconfig.json": "tsconfig.*.json, *.d.ts"
+		".env.*.local": ".env.*",
+		".gitignore": ".gitattributes, lefthook.yml",
+		// ".gitlab-ci.yml": "Dockerfile, .releaserc.template.yaml",
+		"package.json": ".npmrc, package-lock.json",
+		"README.md": "*.md",
+		// typescript
+		"tsconfig.json": "tsconfig.*.json, *.d.ts",
 	},
 
 	"javascript.preferences.importModuleSpecifier": "non-relative",
-  // typescript
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  // typescript
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  // typescript
-  "typescript.enablePromptUseWorkspaceTsdk": true,
+	// typescript
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	// typescript
+	"typescript.tsdk": "./node_modules/typescript/lib",
+	// typescript
+	"typescript.enablePromptUseWorkspaceTsdk": true,
 
 	"json.validate.enable": false,
-  "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
-  },
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": "explicit",
+		"source.fixAll.stylelint": "explicit",
+	},
 	"eslint.validate": [
 		"javascript",
-    "typescript",
-    "html",
-    "vue",
+		"typescript",
+		"html",
+		"vue",
 		"json",
 		"jsonc",
-		"json5"
+		"json5",
 	],
 	// "stylelint.validate": [
-  //   "css",
-  //   "scss",
-  //   "vue"
-  // ],
-  "editor.tabSize": 2,
+	//   "css",
+	//   "scss",
+	//   "vue"
+	// ],
+	"editor.tabSize": 2,
 	"cSpell.words": [
-			"Cherepanov",
-			"Pavel"
-	]
+		"Cherepanov",
+		"Pavel",
+	],
 }

@@ -25,19 +25,28 @@ export const commonRules = {
 		{
 			selector: 'default',
 			// UPPER_CASE for, like example, consts from env files
-			format: ['camelCase', 'UPPER_CASE'],
+			format: [
+				'camelCase',
+				'UPPER_CASE',
+			],
 			leadingUnderscore: 'forbid',
 			trailingUnderscore: 'forbid',
 		},
 		{
 			selector: 'import',
 			// PascalCase for components import
-			format: ['camelCase', 'PascalCase'],
+			format: [
+				'camelCase',
+				'PascalCase',
+			],
 		},
 		{
 			selector: 'variable',
 			// UPPER_CASE for, like example, consts from env files
-			format: ['camelCase', 'UPPER_CASE'],
+			format: [
+				'camelCase',
+				'UPPER_CASE',
+			],
 		},
 		{
 			selector: 'typeLike',

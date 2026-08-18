@@ -15,7 +15,10 @@ export default defineConfig([
 		],
 	},
 	{
-		files: ['**/*.*js', '**/*.*vue'],
+		files: [
+			'**/*.*js',
+			'**/*.*vue',
+		],
 		languageOptions: {
 			globals: {
 				...globals.browser,

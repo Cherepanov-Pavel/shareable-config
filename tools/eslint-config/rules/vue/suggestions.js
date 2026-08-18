@@ -23,7 +23,10 @@ export const suggestionRules = {
 	'vue/no-deprecated-inline-template': [ERROR],
 	'vue/no-deprecated-model-definition': [ERROR],
 	'vue/no-deprecated-props-default-this': [ERROR],
-	'vue/no-deprecated-router-link-tag-prop': [ERROR, { components: ['RouterLink'] }],
+	'vue/no-deprecated-router-link-tag-prop': [
+		ERROR,
+		{ components: ['RouterLink'] },
+	],
 	'vue/no-deprecated-v-bind-sync': [ERROR],
 	'vue/no-deprecated-v-on-native-modifier': [ERROR],
 	'vue/no-deprecated-v-on-number-modifiers': [ERROR],

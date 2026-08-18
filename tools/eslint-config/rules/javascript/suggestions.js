@@ -2,36 +2,82 @@ import { ERROR, OFF, WARN } from '../severity.js';
 
 export const suggestionRules = {
 	'accessor-pairs': [ERROR],
-	'arrow-body-style': [ERROR, 'always'],
+	'arrow-body-style': [
+		ERROR,
+		'always',
+	],
 	'block-scoped-var': [ERROR],
-	'camelcase': [ERROR, { properties: 'never' }],
-	'capitalized-comments': [OFF, 'never'],
+	'camelcase': [
+		ERROR,
+		{ properties: 'never' },
+	],
+	'capitalized-comments': [
+		OFF,
+		'never',
+	],
 	'class-methods-use-this': [ERROR],
 	'complexity': [OFF],
 	'consistent-return': [OFF],
 	'consistent-this': [OFF],
-	'curly': [ERROR, 'all'],
+	'curly': [
+		ERROR,
+		'all',
+	],
 	'default-case': [OFF],
 	'default-case-last': [ERROR],
 	'default-param-last': [ERROR],
 	'dot-notation': [ERROR],
-	'eqeqeq': [ERROR, 'always', { null: 'always' }],
+	'eqeqeq': [
+		ERROR,
+		'always',
+		{ null: 'always' },
+	],
 	'func-name-matching': [WARN],
-	'func-names': [WARN, 'as-needed'],
-	'func-style': [ERROR, 'declaration', { allowArrowFunctions: true }],
-	'grouped-accessor-pairs': [ERROR, 'getBeforeSet'],
+	'func-names': [
+		WARN,
+		'as-needed',
+	],
+	'func-style': [
+		ERROR,
+		'declaration',
+		{ allowArrowFunctions: true },
+	],
+	'grouped-accessor-pairs': [
+		ERROR,
+		'getBeforeSet',
+	],
 	'guard-for-in': [OFF],
 	'id-denylist': [OFF],
-	'id-length': [ERROR, {
-		min: 2,
-		exceptionPatterns: ['sort', '^a$', '^b$', 'for', '^i$', '^j$'],
-		properties: 'never',
-	}],
+	'id-length': [
+		ERROR,
+		{
+			min: 2,
+			exceptionPatterns: [
+				'sort',
+				'^a$',
+				'^b$',
+				'for',
+				'^i$',
+				'^j$',
+			],
+			properties: 'never',
+		},
+	],
 	'id-match': [OFF],
 	'init-declarations': [OFF],
-	'logical-assignment-operators': [ERROR, 'always', { enforceForIfStatements: true }],
-	'max-classes-per-file': [ERROR, 1],
-	'max-depth': [ERROR, 4],
+	'logical-assignment-operators': [
+		ERROR,
+		'always',
+		{ enforceForIfStatements: true },
+	],
+	'max-classes-per-file': [
+		ERROR,
+		1,
+	],
+	'max-depth': [
+		ERROR,
+		4,
+	],
 	// 'max-lines': [WARN, {
 	//   max: 600,
 	//   skipBlankLines: true,
@@ -42,25 +88,52 @@ export const suggestionRules = {
 	//   skipBlankLines: true,
 	//   skipComments: true,
 	// }],
-	'max-nested-callbacks': [WARN, { max: 5 }],
-	'max-params': [WARN, { max: 5 }],
-	'max-statements': [WARN, { max: 20 }],
+	'max-nested-callbacks': [
+		WARN,
+		{ max: 5 },
+	],
+	'max-params': [
+		WARN,
+		{ max: 5 },
+	],
+	'max-statements': [
+		WARN,
+		{ max: 20 },
+	],
 	'multiline-comment-style': [OFF],
-	'new-cap': [ERROR, {
-		capIsNew: true,
-		newIsCap: true,
-	}],
+	'new-cap': [
+		ERROR,
+		{
+			capIsNew: true,
+			newIsCap: true,
+		},
+	],
 	'no-alert': [ERROR],
 	'no-array-constructor': [ERROR],
 	'no-bitwise': [ERROR],
 	'no-caller': [ERROR],
 	'no-case-declarations': [ERROR],
-	'no-console': [WARN, { allow: ['warn', 'error', 'info'] }],
+	'no-console': [
+		WARN,
+		{
+			allow: [
+				'warn',
+				'error',
+				'info',
+			],
+		},
+	],
 	'no-continue': [ERROR],
 	'no-delete-var': [ERROR],
 	'no-div-regex': [ERROR],
-	'no-else-return': [ERROR, { allowElseIf: false }],
-	'no-empty': [ERROR, { allowEmptyCatch: true }],
+	'no-else-return': [
+		ERROR,
+		{ allowElseIf: false },
+	],
+	'no-empty': [
+		ERROR,
+		{ allowEmptyCatch: true },
+	],
 	'no-empty-function': [ERROR],
 	'no-empty-static-block': [ERROR],
 	'no-eq-null': [OFF],
@@ -70,18 +143,24 @@ export const suggestionRules = {
 	'no-extra-boolean-cast': [ERROR],
 	'no-extra-label': [ERROR],
 	'no-global-assign': [ERROR],
-	'no-implicit-coercion': [ERROR, {
-		boolean: true,
-		number: true,
-		string: true,
-	}],
+	'no-implicit-coercion': [
+		ERROR,
+		{
+			boolean: true,
+			number: true,
+			string: true,
+		},
+	],
 	'no-implicit-globals': [OFF],
 	'no-implied-eval': [ERROR],
 	'no-inline-comments': [OFF],
 	'no-invalid-this': [ERROR],
 	'no-iterator': [ERROR],
 	'no-label-var': [ERROR],
-	'no-labels': [ERROR, { allowLoop: false, allowSwitch: false }],
+	'no-labels': [
+		ERROR,
+		{ allowLoop: false, allowSwitch: false },
+	],
 	'no-lone-blocks': [ERROR],
 	'no-lonely-if': [ERROR],
 	'no-loop-func': [ERROR],
@@ -97,59 +176,86 @@ export const suggestionRules = {
 	'no-nonoctal-decimal-escape': [ERROR],
 	'no-octal': [ERROR],
 	'no-octal-escape': [ERROR],
-	'no-param-reassign': [ERROR, {
-		props: true,
-	}],
-	'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
+	'no-param-reassign': [
+		ERROR,
+		{
+			props: true,
+		},
+	],
+	'no-plusplus': [
+		ERROR,
+		{ allowForLoopAfterthoughts: true },
+	],
 	'no-proto': [ERROR],
-	'no-redeclare': [ERROR, { builtinGlobals: true }],
+	'no-redeclare': [
+		ERROR,
+		{ builtinGlobals: true },
+	],
 	'no-regex-spaces': [ERROR],
-	'no-restricted-exports': [ERROR, {
-		restrictedNamedExports: [
-			'default', // use `export default` to provide a default export
-			'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
-		],
-	}],
-	'no-restricted-imports': [OFF, { paths: [], patterns: [] }],
-	'no-restricted-properties': [ERROR, {
-		object: 'arguments',
-		property: 'callee',
-		message: 'arguments.callee is deprecated',
-	}, {
-		object: 'global',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
-	}, {
-		object: 'self',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
-	}, {
-		object: 'window',
-		property: 'isFinite',
-		message: 'Please use Number.isFinite instead',
-	}, {
-		object: 'global',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
-	}, {
-		object: 'self',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
-	}, {
-		object: 'window',
-		property: 'isNaN',
-		message: 'Please use Number.isNaN instead',
-	}, {
-		property: '__defineGetter__',
-		message: 'Please use Object.defineProperty instead.',
-	}, {
-		property: '__defineSetter__',
-		message: 'Please use Object.defineProperty instead.',
-	}, {
-		object: 'Math',
-		property: 'pow',
-		message: 'Use the exponentiation operator (**) instead.',
-	}],
+	'no-restricted-exports': [
+		ERROR,
+		{
+			restrictedNamedExports: [
+				'default', // use `export default` to provide a default export
+				'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
+			],
+		},
+	],
+	'no-restricted-imports': [
+		OFF,
+		{ paths: [], patterns: [] },
+	],
+	'no-restricted-properties': [
+		ERROR,
+		{
+			object: 'arguments',
+			property: 'callee',
+			message: 'arguments.callee is deprecated',
+		},
+		{
+			object: 'global',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead',
+		},
+		{
+			object: 'self',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead',
+		},
+		{
+			object: 'window',
+			property: 'isFinite',
+			message: 'Please use Number.isFinite instead',
+		},
+		{
+			object: 'global',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead',
+		},
+		{
+			object: 'self',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead',
+		},
+		{
+			object: 'window',
+			property: 'isNaN',
+			message: 'Please use Number.isNaN instead',
+		},
+		{
+			property: '__defineGetter__',
+			message: 'Please use Object.defineProperty instead.',
+		},
+		{
+			property: '__defineSetter__',
+			message: 'Please use Object.defineProperty instead.',
+		},
+		{
+			object: 'Math',
+			property: 'pow',
+			message: 'Use the exponentiation operator (**) instead.',
+		},
+	],
 	'no-restricted-syntax': [
 		ERROR,
 		{
@@ -165,7 +271,10 @@ export const suggestionRules = {
 			message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
 		},
 	],
-	'no-return-assign': [ERROR, 'always'],
+	'no-return-assign': [
+		ERROR,
+		'always',
+	],
 	'no-return-await': [ERROR],
 	'no-script-url': [ERROR],
 	'no-sequences': [ERROR],
@@ -175,65 +284,106 @@ export const suggestionRules = {
 	'no-throw-literal': [ERROR],
 	'no-undef-init': [ERROR],
 	'no-undefined': [OFF],
-	'no-underscore-dangle': [ERROR, {
-		allow: [],
-		allowAfterSuper: false,
-		allowAfterThis: true,
-		allowFunctionParams: false,
-		allowInObjectDestructuring: false,
-	}],
-	'no-unneeded-ternary': [ERROR, {
-		defaultAssignment: false,
-	}],
-	'no-unused-expressions': [ERROR, {
-		allowShortCircuit: false,
-		allowTernary: false,
-		allowTaggedTemplates: false,
-	}],
+	'no-underscore-dangle': [
+		ERROR,
+		{
+			allow: [],
+			allowAfterSuper: false,
+			allowAfterThis: true,
+			allowFunctionParams: false,
+			allowInObjectDestructuring: false,
+		},
+	],
+	'no-unneeded-ternary': [
+		ERROR,
+		{
+			defaultAssignment: false,
+		},
+	],
+	'no-unused-expressions': [
+		ERROR,
+		{
+			allowShortCircuit: false,
+			allowTernary: false,
+			allowTaggedTemplates: false,
+		},
+	],
 	'no-unused-labels': [ERROR],
 	'no-useless-call': [WARN],
 	'no-useless-catch': [ERROR],
-	'no-useless-computed-key': [ERROR, { enforceForClassMembers: true }],
+	'no-useless-computed-key': [
+		ERROR,
+		{ enforceForClassMembers: true },
+	],
 	'no-useless-concat': [ERROR],
 	'no-useless-constructor': [ERROR],
 	'no-useless-escape': [ERROR],
-	'no-useless-rename': [ERROR, {
-		ignoreImport: false,
-		ignoreExport: false,
-		ignoreDestructuring: false,
-	}],
+	'no-useless-rename': [
+		ERROR,
+		{
+			ignoreImport: false,
+			ignoreExport: false,
+			ignoreDestructuring: false,
+		},
+	],
 	'no-useless-return': [ERROR],
 	'no-var': [ERROR],
-	'no-void': [ERROR, { allowAsStatement: true }],
+	'no-void': [
+		ERROR,
+		{ allowAsStatement: true },
+	],
 	'no-warning-comments': [OFF],
 	'no-with': [ERROR],
-	'object-shorthand': [ERROR, 'always', {
-		avoidQuotes: true,
-		ignoreConstructors: false,
-	}],
-	'one-var': [ERROR, 'never'],
-	'operator-assignment': [ERROR, 'always'],
-	'prefer-arrow-callback': [ERROR, {
-		allowNamedFunctions: false,
-		allowUnboundThis: true,
-	}],
-	'prefer-const': [ERROR, {
-		destructuring: 'any',
-		ignoreReadBeforeAssign: true,
-	}],
-	'prefer-destructuring': [ERROR, {
-		array: false,
-		object: true,
-	}, {
-		enforceForRenamedProperties: false,
-	}],
+	'object-shorthand': [
+		ERROR,
+		'always',
+		{
+			avoidQuotes: true,
+			ignoreConstructors: false,
+		},
+	],
+	'one-var': [
+		ERROR,
+		'never',
+	],
+	'operator-assignment': [
+		ERROR,
+		'always',
+	],
+	'prefer-arrow-callback': [
+		ERROR,
+		{
+			allowNamedFunctions: false,
+			allowUnboundThis: true,
+		},
+	],
+	'prefer-const': [
+		ERROR,
+		{
+			destructuring: 'any',
+			ignoreReadBeforeAssign: true,
+		},
+	],
+	'prefer-destructuring': [
+		ERROR,
+		{
+			array: false,
+			object: true,
+		},
+		{
+			enforceForRenamedProperties: false,
+		},
+	],
 	'prefer-exponentiation-operator': [ERROR],
 	'prefer-named-capture-group': [OFF],
 	'prefer-numeric-literals': [ERROR],
 	'prefer-object-has-own': [ERROR],
 	'prefer-object-spread': [ERROR],
 	'prefer-promise-reject-errors': [ERROR],
-	'prefer-regex-literals': [ERROR, { disallowRedundantWrapping: true }],
+	'prefer-regex-literals': [
+		ERROR,
+		{ disallowRedundantWrapping: true },
+	],
 	'prefer-rest-params': [ERROR],
 	'prefer-spread': [ERROR],
 	'prefer-template': [ERROR],
@@ -244,11 +394,17 @@ export const suggestionRules = {
 	'sort-imports': [OFF],
 	'sort-keys': [OFF],
 	'sort-vars': [OFF],
-	'strict': [ERROR, 'never'],
+	'strict': [
+		ERROR,
+		'never',
+	],
 	'symbol-description': [ERROR],
 	'vars-on-top': [ERROR],
 	'yoda': [ERROR],
 
 	'line-comment-position': [OFF],
-	'unicode-bom': [ERROR, 'never'],
+	'unicode-bom': [
+		ERROR,
+		'never',
+	],
 };

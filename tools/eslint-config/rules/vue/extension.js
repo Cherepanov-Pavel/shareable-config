@@ -50,7 +50,8 @@ export const extensionRules = {
 	'@stylistic/max-len': [OFF],
 	'max-len': [OFF],
 	'vue/max-len': [
-		ERROR, {
+		ERROR,
+		{
 			...MAX_LEN,
 
 			ignoreHTMLAttributeValues: true,

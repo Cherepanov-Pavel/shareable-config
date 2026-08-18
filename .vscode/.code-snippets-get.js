@@ -8,7 +8,10 @@ import { getHeader } from '../utils/file-header.js';
 import { getSrcJSONFileData } from '../utils/file.js';
 import { getEnvs } from '../utils/env.js';
 
-const fileNames = ['vue.code-snippets', 'all-files.code-snippets'];
+const fileNames = [
+	'vue.code-snippets',
+	'all-files.code-snippets',
+];
 
 try {
 	const {
