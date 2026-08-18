@@ -1,4 +1,5 @@
 {
+	"editor.tabSize": 2,
 	"editor.linkedEditing": true,
 	"editor.suggestSelection": "recentlyUsed",
 	"git.blame.editorDecoration.enabled": true,
@@ -43,7 +44,6 @@
 	//   "scss",
 	//   "vue"
 	// ],
-	"editor.tabSize": 2,
 	"cSpell.words": [
 		"Cherepanov",
 		"Pavel",

@@ -23,7 +23,6 @@ const COMMON_RULES = {
 	'jsonc/no-template-literals': ERROR,
 	'jsonc/no-undefined-value': ERROR,
 	'jsonc/no-unicode-codepoint-escapes': ERROR,
-	'jsonc/vue-custom-block/no-parsing-error': ERROR,
 	'jsonc/array-bracket-newline': jsFormatting['@stylistic/array-bracket-newline'],
 	'jsonc/array-bracket-spacing': jsFormatting['@stylistic/array-bracket-spacing'],
 	'jsonc/array-element-newline': jsFormatting['@stylistic/array-element-newline'],
@@ -83,6 +82,12 @@ export default defineConfig([
 		language: 'jsonc/json5',
 		rules: {
 			...COMMON_RULES,
+		},
+	},
+	{
+		files: ['**/*.vue'],
+		rules: {
+			'jsonc/vue-custom-block/no-parsing-error': ERROR,
 		},
 	},
 ]);
