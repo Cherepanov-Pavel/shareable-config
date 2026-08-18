@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import jsonc from 'eslint-plugin-jsonc';
-import { ERROR } from '../rules/severity';
+import { ERROR } from '../rules/severity.js';
 import { jsFormatting } from '../rules/stylistic/index.js';
 
 const JSON_BUT_JSONC_FILES = [
