@@ -5,6 +5,7 @@ import { jsFormatting } from '../rules/stylistic/index.js';
 
 const JSON_BUT_JSONC_FILES = [
 	'**/.vscode/*.json',
+	'**/.vscode/*.code-snippets',
 	'**/tsconfig*.json',
 ];
 const COMMON_RULES = {

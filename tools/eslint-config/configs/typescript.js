@@ -8,7 +8,7 @@ import tsParser from '@typescript-eslint/parser';
 import { jsRules } from '../rules/javascript/index.js';
 
 export default {
-	files: ['**/*.*ts'],
+	files: ['**/*.{ts,mts,cts}'],
 	plugins: {
 		'@typescript-eslint': tsPlugin,
 		'@stylistic': stylisticPlugin,

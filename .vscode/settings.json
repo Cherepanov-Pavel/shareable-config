@@ -31,6 +31,9 @@
 		"source.fixAll.eslint": "explicit",
 		"source.fixAll.stylelint": "explicit",
 	},
+	"files.associations": {
+		"*.code-snippets": "jsonc",
+	},
 	"eslint.validate": [
 		"javascript",
 		"typescript",

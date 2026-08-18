@@ -1,28 +1,28 @@
 {
-  "template for empty vue file": {
-    "scope": "vue",
-    "prefix": "t vue file",
-    "body": [
+	"template for empty vue file": {
+		"scope": "vue",
+		"prefix": "t vue file",
+		"body": [
 			"<script setup>",
-      "</script>",
-      "",
-      "<template>",
-      "</template>",
-      "",
-      "<style scoped lang=\"scss\">",
-      "</style>"
-    ],
-    // typescript multiline
-    "body": [
+			"</script>",
+			"",
+			"<template>",
+			"</template>",
+			"",
+			"<style scoped lang=\"scss\">",
+			"</style>",
+		],
+		// typescript multiline
+		"body": [
 			"<script setup lang=\"ts\">",
-      "</script>",
-      "",
+			"</script>",
+			"",
      	"<template>",
-      "</template>",
-      "",
-      "<style scoped lang=\"scss\">",
-      "</style>"
-    ],
-    // typescript multiline end
-  },
+			"</template>",
+			"",
+			"<style scoped lang=\"scss\">",
+			"</style>",
+		],
+		// typescript multiline end
+	},
 }

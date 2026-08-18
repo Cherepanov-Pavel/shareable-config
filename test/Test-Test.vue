@@ -1,8 +1,8 @@
 <script setup lang="ts">
-const test = [
-	1,
-	2,
-];
+// const test = [
+// 	1,
+// 	2,
+// ];
 </script>
 
 <i18n>
