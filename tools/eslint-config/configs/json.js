@@ -1,15 +1,12 @@
 import { defineConfig } from 'eslint/config';
 import jsonc from 'eslint-plugin-jsonc';
-import { ERROR, OFF } from '../rules/severity';
-import { INDENT_SIZE, TAB_WIDTH } from '../rules/constants';
-import stylisticPlugin from '@stylistic/eslint-plugin';
+import { ERROR } from '../rules/severity';
 import { jsFormatting } from '../rules/stylistic/index.js';
 
 const JSON_BUT_JSONC_FILES = [
 	'**/.vscode/*.json',
 	'**/tsconfig*.json',
 ];
-
 const COMMON_RULES = {
 	'jsonc/no-bigint-literals': ERROR,
 	'jsonc/no-binary-expression': ERROR,
@@ -28,15 +25,19 @@ const COMMON_RULES = {
 	'jsonc/no-unicode-codepoint-escapes': ERROR,
 	'jsonc/vue-custom-block/no-parsing-error': ERROR,
 	'jsonc/array-bracket-newline': jsFormatting['@stylistic/array-bracket-newline'],
+	'jsonc/array-bracket-spacing': jsFormatting['@stylistic/array-bracket-spacing'],
+	'jsonc/array-element-newline': jsFormatting['@stylistic/array-element-newline'],
 	'jsonc/indent': [
-		jsFormatting['@stylistic/indent'][0], jsFormatting['@stylistic/indent'][1],
+		jsFormatting['@stylistic/indent'][0],
+		jsFormatting['@stylistic/indent'][1],
 	],
 	'jsonc/comma-dangle': jsFormatting['@stylistic/comma-dangle'],
 };
 const JSON_RULES = {
 	'jsonc/no-comments': ERROR,
 	'jsonc/comma-dangle': [
-		ERROR, 'never',
+		ERROR,
+		'never',
 	],
 };
 const JSON_JSONC_RULES = {
@@ -54,7 +55,8 @@ export default defineConfig([
 	{
 		files: ['**/*.json'],
 		ignores: [
-			...JSON_BUT_JSONC_FILES, 'package-lock.json',
+			...JSON_BUT_JSONC_FILES,
+			'package-lock.json',
 		],
 		language: 'jsonc/json',
 		rules: {
@@ -66,7 +68,8 @@ export default defineConfig([
 
 	{
 		files: [
-			'**/*.jsonc', ...JSON_BUT_JSONC_FILES,
+			'**/*.jsonc',
+			...JSON_BUT_JSONC_FILES,
 		],
 		language: 'jsonc/jsonc',
 		rules: {

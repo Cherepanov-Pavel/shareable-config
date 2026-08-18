@@ -3,106 +3,181 @@ import { ERROR, OFF } from '../severity.js';
 
 /* == formatting rules for javascript == */
 export default {
-	'@stylistic/array-bracket-newline': [ERROR, { multiline: false, minItems: 2 }],
-	'@stylistic/array-bracket-spacing': [ERROR, 'never'],
-	'@stylistic/array-element-newline': [OFF],
-	'@stylistic/arrow-parens': [ERROR, 'always'],
-	'@stylistic/arrow-spacing': [ERROR, { before: true, after: true }],
-	'@stylistic/block-spacing': [ERROR, 'always'],
-	'@stylistic/brace-style': [ERROR, '1tbs', { allowSingleLine: false }],
-	'@stylistic/comma-dangle': [ERROR, 'always-multiline'],
-	'@stylistic/comma-spacing': [ERROR, { before: false, after: true }],
-	'@stylistic/comma-style': [ERROR, 'last', {
-		exceptions: {
-			ArrayExpression: false,
-			ArrayPattern: false,
-			ArrowFunctionExpression: false,
-			CallExpression: false,
-			FunctionDeclaration: false,
-			FunctionExpression: false,
-			ImportDeclaration: false,
-			NewExpression: false,
-			ObjectExpression: false,
-			ObjectPattern: false,
-			VariableDeclaration: false,
+	'@stylistic/array-bracket-newline': [
+		ERROR, { multiline: true, minItems: 2 },
+	],
+	'@stylistic/array-bracket-spacing': [
+		ERROR, 'never',
+	],
+	'@stylistic/array-element-newline': [ERROR, { "multiline": true, "minItems": 2 }],
+	'@stylistic/arrow-parens': [
+		ERROR, 'always',
+	],
+	'@stylistic/arrow-spacing': [
+		ERROR, { before: true, after: true },
+	],
+	'@stylistic/block-spacing': [
+		ERROR, 'always',
+	],
+	'@stylistic/brace-style': [
+		ERROR, '1tbs', { allowSingleLine: false },
+	],
+	'@stylistic/comma-dangle': [
+		ERROR, 'always-multiline',
+	],
+	'@stylistic/comma-spacing': [
+		ERROR, { before: false, after: true },
+	],
+	'@stylistic/comma-style': [
+		ERROR, 'last', {
+			exceptions: {
+				ArrayExpression: false,
+				ArrayPattern: false,
+				ArrowFunctionExpression: false,
+				CallExpression: false,
+				FunctionDeclaration: false,
+				FunctionExpression: false,
+				ImportDeclaration: false,
+				NewExpression: false,
+				ObjectExpression: false,
+				ObjectPattern: false,
+				VariableDeclaration: false,
+			},
 		},
-	}],
-	'@stylistic/computed-property-spacing': [ERROR, 'never'],
-	'@stylistic/dot-location': [ERROR, 'property'],
-	'@stylistic/eol-last': [ERROR, 'always'],
-	'@stylistic/function-call-argument-newline': [ERROR, 'consistent'],
+	],
+	'@stylistic/computed-property-spacing': [
+		ERROR, 'never',
+	],
+	'@stylistic/dot-location': [
+		ERROR, 'property',
+	],
+	'@stylistic/eol-last': [
+		ERROR, 'always',
+	],
+	'@stylistic/function-call-argument-newline': [
+		ERROR, 'consistent',
+	],
 	'@stylistic/function-call-spacing': [ERROR],
-	'@stylistic/function-paren-newline': [ERROR, 'multiline-arguments'],
-	'@stylistic/generator-star-spacing': [ERROR, { before: false, after: true }],
-	'@stylistic/implicit-arrow-linebreak': [ERROR, 'beside'],
-	'@stylistic/indent': [ERROR, INDENT_SIZE, {
-		tabLength: TAB_WIDTH,
-	}],
-	'@stylistic/indent-binary-ops': [ERROR, INDENT_SIZE],
-	'@stylistic/key-spacing': [ERROR, { beforeColon: false, afterColon: true }],
-	'@stylistic/keyword-spacing': [ERROR, {
-		before: true,
-		after: true,
-		overrides: {
-			return: { after: true },
-			throw: { after: true },
-			case: { after: true },
+	'@stylistic/function-paren-newline': [
+		ERROR, 'multiline-arguments',
+	],
+	'@stylistic/generator-star-spacing': [
+		ERROR, { before: false, after: true },
+	],
+	'@stylistic/implicit-arrow-linebreak': [
+		ERROR, 'beside',
+	],
+	'@stylistic/indent': [
+		ERROR, INDENT_SIZE, {
+			tabLength: TAB_WIDTH,
 		},
-	}],
-	'@stylistic/linebreak-style': [ERROR, 'unix'],
+	],
+	'@stylistic/indent-binary-ops': [
+		ERROR, INDENT_SIZE,
+	],
+	'@stylistic/key-spacing': [
+		ERROR, { beforeColon: false, afterColon: true },
+	],
+	'@stylistic/keyword-spacing': [
+		ERROR, {
+			before: true,
+			after: true,
+			overrides: {
+				return: { after: true },
+				throw: { after: true },
+				case: { after: true },
+			},
+		},
+	],
+	'@stylistic/linebreak-style': [
+		ERROR, 'unix',
+	],
 	'@stylistic/lines-around-comment': [OFF],
-	'@stylistic/lines-between-class-members': [ERROR, 'always', { exceptAfterSingleLine: false }],
-	'@stylistic/max-len': [ERROR, MAX_LEN],
+	'@stylistic/lines-between-class-members': [
+		ERROR, 'always', { exceptAfterSingleLine: false },
+	],
+	'@stylistic/max-len': [
+		ERROR, MAX_LEN,
+	],
 	'@stylistic/max-statements-per-line': [OFF],
-	'@stylistic/multiline-ternary': [ERROR, 'always-multiline'],
-	'@stylistic/new-parens': [ERROR, 'always'],
-	'@stylistic/newline-per-chained-call': [ERROR, { ignoreChainWithDepth: 2 }],
-	'@stylistic/no-confusing-arrow': [ERROR, { allowParens: true }],
+	'@stylistic/multiline-ternary': [
+		ERROR, 'always-multiline',
+	],
+	'@stylistic/new-parens': [
+		ERROR, 'always',
+	],
+	'@stylistic/newline-per-chained-call': [
+		ERROR, { ignoreChainWithDepth: 2 },
+	],
+	'@stylistic/no-confusing-arrow': [
+		ERROR, { allowParens: true },
+	],
 	'@stylistic/no-extra-parens': [OFF],
 	'@stylistic/no-extra-semi': [ERROR],
 	'@stylistic/no-floating-decimal': [ERROR],
-	'@stylistic/no-mixed-operators': [OFF, { allowSamePrecedence: true }],
+	'@stylistic/no-mixed-operators': [
+		OFF, { allowSamePrecedence: true },
+	],
 	'@stylistic/no-mixed-spaces-and-tabs': [ERROR],
-	'@stylistic/no-multi-spaces': [ERROR, { ignoreEOLComments: false }],
-	'@stylistic/no-multiple-empty-lines': [ERROR, {
-		max: 2,
-		maxBOF: 0,
-		maxEOF: 0,
-	}],
+	'@stylistic/no-multi-spaces': [
+		ERROR, { ignoreEOLComments: false },
+	],
+	'@stylistic/no-multiple-empty-lines': [
+		ERROR, {
+			max: 2,
+			maxBOF: 0,
+			maxEOF: 0,
+		},
+	],
 	'@stylistic/no-tabs': [OFF],
-	'@stylistic/no-trailing-spaces': [ERROR, {
-		skipBlankLines: false,
-		ignoreComments: false,
-	}],
+	'@stylistic/no-trailing-spaces': [
+		ERROR, {
+			skipBlankLines: false,
+			ignoreComments: false,
+		},
+	],
 	'@stylistic/no-whitespace-before-property': [ERROR],
-	'@stylistic/nonblock-statement-body-position': [ERROR, 'beside'],
-	'@stylistic/object-curly-newline': [ERROR, {
-		ObjectExpression: {
-			minProperties: 4,
-			multiline: true,
-			consistent: true,
+	'@stylistic/nonblock-statement-body-position': [
+		ERROR, 'beside',
+	],
+	'@stylistic/object-curly-newline': [
+		ERROR, {
+			ObjectExpression: {
+				minProperties: 4,
+				multiline: true,
+				consistent: true,
+			},
+			ObjectPattern: {
+				minProperties: 4,
+				multiline: true,
+				consistent: true,
+			},
+			ImportDeclaration: {
+				minProperties: 4,
+				multiline: true,
+				consistent: true,
+			},
+			ExportDeclaration: {
+				minProperties: 4,
+				multiline: true,
+				consistent: true,
+			},
 		},
-		ObjectPattern: {
-			minProperties: 4,
-			multiline: true,
-			consistent: true,
-		},
-		ImportDeclaration: {
-			minProperties: 4,
-			multiline: true,
-			consistent: true,
-		},
-		ExportDeclaration: {
-			minProperties: 4,
-			multiline: true,
-			consistent: true,
-		},
-	}],
-	'@stylistic/object-curly-spacing': [ERROR, 'always'],
-	'@stylistic/object-property-newline': [ERROR, { allowAllPropertiesOnSameLine: true }],
-	'@stylistic/one-var-declaration-per-line': [ERROR, 'always'],
-	'@stylistic/operator-linebreak': [ERROR, 'before', { overrides: { '=': 'none' } }],
-	'@stylistic/padded-blocks': [ERROR,
+	],
+	'@stylistic/object-curly-spacing': [
+		ERROR, 'always',
+	],
+	'@stylistic/object-property-newline': [
+		ERROR, { allowAllPropertiesOnSameLine: true },
+	],
+	'@stylistic/one-var-declaration-per-line': [
+		ERROR, 'always',
+	],
+	'@stylistic/operator-linebreak': [
+		ERROR, 'before', { overrides: { '=': 'none' } },
+	],
+	'@stylistic/padded-blocks': [
+		ERROR,
 		{
 			blocks: 'never',
 			classes: 'never',
@@ -113,37 +188,73 @@ export default {
 		},
 	],
 	'@stylistic/padding-line-between-statements': [OFF],
-	'@stylistic/quote-props': [ERROR, 'consistent-as-needed'],
-	'@stylistic/quotes': [ERROR, 'single', { avoidEscape: true }],
-	'@stylistic/rest-spread-spacing': [ERROR, 'never'],
-	'@stylistic/semi': [ERROR, 'always'],
-	'@stylistic/semi-spacing': [ERROR, { before: false, after: true }],
-	'@stylistic/semi-style': [ERROR, 'last'],
-	'@stylistic/space-before-blocks': [ERROR, 'always'],
-	'@stylistic/space-before-function-paren': [ERROR, {
-		anonymous: 'always',
-		named: 'never',
-		asyncArrow: 'always',
-	}],
-	'@stylistic/space-in-parens': [ERROR, 'never'],
+	'@stylistic/quote-props': [
+		ERROR, 'consistent-as-needed',
+	],
+	'@stylistic/quotes': [
+		ERROR, 'single', { avoidEscape: true },
+	],
+	'@stylistic/rest-spread-spacing': [
+		ERROR, 'never',
+	],
+	'@stylistic/semi': [
+		ERROR, 'always',
+	],
+	'@stylistic/semi-spacing': [
+		ERROR, { before: false, after: true },
+	],
+	'@stylistic/semi-style': [
+		ERROR, 'last',
+	],
+	'@stylistic/space-before-blocks': [
+		ERROR, 'always',
+	],
+	'@stylistic/space-before-function-paren': [
+		ERROR, {
+			anonymous: 'always',
+			named: 'never',
+			asyncArrow: 'always',
+		},
+	],
+	'@stylistic/space-in-parens': [
+		ERROR, 'never',
+	],
 	'@stylistic/space-infix-ops': [ERROR],
-	'@stylistic/space-unary-ops': [ERROR, {
-		words: true,
-		nonwords: false,
-	}],
-	'@stylistic/spaced-comment': [ERROR, 'always', {
-		line: {
-			exceptions: ['-', '+'],
+	'@stylistic/space-unary-ops': [
+		ERROR, {
+			words: true,
+			nonwords: false,
 		},
-		block: {
-			exceptions: ['-', '+'],
-			balanced: true,
+	],
+	'@stylistic/spaced-comment': [
+		ERROR, 'always', {
+			line: {
+				exceptions: [
+					'-', '+',
+				],
+			},
+			block: {
+				exceptions: [
+					'-', '+',
+				],
+				balanced: true,
+			},
 		},
-	}],
-	'@stylistic/switch-colon-spacing': [ERROR, { after: true, before: false }],
-	'@stylistic/template-curly-spacing': [ERROR, 'never'],
-	'@stylistic/template-tag-spacing': [ERROR, 'never'],
-	'@stylistic/wrap-iife': [ERROR, 'outside', { functionPrototypeMethods: false }],
+	],
+	'@stylistic/switch-colon-spacing': [
+		ERROR, { after: true, before: false },
+	],
+	'@stylistic/template-curly-spacing': [
+		ERROR, 'never',
+	],
+	'@stylistic/template-tag-spacing': [
+		ERROR, 'never',
+	],
+	'@stylistic/wrap-iife': [
+		ERROR, 'outside', { functionPrototypeMethods: false },
+	],
 	'@stylistic/wrap-regex': [ERROR],
-	'@stylistic/yield-star-spacing': [ERROR, 'after'],
+	'@stylistic/yield-star-spacing': [
+		ERROR, 'after',
+	],
 };
