@@ -3,7 +3,7 @@ import { ERROR, OFF } from '../severity.js';
 
 /* == formatting rules for javascript == */
 export default {
-	'@stylistic/array-bracket-newline': [OFF],
+	'@stylistic/array-bracket-newline': [ERROR, { multiline: false, minItems: 2 }],
 	'@stylistic/array-bracket-spacing': [ERROR, 'never'],
 	'@stylistic/array-element-newline': [OFF],
 	'@stylistic/arrow-parens': [ERROR, 'always'],

@@ -3,6 +3,7 @@ import {
 	jsConfig,
 	tsConfig,
 	vueConfig,
+	jsonConfig,
 } from './tools/eslint-config/index.js';
 
 const eslintConfig = [
@@ -10,6 +11,7 @@ const eslintConfig = [
 	jsConfig,
 	tsConfig,
 	vueConfig,
+	...jsonConfig,
 ];
 
 export function override() {

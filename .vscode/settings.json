@@ -27,16 +27,25 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.stylelint": "explicit"
   },
+	"eslint.validate": [
+		"javascript",
+    "typescript",
+    "html",
+    "vue",
+		"json",
+		"jsonc",
+		"json5"
+	],
 	// "stylelint.validate": [
   //   "css",
   //   "scss",
   //   "vue"
   // ],
-
+  "editor.tabSize": 2,
 	"cSpell.words": [
 			"Cherepanov",
 			"Pavel"
-	],
+	]
 }
