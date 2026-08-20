@@ -43,21 +43,6 @@ export default {
 	'@stylistic/comma-style': [
 		ERROR,
 		'last',
-		{
-			exceptions: {
-				ArrayExpression: false,
-				ArrayPattern: false,
-				ArrowFunctionExpression: false,
-				CallExpression: false,
-				FunctionDeclaration: false,
-				FunctionExpression: false,
-				ImportDeclaration: false,
-				NewExpression: false,
-				ObjectExpression: false,
-				ObjectPattern: false,
-				VariableDeclaration: false,
-			},
-		},
 	],
 	'@stylistic/computed-property-spacing': [
 		ERROR,
@@ -101,7 +86,11 @@ export default {
 	],
 	'@stylistic/key-spacing': [
 		ERROR,
-		{ beforeColon: false, afterColon: true },
+		{
+			beforeColon: false,
+			afterColon: true,
+			mode: 'strict',
+		},
 	],
 	'@stylistic/keyword-spacing': [
 		ERROR,

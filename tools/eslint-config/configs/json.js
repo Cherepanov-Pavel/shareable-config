@@ -27,11 +27,13 @@ const COMMON_RULES = {
 	'jsonc/array-bracket-newline': jsFormatting['@stylistic/array-bracket-newline'],
 	'jsonc/array-bracket-spacing': jsFormatting['@stylistic/array-bracket-spacing'],
 	'jsonc/array-element-newline': jsFormatting['@stylistic/array-element-newline'],
+	'jsonc/comma-dangle': jsFormatting['@stylistic/comma-dangle'],
+	'jsonc/comma-style': jsFormatting['@stylistic/comma-style'],
 	'jsonc/indent': [
 		jsFormatting['@stylistic/indent'][0],
 		jsFormatting['@stylistic/indent'][1],
 	],
-	'jsonc/comma-dangle': jsFormatting['@stylistic/comma-dangle'],
+	'jsonc/key-spacing': jsFormatting['@stylistic/key-spacing'],
 };
 const JSON_RULES = {
 	'jsonc/no-comments': ERROR,
