@@ -27,26 +27,3 @@ export function override() {
 override();
 
 export default eslintConfig;
-
-// add later
-// {
-// 		plugins: {
-// 			json,
-// 		},
-// 	},
-// 	{
-// 		files: ["**/*.json"],
-// 		ignores: ["package-lock.json"],
-// 		language: "json/json",
-// 		rules: jsonRules
-// 	},
-// 	{
-// 		files: ["**/*.jsonc", ".vscode/*.json"],
-// 		language: "json/jsonc",
-// 		rules: jsonRules
-// 	},
-// 	{
-// 		files: ["**/*.json5"],
-// 		language: "json/json5",
-// 		rules: jsonRules
-// 	},
