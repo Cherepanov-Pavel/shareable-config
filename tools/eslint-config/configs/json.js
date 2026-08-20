@@ -2,6 +2,9 @@ import { defineConfig } from 'eslint/config';
 import jsonc from 'eslint-plugin-jsonc';
 import { ERROR } from '../rules/severity.js';
 import { jsFormatting } from '../rules/stylistic/index.js';
+import { possibleProblemRules } from '../rules/javascript/possible-problems.js';
+import { suggestionRules } from '../rules/javascript/suggestions.js';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 
 const JSON_BUT_JSONC_FILES = [
 	'**/.vscode/*.json',
@@ -9,6 +12,7 @@ const JSON_BUT_JSONC_FILES = [
 	'**/tsconfig*.json',
 ];
 const COMMON_RULES = {
+	'@stylistic/eol-last': jsFormatting['@stylistic/eol-last'],
 	'jsonc/no-bigint-literals': ERROR,
 	'jsonc/no-binary-expression': ERROR,
 	'jsonc/no-binary-numeric-literals': ERROR,
@@ -34,6 +38,13 @@ const COMMON_RULES = {
 		jsFormatting['@stylistic/indent'][1],
 	],
 	'jsonc/key-spacing': jsFormatting['@stylistic/key-spacing'],
+	'jsonc/no-dupe-keys': possibleProblemRules['no-dupe-keys'],
+	'jsonc/no-floating-decimal': jsFormatting['@stylistic/no-floating-decimal'],
+	'jsonc/no-irregular-whitespace': possibleProblemRules['no-irregular-whitespace'],
+	'jsonc/no-octal-escape': suggestionRules['no-octal-escape'],
+	'jsonc/no-octal': suggestionRules['no-octal'],
+	'jsonc/no-sparse-arrays': ERROR,
+	'jsonc/no-useless-escape': suggestionRules['no-useless-escape'],
 };
 const JSON_RULES = {
 	'jsonc/no-comments': ERROR,
@@ -44,12 +55,14 @@ const JSON_RULES = {
 };
 const JSON_JSONC_RULES = {
 	'jsonc/no-infinity': ERROR,
+	'jsonc/no-multi-str': suggestionRules['no-multi-str'],
 };
 
 
 export default defineConfig([
 	{
 		plugins: {
+			'@stylistic': stylisticPlugin,
 			jsonc,
 		},
 	},

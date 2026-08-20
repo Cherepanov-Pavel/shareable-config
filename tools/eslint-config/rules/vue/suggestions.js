@@ -1,3 +1,4 @@
+import { possibleProblemRules } from '../javascript/possible-problems.js';
 import { ERROR, OFF } from '../severity.js';
 
 export const suggestionRules = {
@@ -31,7 +32,7 @@ export const suggestionRules = {
 	'vue/no-deprecated-v-on-native-modifier': [ERROR],
 	'vue/no-deprecated-v-on-number-modifiers': [ERROR],
 	'vue/no-deprecated-vue-config-keycodes': [ERROR],
-	'vue/no-dupe-keys': [ERROR],
+	'vue/no-dupe-keys': possibleProblemRules['no-dupe-keys'],
 	'vue/no-dupe-v-else-if': [ERROR],
 	'vue/no-duplicate-attributes': [ERROR],
 	'vue/no-export-in-script-setup': [ERROR],

@@ -28,7 +28,7 @@ export const possibleProblemRules = {
 	'no-dupe-args': [ERROR],
 	'no-dupe-class-members': [ERROR],
 	'no-dupe-else-if': [ERROR],
-	'no-dupe-keys': [ERROR],
+	'no-dupe-keys': [WARN],
 	'no-duplicate-case': [ERROR],
 	'no-duplicate-imports': [ERROR],
 	'no-empty-character-class': [ERROR],
