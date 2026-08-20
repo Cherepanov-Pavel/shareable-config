@@ -8,10 +8,10 @@ import {
 
 const eslintConfig = [
 	...globalConfig,
+	...jsonConfig,
 	jsConfig,
 	tsConfig,
 	vueConfig,
-	...jsonConfig,
 ];
 
 export function override() {

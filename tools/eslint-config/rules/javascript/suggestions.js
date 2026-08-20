@@ -308,7 +308,8 @@ export const suggestionRules = {
 			allowTaggedTemplates: false,
 		},
 	],
-	'no-unused-labels': [ERROR],
+	// since we already have no-labels: ERROR
+	'no-unused-labels': [OFF],
 	'no-useless-call': [WARN],
 	'no-useless-catch': [ERROR],
 	'no-useless-computed-key': [

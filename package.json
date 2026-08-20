@@ -47,10 +47,12 @@
 		"lint:js": "eslint",
 		"lint:js:fix": "npm run lint:js -- --fix",
 		"lint:css": "stylelint \"./**/*.{css,vue}\" --ignore-path .gitignore --formatter verbose",
-		"lint:css:fix": "npm run lint:css:files -- --fix"
+		"lint:css:fix": "npm run lint:css:files -- --fix",
+		"lint:types": "tsc --noEmit"
 	},
 	"dependencies": {
 		"@eslint/compat": "2.1.0",
+		"@eslint/markdown": "^8.0.3",
 		"@stylistic/eslint-plugin": "5.10.0",
 		"@stylistic/stylelint-plugin": "5.2.1",
 		"@typescript-eslint/eslint-plugin": "^8.66.0",
@@ -62,6 +64,7 @@
 		"globals": "^17.9.0",
 		"jiti": "^2.7.0",
 		"json5": "^2.2.3",
+		"npm-run-all2": "^9.0.3",
 		"postcss-html": "^2.0.0",
 		"stylelint": "^17.14.1",
 		"stylelint-config-standard": "^40.0.0",
@@ -69,5 +72,8 @@
 		"stylelint-config-standard-vue": "^2.0.0",
 		"stylelint-order": "^8.1.1",
 		"vue-eslint-parser": "^10.4.1"
+	},
+	"devDependencies": {
+		"typescript": "^6.0.3"
 	}
 }
