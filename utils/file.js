@@ -57,7 +57,7 @@ export async function getSrcJSONFileData({
 
 	const stringResult = result.join('\n');
 	if (removeDuplicateKeys) {
-		return JSON.stringify(JSON5.parse(stringResult), null, 2);
+		return JSON.stringify(JSON5.parse(stringResult));
 	}
 
 	return stringResult;

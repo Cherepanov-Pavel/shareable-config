@@ -7,6 +7,7 @@ import { mergeWithOverride } from '../utils/merge.js';
 import { getHeader } from '../utils/file-header.js';
 import { getSrcJSONFileData } from '../utils/file.js';
 import { getEnvs } from '../utils/env.js';
+import { eslintFiles } from '../utils/lint.js';
 
 const fileNames = [
 	'vue.code-snippets',
@@ -41,6 +42,7 @@ try {
 		}
 
 		await outputFile(destFile, `${getHeader()}${result}`);
+		await eslintFiles(destFile);
 		if (isDestFileHaveOverride) {
 			console.info(`${fileName} обновлён с учётом override`);
 		} else {

@@ -7,6 +7,7 @@ import { mergeWithOverride } from '../utils/merge.js';
 import { getHeader } from '../utils/file-header.js';
 import { getEnvs } from '../utils/env.js';
 import { outputFile } from 'fs-extra';
+import { eslintFiles } from '../utils/lint.js';
 
 const fileName = 'settings.json';
 const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
@@ -33,6 +34,7 @@ try {
 	}
 
 	await outputFile(destFile, `${getHeader()}${result}`);
+	await eslintFiles(destFile);
 	if (overrideContent) {
 		console.info(`${fileName} обновлён с учётом override`);
 	} else {
