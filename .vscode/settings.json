@@ -38,10 +38,12 @@
 		"javascript",
 		"typescript",
 		"html",
-		"vue",
 		"json",
 		"jsonc",
 		"json5",
+		"vue",
+		"javascriptreact",
+		"typescriptreact",
 	],
 	// "stylelint.validate": [
 	//   "css",

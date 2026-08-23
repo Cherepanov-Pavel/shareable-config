@@ -12,6 +12,9 @@ export default {
 		sourceType: 'module',
 		parserOptions: {
 			sourceType: 'module',
+			ecmaFeatures: {
+				jsx: true,
+			},
 		},
 	},
 	rules: {
