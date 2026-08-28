@@ -23,5 +23,7 @@ export default {
 			return path.resolve(currentDir, string);
 		}),
 	),
-	plugins: ["@stylistic/stylelint-plugin"],
+	plugins: [
+		"@stylistic/stylelint-plugin",
+	],
 };

@@ -48,8 +48,12 @@ export const extensionRules = {
 	"vue/space-unary-ops": jsFormatting["@stylistic/space-unary-ops"],
 	"vue/template-curly-spacing": jsFormatting["@stylistic/template-curly-spacing"],
 
-	"@stylistic/max-len": [OFF],
-	"max-len": [OFF],
+	"@stylistic/max-len": [
+		OFF,
+	],
+	"max-len": [
+		OFF,
+	],
 	"vue/max-len": [
 		ERROR,
 		{

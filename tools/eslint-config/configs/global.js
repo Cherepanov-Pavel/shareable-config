@@ -9,7 +9,9 @@ export default defineConfig([
 	includeIgnoreFile(gitignorePath),
 	{
 		name: "Additional .gitignore patterns",
-		ignores: ["public/js/*"],
+		ignores: [
+			"public/js/*",
+		],
 	},
 	{
 		files: [

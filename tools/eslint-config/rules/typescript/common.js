@@ -50,7 +50,9 @@ export const commonRules = {
 		},
 		{
 			selector: "typeLike",
-			format: ["PascalCase"],
+			format: [
+				"PascalCase",
+			],
 		},
 		{
 			selector: "objectLiteralProperty",

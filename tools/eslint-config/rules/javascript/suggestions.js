@@ -1,12 +1,16 @@
 import { ERROR, OFF, WARN } from "../severity.js";
 
 export const suggestionRules = {
-	"accessor-pairs": [ERROR],
+	"accessor-pairs": [
+		ERROR,
+	],
 	"arrow-body-style": [
 		ERROR,
 		"always",
 	],
-	"block-scoped-var": [ERROR],
+	"block-scoped-var": [
+		ERROR,
+	],
 	"camelcase": [
 		ERROR,
 		{ properties: "never" },
@@ -15,24 +19,42 @@ export const suggestionRules = {
 		OFF,
 		"never",
 	],
-	"class-methods-use-this": [ERROR],
-	"complexity": [OFF],
-	"consistent-return": [OFF],
-	"consistent-this": [OFF],
+	"class-methods-use-this": [
+		ERROR,
+	],
+	"complexity": [
+		OFF,
+	],
+	"consistent-return": [
+		OFF,
+	],
+	"consistent-this": [
+		OFF,
+	],
 	"curly": [
 		ERROR,
 		"all",
 	],
-	"default-case": [OFF],
-	"default-case-last": [ERROR],
-	"default-param-last": [ERROR],
-	"dot-notation": [ERROR],
+	"default-case": [
+		OFF,
+	],
+	"default-case-last": [
+		ERROR,
+	],
+	"default-param-last": [
+		ERROR,
+	],
+	"dot-notation": [
+		ERROR,
+	],
 	"eqeqeq": [
 		ERROR,
 		"always",
 		{ null: "always" },
 	],
-	"func-name-matching": [WARN],
+	"func-name-matching": [
+		WARN,
+	],
 	"func-names": [
 		WARN,
 		"as-needed",
@@ -46,8 +68,12 @@ export const suggestionRules = {
 		ERROR,
 		"getBeforeSet",
 	],
-	"guard-for-in": [OFF],
-	"id-denylist": [OFF],
+	"guard-for-in": [
+		OFF,
+	],
+	"id-denylist": [
+		OFF,
+	],
 	"id-length": [
 		ERROR,
 		{
@@ -63,8 +89,12 @@ export const suggestionRules = {
 			properties: "never",
 		},
 	],
-	"id-match": [OFF],
-	"init-declarations": [OFF],
+	"id-match": [
+		OFF,
+	],
+	"init-declarations": [
+		OFF,
+	],
 	"logical-assignment-operators": [
 		ERROR,
 		"always",
@@ -100,7 +130,9 @@ export const suggestionRules = {
 		WARN,
 		{ max: 20 },
 	],
-	"multiline-comment-style": [OFF],
+	"multiline-comment-style": [
+		OFF,
+	],
 	"new-cap": [
 		ERROR,
 		{
@@ -108,11 +140,21 @@ export const suggestionRules = {
 			newIsCap: true,
 		},
 	],
-	"no-alert": [ERROR],
-	"no-array-constructor": [ERROR],
-	"no-bitwise": [ERROR],
-	"no-caller": [ERROR],
-	"no-case-declarations": [ERROR],
+	"no-alert": [
+		ERROR,
+	],
+	"no-array-constructor": [
+		ERROR,
+	],
+	"no-bitwise": [
+		ERROR,
+	],
+	"no-caller": [
+		ERROR,
+	],
+	"no-case-declarations": [
+		ERROR,
+	],
 	"no-console": [
 		WARN,
 		{
@@ -123,9 +165,15 @@ export const suggestionRules = {
 			],
 		},
 	],
-	"no-continue": [ERROR],
-	"no-delete-var": [ERROR],
-	"no-div-regex": [ERROR],
+	"no-continue": [
+		ERROR,
+	],
+	"no-delete-var": [
+		ERROR,
+	],
+	"no-div-regex": [
+		ERROR,
+	],
 	"no-else-return": [
 		ERROR,
 		{ allowElseIf: false },
@@ -134,15 +182,33 @@ export const suggestionRules = {
 		ERROR,
 		{ allowEmptyCatch: true },
 	],
-	"no-empty-function": [ERROR],
-	"no-empty-static-block": [ERROR],
-	"no-eq-null": [OFF],
-	"no-eval": [ERROR],
-	"no-extend-native": [ERROR],
-	"no-extra-bind": [ERROR],
-	"no-extra-boolean-cast": [ERROR],
-	"no-extra-label": [ERROR],
-	"no-global-assign": [ERROR],
+	"no-empty-function": [
+		ERROR,
+	],
+	"no-empty-static-block": [
+		ERROR,
+	],
+	"no-eq-null": [
+		OFF,
+	],
+	"no-eval": [
+		ERROR,
+	],
+	"no-extend-native": [
+		ERROR,
+	],
+	"no-extra-bind": [
+		ERROR,
+	],
+	"no-extra-boolean-cast": [
+		ERROR,
+	],
+	"no-extra-label": [
+		ERROR,
+	],
+	"no-global-assign": [
+		ERROR,
+	],
 	"no-implicit-coercion": [
 		ERROR,
 		{
@@ -151,31 +217,73 @@ export const suggestionRules = {
 			string: true,
 		},
 	],
-	"no-implicit-globals": [OFF],
-	"no-implied-eval": [ERROR],
-	"no-inline-comments": [OFF],
-	"no-invalid-this": [ERROR],
-	"no-iterator": [ERROR],
-	"no-label-var": [ERROR],
+	"no-implicit-globals": [
+		OFF,
+	],
+	"no-implied-eval": [
+		ERROR,
+	],
+	"no-inline-comments": [
+		OFF,
+	],
+	"no-invalid-this": [
+		ERROR,
+	],
+	"no-iterator": [
+		ERROR,
+	],
+	"no-label-var": [
+		ERROR,
+	],
 	"no-labels": [
 		ERROR,
 		{ allowLoop: false, allowSwitch: false },
 	],
-	"no-lone-blocks": [ERROR],
-	"no-lonely-if": [ERROR],
-	"no-loop-func": [ERROR],
-	"no-magic-numbers": [OFF],
-	"no-multi-assign": [ERROR],
-	"no-multi-str": [ERROR],
-	"no-negated-condition": [ERROR],
-	"no-nested-ternary": [ERROR],
-	"no-new": [ERROR],
-	"no-new-func": [ERROR],
-	"no-new-object": [ERROR],
-	"no-new-wrappers": [ERROR],
-	"no-nonoctal-decimal-escape": [ERROR],
-	"no-octal": [ERROR],
-	"no-octal-escape": [ERROR],
+	"no-lone-blocks": [
+		ERROR,
+	],
+	"no-lonely-if": [
+		ERROR,
+	],
+	"no-loop-func": [
+		ERROR,
+	],
+	"no-magic-numbers": [
+		OFF,
+	],
+	"no-multi-assign": [
+		ERROR,
+	],
+	"no-multi-str": [
+		ERROR,
+	],
+	"no-negated-condition": [
+		ERROR,
+	],
+	"no-nested-ternary": [
+		ERROR,
+	],
+	"no-new": [
+		ERROR,
+	],
+	"no-new-func": [
+		ERROR,
+	],
+	"no-new-object": [
+		ERROR,
+	],
+	"no-new-wrappers": [
+		ERROR,
+	],
+	"no-nonoctal-decimal-escape": [
+		ERROR,
+	],
+	"no-octal": [
+		ERROR,
+	],
+	"no-octal-escape": [
+		ERROR,
+	],
 	"no-param-reassign": [
 		ERROR,
 		{
@@ -186,12 +294,16 @@ export const suggestionRules = {
 		ERROR,
 		{ allowForLoopAfterthoughts: true },
 	],
-	"no-proto": [ERROR],
+	"no-proto": [
+		ERROR,
+	],
 	"no-redeclare": [
 		ERROR,
 		{ builtinGlobals: true },
 	],
-	"no-regex-spaces": [ERROR],
+	"no-regex-spaces": [
+		ERROR,
+	],
 	"no-restricted-exports": [
 		ERROR,
 		{
@@ -275,15 +387,33 @@ export const suggestionRules = {
 		ERROR,
 		"always",
 	],
-	"no-return-await": [ERROR],
-	"no-script-url": [ERROR],
-	"no-sequences": [ERROR],
-	"no-shadow": [OFF],
-	"no-shadow-restricted-names": [ERROR],
-	"no-ternary": [OFF],
-	"no-throw-literal": [ERROR],
-	"no-undef-init": [ERROR],
-	"no-undefined": [OFF],
+	"no-return-await": [
+		ERROR,
+	],
+	"no-script-url": [
+		ERROR,
+	],
+	"no-sequences": [
+		ERROR,
+	],
+	"no-shadow": [
+		OFF,
+	],
+	"no-shadow-restricted-names": [
+		ERROR,
+	],
+	"no-ternary": [
+		OFF,
+	],
+	"no-throw-literal": [
+		ERROR,
+	],
+	"no-undef-init": [
+		ERROR,
+	],
+	"no-undefined": [
+		OFF,
+	],
 	"no-underscore-dangle": [
 		ERROR,
 		{
@@ -308,16 +438,28 @@ export const suggestionRules = {
 			allowTaggedTemplates: false,
 		},
 	],
-	"no-unused-labels": [ERROR],
-	"no-useless-call": [WARN],
-	"no-useless-catch": [ERROR],
+	"no-unused-labels": [
+		ERROR,
+	],
+	"no-useless-call": [
+		WARN,
+	],
+	"no-useless-catch": [
+		ERROR,
+	],
 	"no-useless-computed-key": [
 		ERROR,
 		{ enforceForClassMembers: true },
 	],
-	"no-useless-concat": [ERROR],
-	"no-useless-constructor": [ERROR],
-	"no-useless-escape": [ERROR],
+	"no-useless-concat": [
+		ERROR,
+	],
+	"no-useless-constructor": [
+		ERROR,
+	],
+	"no-useless-escape": [
+		ERROR,
+	],
 	"no-useless-rename": [
 		ERROR,
 		{
@@ -326,14 +468,22 @@ export const suggestionRules = {
 			ignoreDestructuring: false,
 		},
 	],
-	"no-useless-return": [ERROR],
-	"no-var": [ERROR],
+	"no-useless-return": [
+		ERROR,
+	],
+	"no-var": [
+		ERROR,
+	],
 	"no-void": [
 		ERROR,
 		{ allowAsStatement: true },
 	],
-	"no-warning-comments": [OFF],
-	"no-with": [ERROR],
+	"no-warning-comments": [
+		OFF,
+	],
+	"no-with": [
+		ERROR,
+	],
 	"object-shorthand": [
 		ERROR,
 		"always",
@@ -373,35 +523,75 @@ export const suggestionRules = {
 			enforceForRenamedProperties: false,
 		},
 	],
-	"prefer-exponentiation-operator": [ERROR],
-	"prefer-named-capture-group": [OFF],
-	"prefer-numeric-literals": [ERROR],
-	"prefer-object-has-own": [ERROR],
-	"prefer-object-spread": [ERROR],
-	"prefer-promise-reject-errors": [ERROR],
+	"prefer-exponentiation-operator": [
+		ERROR,
+	],
+	"prefer-named-capture-group": [
+		OFF,
+	],
+	"prefer-numeric-literals": [
+		ERROR,
+	],
+	"prefer-object-has-own": [
+		ERROR,
+	],
+	"prefer-object-spread": [
+		ERROR,
+	],
+	"prefer-promise-reject-errors": [
+		ERROR,
+	],
 	"prefer-regex-literals": [
 		ERROR,
 		{ disallowRedundantWrapping: true },
 	],
-	"prefer-rest-params": [ERROR],
-	"prefer-spread": [ERROR],
-	"prefer-template": [ERROR],
-	"radix": [ERROR],
-	"require-await": [OFF],
-	"require-unicode-regexp": [WARN],
-	"require-yield": [ERROR],
-	"sort-imports": [OFF],
-	"sort-keys": [OFF],
-	"sort-vars": [OFF],
+	"prefer-rest-params": [
+		ERROR,
+	],
+	"prefer-spread": [
+		ERROR,
+	],
+	"prefer-template": [
+		ERROR,
+	],
+	"radix": [
+		ERROR,
+	],
+	"require-await": [
+		OFF,
+	],
+	"require-unicode-regexp": [
+		WARN,
+	],
+	"require-yield": [
+		ERROR,
+	],
+	"sort-imports": [
+		OFF,
+	],
+	"sort-keys": [
+		OFF,
+	],
+	"sort-vars": [
+		OFF,
+	],
 	"strict": [
 		ERROR,
 		"never",
 	],
-	"symbol-description": [ERROR],
-	"vars-on-top": [ERROR],
-	"yoda": [ERROR],
+	"symbol-description": [
+		ERROR,
+	],
+	"vars-on-top": [
+		ERROR,
+	],
+	"yoda": [
+		ERROR,
+	],
 
-	"line-comment-position": [OFF],
+	"line-comment-position": [
+		OFF,
+	],
 	"unicode-bom": [
 		ERROR,
 		"never",

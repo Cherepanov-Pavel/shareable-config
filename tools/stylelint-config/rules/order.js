@@ -1,7 +1,9 @@
 import { propertyGroups } from "./property-groups.js";
 
 export default {
-	plugins: ["stylelint-order"],
+	plugins: [
+		"stylelint-order",
+	],
 	rules: {
 		"order/order": [
 			[

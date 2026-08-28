@@ -18,7 +18,9 @@ const {
 } = await getEnvs();
 
 export default {
-	files: ["**/*.vue"],
+	files: [
+		"**/*.vue",
+	],
 	plugins: {
 		"vue": vuePlugin,
 		"@stylistic": stylisticPlugin,
@@ -30,7 +32,9 @@ export default {
 		parserOptions: {
 			parser: isTs ? tsParser : "espree",
 			...(isTs ? { projectService: true } : {}),
-			extraFileExtensions: [".vue"],
+			extraFileExtensions: [
+				".vue",
+			],
 		},
 	},
 	rules: {

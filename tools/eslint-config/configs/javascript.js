@@ -4,7 +4,9 @@ import { jsRules } from "../rules/javascript/index.js";
 import { jsFormatting } from "../rules/stylistic/index.js";
 
 export default {
-	files: ["**/*.*js"],
+	files: [
+		"**/*.*js",
+	],
 	plugins: {
 		"@stylistic": stylisticPlugin,
 	},

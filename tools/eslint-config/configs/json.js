@@ -68,7 +68,9 @@ export default defineConfig([
 	},
 
 	{
-		files: ["**/*.json"],
+		files: [
+			"**/*.json",
+		],
 		ignores: [
 			...JSON_BUT_JSONC_FILES,
 			"package-lock.json",
@@ -94,14 +96,18 @@ export default defineConfig([
 	},
 
 	{
-		files: ["**/*.json5"],
+		files: [
+			"**/*.json5",
+		],
 		language: "jsonc/json5",
 		rules: {
 			...COMMON_RULES,
 		},
 	},
 	{
-		files: ["**/*.vue"],
+		files: [
+			"**/*.vue",
+		],
 		rules: {
 			"jsonc/vue-custom-block/no-parsing-error": ERROR,
 		},

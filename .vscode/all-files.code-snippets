@@ -11,6 +11,8 @@
 	},
 	"template for todo comments for easy search in project": {
 		"prefix": "t todo",
-		"body": ["$LINE_COMMENT TODO: "],
+		"body": [
+			"$LINE_COMMENT TODO: ",
+		],
 	},
 }

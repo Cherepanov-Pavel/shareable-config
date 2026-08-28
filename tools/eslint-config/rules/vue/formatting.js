@@ -11,7 +11,9 @@ export const formattingRules = {
 		},
 	],
 	// https://github.com/vuejs/eslint-plugin-vue/issues/2380
-	"vue/define-macros-order": [OFF],
+	"vue/define-macros-order": [
+		OFF,
+	],
 	"vue/first-attribute-linebreak": [
 		ERROR,
 		{
@@ -19,16 +21,28 @@ export const formattingRules = {
 			multiline: "below",
 		},
 	],
-	"vue/html-closing-bracket-newline": [ERROR],
-	"vue/html-closing-bracket-spacing": [ERROR],
-	"vue/html-comment-content-newline": [OFF],
-	"vue/html-comment-content-spacing": [ERROR],
-	"vue/html-comment-indent": [OFF],
+	"vue/html-closing-bracket-newline": [
+		ERROR,
+	],
+	"vue/html-closing-bracket-spacing": [
+		ERROR,
+	],
+	"vue/html-comment-content-newline": [
+		OFF,
+	],
+	"vue/html-comment-content-spacing": [
+		ERROR,
+	],
+	"vue/html-comment-indent": [
+		OFF,
+	],
 	"vue/html-indent": [
 		ERROR,
 		INDENT_SIZE,
 	],
-	"vue/html-self-closing": [ERROR],
+	"vue/html-self-closing": [
+		ERROR,
+	],
 	"vue/max-attributes-per-line": [
 		ERROR,
 		{
@@ -39,27 +53,41 @@ export const formattingRules = {
 	"vue/multiline-html-element-content-newline": [
 		ERROR,
 		{
-			ignores: ["pre"],
+			ignores: [
+				"pre",
+			],
 		},
 	],
 	"vue/mustache-interpolation-spacing": [
 		ERROR,
 		"always",
 	],
-	"vue/new-line-between-multi-line-property": [OFF],
-	"vue/no-multi-spaces": [ERROR],
-	"vue/no-spaces-around-equal-signs-in-attribute": [ERROR],
+	"vue/new-line-between-multi-line-property": [
+		OFF,
+	],
+	"vue/no-multi-spaces": [
+		ERROR,
+	],
+	"vue/no-spaces-around-equal-signs-in-attribute": [
+		ERROR,
+	],
 	"vue/padding-line-between-blocks": [
 		ERROR,
 		"always",
 	],
-	"vue/padding-line-between-tags": [OFF],
-	"vue/padding-lines-in-component-definition": [OFF],
+	"vue/padding-line-between-tags": [
+		OFF,
+	],
+	"vue/padding-lines-in-component-definition": [
+		OFF,
+	],
 	"vue/script-indent": [
 		"error",
 		INDENT_SIZE,
 	],
-	"vue/singleline-html-element-content-newline": [OFF],
+	"vue/singleline-html-element-content-newline": [
+		OFF,
+	],
 	"vue/v-for-delimiter-style": [
 		ERROR,
 		"in",

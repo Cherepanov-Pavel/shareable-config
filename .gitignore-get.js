@@ -14,7 +14,9 @@ async function getGitignoreFileData(framework) {
 	const src = path.join(dirname, ".npmignore");
 	const srcFileData = await readFile(src, "utf8");
 
-	const [commonData] = srcFileData.split(/^#\s*\w+/mu);
+	const [
+		commonData,
+	] = srcFileData.split(/^#\s*\w+/mu);
 
 	if (!framework) {
 		return commonData.trim();
@@ -22,7 +24,9 @@ async function getGitignoreFileData(framework) {
 
 	const sections = srcFileData.split(/^#\s*/mu).slice(1);
 	const matchedSection = sections.find((section) => {
-		const [header] = section.split("\n");
+		const [
+			header,
+		] = section.split("\n");
 		return header.trim().toLowerCase() === framework;
 	});
 

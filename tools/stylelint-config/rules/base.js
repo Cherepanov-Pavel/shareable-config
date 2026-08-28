@@ -10,7 +10,9 @@ export default {
 		"font-weight-notation": [
 			"numeric",
 			{
-				ignore: ["relative"],
+				ignore: [
+					"relative",
+				],
 			},
 		],
 		"max-nesting-depth": [

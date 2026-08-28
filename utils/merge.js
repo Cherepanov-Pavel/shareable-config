@@ -34,7 +34,9 @@ function findOverrideBlocks(overrideContent) {
 		if (line.includes("// override")) {
 			currentBlock = {
 				startLine: i,
-				lines: [line],
+				lines: [
+					line,
+				],
 				path: [],
 				isObjectOverride: false,
 			};

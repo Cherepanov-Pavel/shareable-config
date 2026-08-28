@@ -60,7 +60,9 @@ export default {
 		ERROR,
 		"consistent",
 	],
-	"@stylistic/function-call-spacing": [ERROR],
+	"@stylistic/function-call-spacing": [
+		ERROR,
+	],
 	"@stylistic/function-paren-newline": [
 		ERROR,
 		"multiline-arguments",
@@ -108,7 +110,9 @@ export default {
 		ERROR,
 		"unix",
 	],
-	"@stylistic/lines-around-comment": [OFF],
+	"@stylistic/lines-around-comment": [
+		OFF,
+	],
 	"@stylistic/lines-between-class-members": [
 		ERROR,
 		"always",
@@ -118,7 +122,9 @@ export default {
 		ERROR,
 		MAX_LEN,
 	],
-	"@stylistic/max-statements-per-line": [OFF],
+	"@stylistic/max-statements-per-line": [
+		OFF,
+	],
 	"@stylistic/multiline-ternary": [
 		ERROR,
 		"always-multiline",
@@ -135,14 +141,22 @@ export default {
 		ERROR,
 		{ allowParens: true },
 	],
-	"@stylistic/no-extra-parens": [OFF],
-	"@stylistic/no-extra-semi": [ERROR],
-	"@stylistic/no-floating-decimal": [ERROR],
+	"@stylistic/no-extra-parens": [
+		OFF,
+	],
+	"@stylistic/no-extra-semi": [
+		ERROR,
+	],
+	"@stylistic/no-floating-decimal": [
+		ERROR,
+	],
 	"@stylistic/no-mixed-operators": [
 		OFF,
 		{ allowSamePrecedence: true },
 	],
-	"@stylistic/no-mixed-spaces-and-tabs": [ERROR],
+	"@stylistic/no-mixed-spaces-and-tabs": [
+		ERROR,
+	],
 	"@stylistic/no-multi-spaces": [
 		ERROR,
 		{ ignoreEOLComments: false },
@@ -155,7 +169,9 @@ export default {
 			maxEOF: 0,
 		},
 	],
-	"@stylistic/no-tabs": [OFF],
+	"@stylistic/no-tabs": [
+		OFF,
+	],
 	"@stylistic/no-trailing-spaces": [
 		ERROR,
 		{
@@ -163,7 +179,9 @@ export default {
 			ignoreComments: false,
 		},
 	],
-	"@stylistic/no-whitespace-before-property": [ERROR],
+	"@stylistic/no-whitespace-before-property": [
+		ERROR,
+	],
 	"@stylistic/nonblock-statement-body-position": [
 		ERROR,
 		"beside",
@@ -221,7 +239,9 @@ export default {
 			allowSingleLineBlocks: false,
 		},
 	],
-	"@stylistic/padding-line-between-statements": [OFF],
+	"@stylistic/padding-line-between-statements": [
+		OFF,
+	],
 	"@stylistic/quote-props": [
 		ERROR,
 		"consistent",
@@ -262,7 +282,9 @@ export default {
 		ERROR,
 		"never",
 	],
-	"@stylistic/space-infix-ops": [ERROR],
+	"@stylistic/space-infix-ops": [
+		ERROR,
+	],
 	"@stylistic/space-unary-ops": [
 		ERROR,
 		{
@@ -306,7 +328,9 @@ export default {
 		"outside",
 		{ functionPrototypeMethods: false },
 	],
-	"@stylistic/wrap-regex": [ERROR],
+	"@stylistic/wrap-regex": [
+		ERROR,
+	],
 	"@stylistic/yield-star-spacing": [
 		ERROR,
 		"after",
