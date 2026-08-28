@@ -1,5 +1,6 @@
 import { INDENT_SIZE } from '../constants.js';
 import { ERROR, OFF } from '../severity.js';
+import jsFormatting from '../stylistic/jsFormatting.js';
 
 export const formattingRules = {
 	'vue/block-tag-newline': [
@@ -27,10 +28,6 @@ export const formattingRules = {
 	'vue/html-indent': [
 		ERROR,
 		INDENT_SIZE,
-	],
-	'vue/html-quotes': [
-		ERROR,
-		'double',
 	],
 	'vue/html-self-closing': [ERROR],
 	'vue/max-attributes-per-line': [

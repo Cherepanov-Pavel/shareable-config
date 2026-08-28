@@ -42,6 +42,7 @@ export const extensionRules = {
 	'vue/object-property-newline': jsFormatting['@stylistic/object-property-newline'],
 	'vue/operator-linebreak': jsFormatting['@stylistic/operator-linebreak'],
 	'vue/quote-props': jsFormatting['@stylistic/quote-props'],
+	'vue/html-quotes': jsFormatting['@stylistic/quotes'],
 	'vue/space-in-parens': jsFormatting['@stylistic/space-in-parens'],
 	'vue/space-infix-ops': jsFormatting['@stylistic/space-infix-ops'],
 	'vue/space-unary-ops': jsFormatting['@stylistic/space-unary-ops'],

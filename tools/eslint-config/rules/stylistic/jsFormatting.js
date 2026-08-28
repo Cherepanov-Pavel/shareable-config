@@ -224,12 +224,11 @@ export default {
 	'@stylistic/padding-line-between-statements': [OFF],
 	'@stylistic/quote-props': [
 		ERROR,
-		'consistent-as-needed',
+		'consistent',
 	],
 	'@stylistic/quotes': [
 		ERROR,
-		'single',
-		{ avoidEscape: true },
+		'double',
 	],
 	'@stylistic/rest-spread-spacing': [
 		ERROR,

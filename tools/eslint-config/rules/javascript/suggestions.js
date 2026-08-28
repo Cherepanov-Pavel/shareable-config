@@ -338,8 +338,7 @@ export const suggestionRules = {
 		ERROR,
 		'always',
 		{
-			avoidQuotes: true,
-			ignoreConstructors: false,
+			ignoreConstructors: true,
 		},
 	],
 	'one-var': [
