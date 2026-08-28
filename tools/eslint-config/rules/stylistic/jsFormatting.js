@@ -5,7 +5,7 @@ import { ERROR, OFF } from "../severity.js";
 export default {
 	"@stylistic/array-bracket-newline": [
 		ERROR,
-		{ multiline: true, minItems: 2 },
+		{ multiline: true, minItems: 1 },
 	],
 	"@stylistic/array-bracket-spacing": [
 		ERROR,
@@ -13,7 +13,7 @@ export default {
 	],
 	"@stylistic/array-element-newline": [
 		ERROR,
-		{ multiline: true, minItems: 2 },
+		{ multiline: true, minItems: 1 },
 	],
 	"@stylistic/arrow-parens": [
 		ERROR,
