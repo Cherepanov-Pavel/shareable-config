@@ -1,41 +1,41 @@
-import { propertyGroups } from './property-groups.js';
+import { propertyGroups } from "./property-groups.js";
 
 export default {
-	plugins: ['stylelint-order'],
+	plugins: ["stylelint-order"],
 	rules: {
-		'order/order': [
+		"order/order": [
 			[
-				'dollar-variables',
-				'custom-properties',
-				'declarations',
+				"dollar-variables",
+				"custom-properties",
+				"declarations",
 				{
-					type: 'at-rule',
-					name: 'supports',
+					type: "at-rule",
+					name: "supports",
 				},
-				'rules',
+				"rules",
 				{
-					type: 'at-rule',
-					name: 'container',
+					type: "at-rule",
+					name: "container",
 				},
 				{
-					type: 'at-rule',
-					name: 'media',
+					type: "at-rule",
+					name: "media",
 				},
 			],
-			{ severity: 'error' },
+			{ severity: "error" },
 		],
-		'order/properties-order': [
+		"order/properties-order": [
 			propertyGroups.map((group) => {
 				return {
 					...group,
-					emptyLineBefore: 'always',
+					emptyLineBefore: "always",
 					noEmptyLineBetween: true,
 				};
 			}),
 			{
-				unspecified: 'bottom',
-				emptyLineBeforeUnspecified: 'always',
-				severity: 'error',
+				unspecified: "bottom",
+				emptyLineBeforeUnspecified: "always",
+				severity: "error",
 			},
 		],
 	},

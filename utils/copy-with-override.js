@@ -1,24 +1,24 @@
-import { readFile } from 'fs/promises';
-import { getHeader } from '../utils/file-header.js';
-import { outputFile } from 'fs-extra';
+import { readFile } from "fs/promises";
+import { getHeader } from "../utils/file-header.js";
+import { outputFile } from "fs-extra";
 
 export async function copyFile({ destFile, srcFileData, fileLabel }) {
 	// Если файла нет — просто создаём его
 	try {
-		await readFile(destFile, 'utf8');
+		await readFile(destFile, "utf8");
 	} catch {
-		await outputFile(destFile, `${getHeader('#')}${srcFileData}`);
+		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
 		console.info(`${fileLabel} пересоздан`);
 		return {};
 	}
 
 	// Если файл есть — разбираем оба файла
-	const destFileData = await readFile(destFile, 'utf8');
+	const destFileData = await readFile(destFile, "utf8");
 	// Ищем строку override (без учёта регистра)
 	const overrideRegex = /^# override.*$/imu;
 	const match = destFileData.match(overrideRegex);
 	if (!match) {
-		await outputFile(destFile, `${getHeader('#')}${srcFileData}`);
+		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
 		console.info(`${fileLabel} пересоздан`);
 		return {};
 	}
@@ -26,7 +26,7 @@ export async function copyFile({ destFile, srcFileData, fileLabel }) {
 	return { destFileData, match };
 }
 
-export async function copyWithOverride({ destFile, srcFileData, fileLabel = '' }) {
+export async function copyWithOverride({ destFile, srcFileData, fileLabel = "" }) {
 	try {
 		const { destFileData, match } = await copyFile({ destFile, srcFileData, fileLabel });
 		if (!destFileData) {
@@ -37,7 +37,7 @@ export async function copyWithOverride({ destFile, srcFileData, fileLabel = '' }
 		const preserved = destFileData.slice(overrideIndex);
 		const newContent = `${srcFileData.trimEnd()}\n\n${preserved.trimStart()}`;
 
-		await outputFile(destFile, `${getHeader('#')}${newContent}`);
+		await outputFile(destFile, `${getHeader("#")}${newContent}`);
 		console.info(`${fileLabel} обновлён с учётом override`);
 	} catch (err) {
 		console.error(`Ошибка копирования ${fileLabel}:`, err.message);

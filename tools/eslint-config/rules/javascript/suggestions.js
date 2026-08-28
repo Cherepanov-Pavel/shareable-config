@@ -1,80 +1,80 @@
-import { ERROR, OFF, WARN } from '../severity.js';
+import { ERROR, OFF, WARN } from "../severity.js";
 
 export const suggestionRules = {
-	'accessor-pairs': [ERROR],
-	'arrow-body-style': [
+	"accessor-pairs": [ERROR],
+	"arrow-body-style": [
 		ERROR,
-		'always',
+		"always",
 	],
-	'block-scoped-var': [ERROR],
-	'camelcase': [
+	"block-scoped-var": [ERROR],
+	"camelcase": [
 		ERROR,
-		{ properties: 'never' },
+		{ properties: "never" },
 	],
-	'capitalized-comments': [
+	"capitalized-comments": [
 		OFF,
-		'never',
+		"never",
 	],
-	'class-methods-use-this': [ERROR],
-	'complexity': [OFF],
-	'consistent-return': [OFF],
-	'consistent-this': [OFF],
-	'curly': [
+	"class-methods-use-this": [ERROR],
+	"complexity": [OFF],
+	"consistent-return": [OFF],
+	"consistent-this": [OFF],
+	"curly": [
 		ERROR,
-		'all',
+		"all",
 	],
-	'default-case': [OFF],
-	'default-case-last': [ERROR],
-	'default-param-last': [ERROR],
-	'dot-notation': [ERROR],
-	'eqeqeq': [
+	"default-case": [OFF],
+	"default-case-last": [ERROR],
+	"default-param-last": [ERROR],
+	"dot-notation": [ERROR],
+	"eqeqeq": [
 		ERROR,
-		'always',
-		{ null: 'always' },
+		"always",
+		{ null: "always" },
 	],
-	'func-name-matching': [WARN],
-	'func-names': [
+	"func-name-matching": [WARN],
+	"func-names": [
 		WARN,
-		'as-needed',
+		"as-needed",
 	],
-	'func-style': [
+	"func-style": [
 		ERROR,
-		'declaration',
+		"declaration",
 		{ allowArrowFunctions: true },
 	],
-	'grouped-accessor-pairs': [
+	"grouped-accessor-pairs": [
 		ERROR,
-		'getBeforeSet',
+		"getBeforeSet",
 	],
-	'guard-for-in': [OFF],
-	'id-denylist': [OFF],
-	'id-length': [
+	"guard-for-in": [OFF],
+	"id-denylist": [OFF],
+	"id-length": [
 		ERROR,
 		{
 			min: 2,
 			exceptionPatterns: [
-				'sort',
-				'^a$',
-				'^b$',
-				'for',
-				'^i$',
-				'^j$',
+				"sort",
+				"^a$",
+				"^b$",
+				"for",
+				"^i$",
+				"^j$",
 			],
-			properties: 'never',
+			properties: "never",
 		},
 	],
-	'id-match': [OFF],
-	'init-declarations': [OFF],
-	'logical-assignment-operators': [
+	"id-match": [OFF],
+	"init-declarations": [OFF],
+	"logical-assignment-operators": [
 		ERROR,
-		'always',
+		"always",
 		{ enforceForIfStatements: true },
 	],
-	'max-classes-per-file': [
+	"max-classes-per-file": [
 		ERROR,
 		1,
 	],
-	'max-depth': [
+	"max-depth": [
 		ERROR,
 		4,
 	],
@@ -88,62 +88,62 @@ export const suggestionRules = {
 	//   skipBlankLines: true,
 	//   skipComments: true,
 	// }],
-	'max-nested-callbacks': [
+	"max-nested-callbacks": [
 		WARN,
 		{ max: 5 },
 	],
-	'max-params': [
+	"max-params": [
 		WARN,
 		{ max: 5 },
 	],
-	'max-statements': [
+	"max-statements": [
 		WARN,
 		{ max: 20 },
 	],
-	'multiline-comment-style': [OFF],
-	'new-cap': [
+	"multiline-comment-style": [OFF],
+	"new-cap": [
 		ERROR,
 		{
 			capIsNew: true,
 			newIsCap: true,
 		},
 	],
-	'no-alert': [ERROR],
-	'no-array-constructor': [ERROR],
-	'no-bitwise': [ERROR],
-	'no-caller': [ERROR],
-	'no-case-declarations': [ERROR],
-	'no-console': [
+	"no-alert": [ERROR],
+	"no-array-constructor": [ERROR],
+	"no-bitwise": [ERROR],
+	"no-caller": [ERROR],
+	"no-case-declarations": [ERROR],
+	"no-console": [
 		WARN,
 		{
 			allow: [
-				'warn',
-				'error',
-				'info',
+				"warn",
+				"error",
+				"info",
 			],
 		},
 	],
-	'no-continue': [ERROR],
-	'no-delete-var': [ERROR],
-	'no-div-regex': [ERROR],
-	'no-else-return': [
+	"no-continue": [ERROR],
+	"no-delete-var": [ERROR],
+	"no-div-regex": [ERROR],
+	"no-else-return": [
 		ERROR,
 		{ allowElseIf: false },
 	],
-	'no-empty': [
+	"no-empty": [
 		ERROR,
 		{ allowEmptyCatch: true },
 	],
-	'no-empty-function': [ERROR],
-	'no-empty-static-block': [ERROR],
-	'no-eq-null': [OFF],
-	'no-eval': [ERROR],
-	'no-extend-native': [ERROR],
-	'no-extra-bind': [ERROR],
-	'no-extra-boolean-cast': [ERROR],
-	'no-extra-label': [ERROR],
-	'no-global-assign': [ERROR],
-	'no-implicit-coercion': [
+	"no-empty-function": [ERROR],
+	"no-empty-static-block": [ERROR],
+	"no-eq-null": [OFF],
+	"no-eval": [ERROR],
+	"no-extend-native": [ERROR],
+	"no-extra-bind": [ERROR],
+	"no-extra-boolean-cast": [ERROR],
+	"no-extra-label": [ERROR],
+	"no-global-assign": [ERROR],
+	"no-implicit-coercion": [
 		ERROR,
 		{
 			boolean: true,
@@ -151,140 +151,140 @@ export const suggestionRules = {
 			string: true,
 		},
 	],
-	'no-implicit-globals': [OFF],
-	'no-implied-eval': [ERROR],
-	'no-inline-comments': [OFF],
-	'no-invalid-this': [ERROR],
-	'no-iterator': [ERROR],
-	'no-label-var': [ERROR],
-	'no-labels': [
+	"no-implicit-globals": [OFF],
+	"no-implied-eval": [ERROR],
+	"no-inline-comments": [OFF],
+	"no-invalid-this": [ERROR],
+	"no-iterator": [ERROR],
+	"no-label-var": [ERROR],
+	"no-labels": [
 		ERROR,
 		{ allowLoop: false, allowSwitch: false },
 	],
-	'no-lone-blocks': [ERROR],
-	'no-lonely-if': [ERROR],
-	'no-loop-func': [ERROR],
-	'no-magic-numbers': [OFF],
-	'no-multi-assign': [ERROR],
-	'no-multi-str': [ERROR],
-	'no-negated-condition': [ERROR],
-	'no-nested-ternary': [ERROR],
-	'no-new': [ERROR],
-	'no-new-func': [ERROR],
-	'no-new-object': [ERROR],
-	'no-new-wrappers': [ERROR],
-	'no-nonoctal-decimal-escape': [ERROR],
-	'no-octal': [ERROR],
-	'no-octal-escape': [ERROR],
-	'no-param-reassign': [
+	"no-lone-blocks": [ERROR],
+	"no-lonely-if": [ERROR],
+	"no-loop-func": [ERROR],
+	"no-magic-numbers": [OFF],
+	"no-multi-assign": [ERROR],
+	"no-multi-str": [ERROR],
+	"no-negated-condition": [ERROR],
+	"no-nested-ternary": [ERROR],
+	"no-new": [ERROR],
+	"no-new-func": [ERROR],
+	"no-new-object": [ERROR],
+	"no-new-wrappers": [ERROR],
+	"no-nonoctal-decimal-escape": [ERROR],
+	"no-octal": [ERROR],
+	"no-octal-escape": [ERROR],
+	"no-param-reassign": [
 		ERROR,
 		{
 			props: true,
 		},
 	],
-	'no-plusplus': [
+	"no-plusplus": [
 		ERROR,
 		{ allowForLoopAfterthoughts: true },
 	],
-	'no-proto': [ERROR],
-	'no-redeclare': [
+	"no-proto": [ERROR],
+	"no-redeclare": [
 		ERROR,
 		{ builtinGlobals: true },
 	],
-	'no-regex-spaces': [ERROR],
-	'no-restricted-exports': [
+	"no-regex-spaces": [ERROR],
+	"no-restricted-exports": [
 		ERROR,
 		{
 			restrictedNamedExports: [
-				'default', // use `export default` to provide a default export
-				'then', // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
+				"default", // use `export default` to provide a default export
+				"then", // this will cause tons of confusion when your module is dynamically `import()`ed, and will break in most node ESM versions
 			],
 		},
 	],
-	'no-restricted-imports': [
+	"no-restricted-imports": [
 		OFF,
 		{ paths: [], patterns: [] },
 	],
-	'no-restricted-properties': [
+	"no-restricted-properties": [
 		ERROR,
 		{
-			object: 'arguments',
-			property: 'callee',
-			message: 'arguments.callee is deprecated',
+			object: "arguments",
+			property: "callee",
+			message: "arguments.callee is deprecated",
 		},
 		{
-			object: 'global',
-			property: 'isFinite',
-			message: 'Please use Number.isFinite instead',
+			object: "global",
+			property: "isFinite",
+			message: "Please use Number.isFinite instead",
 		},
 		{
-			object: 'self',
-			property: 'isFinite',
-			message: 'Please use Number.isFinite instead',
+			object: "self",
+			property: "isFinite",
+			message: "Please use Number.isFinite instead",
 		},
 		{
-			object: 'window',
-			property: 'isFinite',
-			message: 'Please use Number.isFinite instead',
+			object: "window",
+			property: "isFinite",
+			message: "Please use Number.isFinite instead",
 		},
 		{
-			object: 'global',
-			property: 'isNaN',
-			message: 'Please use Number.isNaN instead',
+			object: "global",
+			property: "isNaN",
+			message: "Please use Number.isNaN instead",
 		},
 		{
-			object: 'self',
-			property: 'isNaN',
-			message: 'Please use Number.isNaN instead',
+			object: "self",
+			property: "isNaN",
+			message: "Please use Number.isNaN instead",
 		},
 		{
-			object: 'window',
-			property: 'isNaN',
-			message: 'Please use Number.isNaN instead',
+			object: "window",
+			property: "isNaN",
+			message: "Please use Number.isNaN instead",
 		},
 		{
-			property: '__defineGetter__',
-			message: 'Please use Object.defineProperty instead.',
+			property: "__defineGetter__",
+			message: "Please use Object.defineProperty instead.",
 		},
 		{
-			property: '__defineSetter__',
-			message: 'Please use Object.defineProperty instead.',
+			property: "__defineSetter__",
+			message: "Please use Object.defineProperty instead.",
 		},
 		{
-			object: 'Math',
-			property: 'pow',
-			message: 'Use the exponentiation operator (**) instead.',
+			object: "Math",
+			property: "pow",
+			message: "Use the exponentiation operator (**) instead.",
 		},
 	],
-	'no-restricted-syntax': [
+	"no-restricted-syntax": [
 		ERROR,
 		{
-			selector: 'ForInStatement',
-			message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+			selector: "ForInStatement",
+			message: "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
 		},
 		{
-			selector: 'LabeledStatement',
-			message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+			selector: "LabeledStatement",
+			message: "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
 		},
 		{
-			selector: 'WithStatement',
-			message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+			selector: "WithStatement",
+			message: "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
 		},
 	],
-	'no-return-assign': [
+	"no-return-assign": [
 		ERROR,
-		'always',
+		"always",
 	],
-	'no-return-await': [ERROR],
-	'no-script-url': [ERROR],
-	'no-sequences': [ERROR],
-	'no-shadow': [OFF],
-	'no-shadow-restricted-names': [ERROR],
-	'no-ternary': [OFF],
-	'no-throw-literal': [ERROR],
-	'no-undef-init': [ERROR],
-	'no-undefined': [OFF],
-	'no-underscore-dangle': [
+	"no-return-await": [ERROR],
+	"no-script-url": [ERROR],
+	"no-sequences": [ERROR],
+	"no-shadow": [OFF],
+	"no-shadow-restricted-names": [ERROR],
+	"no-ternary": [OFF],
+	"no-throw-literal": [ERROR],
+	"no-undef-init": [ERROR],
+	"no-undefined": [OFF],
+	"no-underscore-dangle": [
 		ERROR,
 		{
 			allow: [],
@@ -294,13 +294,13 @@ export const suggestionRules = {
 			allowInObjectDestructuring: false,
 		},
 	],
-	'no-unneeded-ternary': [
+	"no-unneeded-ternary": [
 		ERROR,
 		{
 			defaultAssignment: false,
 		},
 	],
-	'no-unused-expressions': [
+	"no-unused-expressions": [
 		ERROR,
 		{
 			allowShortCircuit: false,
@@ -308,17 +308,17 @@ export const suggestionRules = {
 			allowTaggedTemplates: false,
 		},
 	],
-	'no-unused-labels': [ERROR],
-	'no-useless-call': [WARN],
-	'no-useless-catch': [ERROR],
-	'no-useless-computed-key': [
+	"no-unused-labels": [ERROR],
+	"no-useless-call": [WARN],
+	"no-useless-catch": [ERROR],
+	"no-useless-computed-key": [
 		ERROR,
 		{ enforceForClassMembers: true },
 	],
-	'no-useless-concat': [ERROR],
-	'no-useless-constructor': [ERROR],
-	'no-useless-escape': [ERROR],
-	'no-useless-rename': [
+	"no-useless-concat": [ERROR],
+	"no-useless-constructor": [ERROR],
+	"no-useless-escape": [ERROR],
+	"no-useless-rename": [
 		ERROR,
 		{
 			ignoreImport: false,
@@ -326,44 +326,44 @@ export const suggestionRules = {
 			ignoreDestructuring: false,
 		},
 	],
-	'no-useless-return': [ERROR],
-	'no-var': [ERROR],
-	'no-void': [
+	"no-useless-return": [ERROR],
+	"no-var": [ERROR],
+	"no-void": [
 		ERROR,
 		{ allowAsStatement: true },
 	],
-	'no-warning-comments': [OFF],
-	'no-with': [ERROR],
-	'object-shorthand': [
+	"no-warning-comments": [OFF],
+	"no-with": [ERROR],
+	"object-shorthand": [
 		ERROR,
-		'always',
+		"always",
 		{
 			ignoreConstructors: true,
 		},
 	],
-	'one-var': [
+	"one-var": [
 		ERROR,
-		'never',
+		"never",
 	],
-	'operator-assignment': [
+	"operator-assignment": [
 		ERROR,
-		'always',
+		"always",
 	],
-	'prefer-arrow-callback': [
+	"prefer-arrow-callback": [
 		ERROR,
 		{
 			allowNamedFunctions: false,
 			allowUnboundThis: true,
 		},
 	],
-	'prefer-const': [
+	"prefer-const": [
 		ERROR,
 		{
-			destructuring: 'any',
+			destructuring: "any",
 			ignoreReadBeforeAssign: true,
 		},
 	],
-	'prefer-destructuring': [
+	"prefer-destructuring": [
 		ERROR,
 		{
 			array: false,
@@ -373,37 +373,37 @@ export const suggestionRules = {
 			enforceForRenamedProperties: false,
 		},
 	],
-	'prefer-exponentiation-operator': [ERROR],
-	'prefer-named-capture-group': [OFF],
-	'prefer-numeric-literals': [ERROR],
-	'prefer-object-has-own': [ERROR],
-	'prefer-object-spread': [ERROR],
-	'prefer-promise-reject-errors': [ERROR],
-	'prefer-regex-literals': [
+	"prefer-exponentiation-operator": [ERROR],
+	"prefer-named-capture-group": [OFF],
+	"prefer-numeric-literals": [ERROR],
+	"prefer-object-has-own": [ERROR],
+	"prefer-object-spread": [ERROR],
+	"prefer-promise-reject-errors": [ERROR],
+	"prefer-regex-literals": [
 		ERROR,
 		{ disallowRedundantWrapping: true },
 	],
-	'prefer-rest-params': [ERROR],
-	'prefer-spread': [ERROR],
-	'prefer-template': [ERROR],
-	'radix': [ERROR],
-	'require-await': [OFF],
-	'require-unicode-regexp': [WARN],
-	'require-yield': [ERROR],
-	'sort-imports': [OFF],
-	'sort-keys': [OFF],
-	'sort-vars': [OFF],
-	'strict': [
+	"prefer-rest-params": [ERROR],
+	"prefer-spread": [ERROR],
+	"prefer-template": [ERROR],
+	"radix": [ERROR],
+	"require-await": [OFF],
+	"require-unicode-regexp": [WARN],
+	"require-yield": [ERROR],
+	"sort-imports": [OFF],
+	"sort-keys": [OFF],
+	"sort-vars": [OFF],
+	"strict": [
 		ERROR,
-		'never',
+		"never",
 	],
-	'symbol-description': [ERROR],
-	'vars-on-top': [ERROR],
-	'yoda': [ERROR],
+	"symbol-description": [ERROR],
+	"vars-on-top": [ERROR],
+	"yoda": [ERROR],
 
-	'line-comment-position': [OFF],
-	'unicode-bom': [
+	"line-comment-position": [OFF],
+	"unicode-bom": [
 		ERROR,
-		'never',
+		"never",
 	],
 };

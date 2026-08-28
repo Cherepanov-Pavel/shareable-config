@@ -4,7 +4,7 @@ import {
 	tsConfig,
 	vueConfig,
 	jsonConfig,
-} from './tools/eslint-config/index.js';
+} from "./tools/eslint-config/index.js";
 
 const eslintConfig = [
 	...globalConfig,

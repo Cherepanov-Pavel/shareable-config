@@ -1,17 +1,17 @@
-import stylisticPlugin from '@stylistic/eslint-plugin';
+import stylisticPlugin from "@stylistic/eslint-plugin";
 
-import { jsRules } from '../rules/javascript/index.js';
-import { jsFormatting } from '../rules/stylistic/index.js';
+import { jsRules } from "../rules/javascript/index.js";
+import { jsFormatting } from "../rules/stylistic/index.js";
 
 export default {
-	files: ['**/*.*js'],
+	files: ["**/*.*js"],
 	plugins: {
-		'@stylistic': stylisticPlugin,
+		"@stylistic": stylisticPlugin,
 	},
 	languageOptions: {
-		sourceType: 'module',
+		sourceType: "module",
 		parserOptions: {
-			sourceType: 'module',
+			sourceType: "module",
 		},
 	},
 	rules: {

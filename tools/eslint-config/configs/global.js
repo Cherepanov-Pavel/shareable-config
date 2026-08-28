@@ -1,20 +1,20 @@
-import { defineConfig } from 'eslint/config';
-import { includeIgnoreFile } from '@eslint/config-helpers';
-import path from 'path';
-import globals from 'globals';
+import { defineConfig } from "eslint/config";
+import { includeIgnoreFile } from "@eslint/config-helpers";
+import path from "path";
+import globals from "globals";
 
-const gitignorePath = path.join(process.cwd(), '.gitignore');
+const gitignorePath = path.join(process.cwd(), ".gitignore");
 
 export default defineConfig([
 	includeIgnoreFile(gitignorePath),
 	{
-		name: 'Additional .gitignore patterns',
-		ignores: ['public/js/*'],
+		name: "Additional .gitignore patterns",
+		ignores: ["public/js/*"],
 	},
 	{
 		files: [
-			'**/*.*js',
-			'**/*.*vue',
+			"**/*.*js",
+			"**/*.*vue",
 		],
 		languageOptions: {
 			globals: {

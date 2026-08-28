@@ -1,4 +1,4 @@
-export const INDENT_SIZE = 'tab';
+export const INDENT_SIZE = "tab";
 export const TAB_WIDTH = 2;
 export const STR_LENGTH = 100;
 

@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import path from 'path';
-import { readFile } from 'fs/promises';
-import { getSrcJSONFileData } from '../utils/file.js';
-import { mergeWithOverride } from '../utils/merge.js';
-import { getHeader } from '../utils/file-header.js';
-import { getEnvs } from '../utils/env.js';
-import { outputFile } from 'fs-extra';
-import { eslintFiles } from '../utils/lint.js';
+import path from "path";
+import { readFile } from "fs/promises";
+import { getSrcJSONFileData } from "../utils/file.js";
+import { mergeWithOverride } from "../utils/merge.js";
+import { getHeader } from "../utils/file-header.js";
+import { getEnvs } from "../utils/env.js";
+import { outputFile } from "fs-extra";
+import { eslintFiles } from "../utils/lint.js";
 
-const fileName = 'settings.json';
+const fileName = "settings.json";
 const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
 
 try {
@@ -22,8 +22,8 @@ try {
 	});
 	let overrideContent;
 	try {
-		const fileData = await readFile(destFile, 'utf8');
-		overrideContent = fileData.includes('// override') ? fileData : undefined;
+		const fileData = await readFile(destFile, "utf8");
+		overrideContent = fileData.includes("// override") ? fileData : undefined;
 	} catch (err) {}
 
 	let result;
@@ -41,5 +41,5 @@ try {
 		console.info(`${fileName} пересоздан`);
 	}
 } catch (err) {
-	console.error('Ошибка:', err.message);
+	console.error("Ошибка:", err.message);
 }

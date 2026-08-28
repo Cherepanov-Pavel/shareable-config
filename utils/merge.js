@@ -7,7 +7,7 @@
 export async function mergeWithOverride(baseContent, overrideContent) {
 	let result = baseContent;
 
-	if (!overrideContent.includes('// override')) {
+	if (!overrideContent.includes("// override")) {
 		return result;
 	}
 
@@ -23,7 +23,7 @@ export async function mergeWithOverride(baseContent, overrideContent) {
 }
 
 function findOverrideBlocks(overrideContent) {
-	const lines = overrideContent.split('\n');
+	const lines = overrideContent.split("\n");
 	const overrideBlocks = [];
 	let currentBlock = null;
 	let braceCount = 0;
@@ -31,7 +31,7 @@ function findOverrideBlocks(overrideContent) {
 	for (let i = 0; i < lines.length; i++) {
 		const line = lines[i];
 
-		if (line.includes('// override')) {
+		if (line.includes("// override")) {
 			currentBlock = {
 				startLine: i,
 				lines: [line],
@@ -98,7 +98,7 @@ function findOverrideBlocks(overrideContent) {
 
 function processArrayOverride(baseContent, block) {
 	// Разбиваем на строки
-	const lines = baseContent.split('\n');
+	const lines = baseContent.split("\n");
 	// Копируем только нужный диапазон
 	const overrideLines = lines.slice(block.startIdx, block.endIdx);
 
@@ -106,7 +106,7 @@ function processArrayOverride(baseContent, block) {
 	let processed = overrideLines;
 	for (const line of block.lines) {
 		const trimmed = line.trim();
-		if (trimmed.startsWith('//')) {
+		if (trimmed.startsWith("//")) {
 			const match = trimmed.match(/^\/\/\s*"([^"]+)"/u);
 			if (match) {
 				const elementToRemove = match[1];
@@ -125,7 +125,7 @@ function processArrayOverride(baseContent, block) {
 		...lines.slice(block.endIdx),
 	];
 
-	return resultLines.join('\n');
+	return resultLines.join("\n");
 }
 
 function findEndOfArrOrObj(startIdx, lines, block) {
@@ -152,7 +152,7 @@ function findEndOfArrOrObj(startIdx, lines, block) {
 function pasteOverrideInsideEndOfPath(block, result) {
 	if (block.path.length) {
 		const resultArr = [];
-		const lines = result.split('\n');
+		const lines = result.split("\n");
 		let pathCount = 0;
 		for (let i = 0; i < lines.length; i++) {
 			if (lines[i].includes(block.path[pathCount])) {
@@ -164,21 +164,21 @@ function pasteOverrideInsideEndOfPath(block, result) {
 				}
 			}
 			if (i === block.endIdx) {
-				resultArr.push('');
+				resultArr.push("");
 				resultArr.push(...block.lines);
 			}
 			resultArr.push(lines[i]);
 		}
 
-		return resultArr.join('\n');
+		return resultArr.join("\n");
 	}
-	const lastBraceIndex = result.lastIndexOf('}');
+	const lastBraceIndex = result.lastIndexOf("}");
 	if (lastBraceIndex !== -1) {
 		const beforeBrace = result.substring(0, lastBraceIndex);
 		const afterBrace = result.substring(lastBraceIndex);
 		result = (
 			`${beforeBrace
-			}\n${block.lines.join('\n')}\n${
+			}\n${block.lines.join("\n")}\n${
 				afterBrace}`
 		);
 	}

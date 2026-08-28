@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { readFile } from 'fs/promises';
-import { copyWithOverride } from './utils/copy-with-override.js';
-import { getEnvs } from './utils/env.js';
+import path from "path";
+import { fileURLToPath } from "url";
+import { readFile } from "fs/promises";
+import { copyWithOverride } from "./utils/copy-with-override.js";
+import { getEnvs } from "./utils/env.js";
 
-const fileName = '.gitignore';
+const fileName = ".gitignore";
 const destFile = path.join(process.cwd(), fileName);
 
 async function getGitignoreFileData(framework) {
 	const dirname = path.dirname(fileURLToPath(import.meta.url));
-	const src = path.join(dirname, '.npmignore');
-	const srcFileData = await readFile(src, 'utf8');
+	const src = path.join(dirname, ".npmignore");
+	const srcFileData = await readFile(src, "utf8");
 
 	const [commonData] = srcFileData.split(/^#\s*\w+/mu);
 
@@ -22,7 +22,7 @@ async function getGitignoreFileData(framework) {
 
 	const sections = srcFileData.split(/^#\s*/mu).slice(1);
 	const matchedSection = sections.find((section) => {
-		const [header] = section.split('\n');
+		const [header] = section.split("\n");
 		return header.trim().toLowerCase() === framework;
 	});
 
@@ -30,8 +30,8 @@ async function getGitignoreFileData(framework) {
 		const [
 			header,
 			...body
-		] = matchedSection.split('\n');
-		return `${commonData.trim()}\n\n# ${header}\n${body.join('\n').trim()}`.trim();
+		] = matchedSection.split("\n");
+		return `${commonData.trim()}\n\n# ${header}\n${body.join("\n").trim()}`.trim();
 	}
 	// Если не найдено — только общий контент
 	return commonData.trim();
@@ -46,5 +46,5 @@ try {
 		fileLabel: fileName,
 	});
 } catch (err) {
-	console.error('Ошибка:', err.message);
+	console.error("Ошибка:", err.message);
 }

@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
-import path from 'path';
-import { readFile } from 'fs/promises';
-import { outputFile } from 'fs-extra';
-import { mergeWithOverride } from '../utils/merge.js';
-import { getHeader } from '../utils/file-header.js';
-import { getSrcJSONFileData } from '../utils/file.js';
-import { getEnvs } from '../utils/env.js';
-import { eslintFiles } from '../utils/lint.js';
+import path from "path";
+import { readFile } from "fs/promises";
+import { outputFile } from "fs-extra";
+import { mergeWithOverride } from "../utils/merge.js";
+import { getHeader } from "../utils/file-header.js";
+import { getSrcJSONFileData } from "../utils/file.js";
+import { getEnvs } from "../utils/env.js";
+import { eslintFiles } from "../utils/lint.js";
 
 const fileNames = [
-	'vue.code-snippets',
-	'all-files.code-snippets',
+	"vue.code-snippets",
+	"all-files.code-snippets",
 ];
 
 try {
@@ -23,15 +23,15 @@ try {
 		const srcFileData = await getSrcJSONFileData({
 			fileName,
 			isTs,
-			removeDuplicateKeys: fileName === 'vue.code-snippets',
+			removeDuplicateKeys: fileName === "vue.code-snippets",
 		});
 
 		const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
 		let destFileData;
 		let isDestFileHaveOverride;
 		try {
-			destFileData = await readFile(destFile, 'utf8');
-			isDestFileHaveOverride = destFileData.includes('// override');
+			destFileData = await readFile(destFile, "utf8");
+			isDestFileHaveOverride = destFileData.includes("// override");
 		} catch (err) {}
 
 		let result;
@@ -50,5 +50,5 @@ try {
 		}
 	});
 } catch (err) {
-	console.error('Ошибка:', err.message);
+	console.error("Ошибка:", err.message);
 }
