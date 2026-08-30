@@ -189,35 +189,22 @@ export default {
 	"@stylistic/object-curly-newline": [
 		ERROR,
 		{
-			ObjectExpression: {
-				minProperties: 4,
-				multiline: true,
-				consistent: true,
-			},
-			ObjectPattern: {
-				minProperties: 4,
-				multiline: true,
-				consistent: true,
-			},
-			ImportDeclaration: {
-				minProperties: 4,
-				multiline: true,
-				consistent: true,
-			},
-			ExportDeclaration: {
-				minProperties: 4,
-				multiline: true,
-				consistent: true,
-			},
-		},
+			"ObjectExpression": { multiline: false, minProperties: 1 },
+			"ObjectPattern": { multiline: false, minProperties: 1 },
+			"ImportDeclaration": { multiline: false, minProperties: 1 },
+			"ExportDeclaration": { multiline: false, minProperties: 1 },
+			"TSTypeLiteral": { multiline: false, minProperties: 1 },
+			"TSInterfaceBody": { multiline: false, minProperties: 1 },
+			"TSEnumBody": { multiline: false, minProperties: 1 },
+    }
 	],
 	"@stylistic/object-curly-spacing": [
 		ERROR,
-		"always",
+		"never",
 	],
 	"@stylistic/object-property-newline": [
 		ERROR,
-		{ allowAllPropertiesOnSameLine: true },
+		{ allowAllPropertiesOnSameLine: false },
 	],
 	"@stylistic/one-var-declaration-per-line": [
 		ERROR,

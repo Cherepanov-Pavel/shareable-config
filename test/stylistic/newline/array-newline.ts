@@ -31,6 +31,14 @@ However, since such an option is not available,
 and considering the benefits for Git diffs and `git blame`,
 I consider this approach to be a reasonable compromise.
 */
+const emptyArr = [];
 const arr = [
 	1,
+];
+const manyElementsArr = [
+	1,
+	2,
+	3,
+	4,
+	5,
 ];

@@ -45,6 +45,36 @@ const COMMON_RULES = {
 	"jsonc/no-octal": suggestionRules["no-octal"],
 	"jsonc/no-sparse-arrays": ERROR,
 	"jsonc/no-useless-escape": suggestionRules["no-useless-escape"],
+	"jsonc/object-curly-newline": [
+		jsFormatting["@stylistic/object-curly-newline"][0],
+		{
+			"ObjectExpression": { multiline: false, minProperties: 1 },
+			"ObjectPattern": { multiline: false, minProperties: 1 },
+			"ImportDeclaration": { multiline: false, minProperties: 1 },
+			"ExportDeclaration": { multiline: false, minProperties: 1 },
+		}
+		// Object.fromEntries(
+		// 	[
+		// 		"ObjectExpression",
+		// 		"ObjectPattern",
+		// 		"ImportDeclaration",
+		// 		"ExportDeclaration"
+		// 	].map(key => [key, ["@stylistic/object-curly-newline"][1][key]])
+		// )
+	],
+	"jsonc/object-curly-spacing": [
+		jsFormatting["@stylistic/object-curly-spacing"][0],
+		jsFormatting["@stylistic/object-curly-spacing"][1],
+		{
+			"arraysInObjects": true,
+			"objectsInObjects": true,
+			"emptyObjects": jsFormatting["@stylistic/object-curly-spacing"][1]
+		}
+	],
+	"jsonc/object-property-newline": jsFormatting["@stylistic/object-property-newline"],
+	"jsonc/quote-props": ERROR,
+	"jsonc/quotes": jsFormatting["@stylistic/quotes"],
+	"jsonc/space-unary-ops": ERROR
 };
 const JSON_RULES = {
 	"jsonc/no-comments": ERROR,
