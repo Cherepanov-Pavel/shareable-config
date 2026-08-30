@@ -1,11 +1,18 @@
-import { TAB_WIDTH, MAX_LEN, INDENT_SIZE } from "../constants.js";
-import { ERROR, OFF } from "../severity.js";
+import {
+	TAB_WIDTH, MAX_LEN, INDENT_SIZE,
+} from "../constants.js";
+import {
+	ERROR, OFF,
+} from "../severity.js";
 
 /* == formatting rules for javascript == */
 export default {
 	"@stylistic/array-bracket-newline": [
 		ERROR,
-		{ multiline: true, minItems: 1 },
+		{
+			multiline: true,
+			minItems: 1,
+		},
 	],
 	"@stylistic/array-bracket-spacing": [
 		ERROR,
@@ -13,7 +20,10 @@ export default {
 	],
 	"@stylistic/array-element-newline": [
 		ERROR,
-		{ multiline: true, minItems: 1 },
+		{
+			multiline: true,
+			minItems: 1,
+		},
 	],
 	"@stylistic/arrow-parens": [
 		ERROR,
@@ -21,7 +31,10 @@ export default {
 	],
 	"@stylistic/arrow-spacing": [
 		ERROR,
-		{ before: true, after: true },
+		{
+			before: true,
+			after: true,
+		},
 	],
 	"@stylistic/block-spacing": [
 		ERROR,
@@ -30,7 +43,9 @@ export default {
 	"@stylistic/brace-style": [
 		ERROR,
 		"1tbs",
-		{ allowSingleLine: false },
+		{
+			allowSingleLine: false,
+		},
 	],
 	"@stylistic/comma-dangle": [
 		ERROR,
@@ -38,7 +53,10 @@ export default {
 	],
 	"@stylistic/comma-spacing": [
 		ERROR,
-		{ before: false, after: true },
+		{
+			before: false,
+			after: true,
+		},
 	],
 	"@stylistic/comma-style": [
 		ERROR,
@@ -69,7 +87,10 @@ export default {
 	],
 	"@stylistic/generator-star-spacing": [
 		ERROR,
-		{ before: false, after: true },
+		{
+			before: false,
+			after: true,
+		},
 	],
 	"@stylistic/implicit-arrow-linebreak": [
 		ERROR,
@@ -100,9 +121,15 @@ export default {
 			before: true,
 			after: true,
 			overrides: {
-				return: { after: true },
-				throw: { after: true },
-				case: { after: true },
+				return: {
+					after: true,
+				},
+				throw: {
+					after: true,
+				},
+				case: {
+					after: true,
+				},
 			},
 		},
 	],
@@ -116,7 +143,9 @@ export default {
 	"@stylistic/lines-between-class-members": [
 		ERROR,
 		"always",
-		{ exceptAfterSingleLine: false },
+		{
+			exceptAfterSingleLine: false,
+		},
 	],
 	"@stylistic/max-len": [
 		ERROR,
@@ -135,11 +164,15 @@ export default {
 	],
 	"@stylistic/newline-per-chained-call": [
 		ERROR,
-		{ ignoreChainWithDepth: 2 },
+		{
+			ignoreChainWithDepth: 2,
+		},
 	],
 	"@stylistic/no-confusing-arrow": [
 		ERROR,
-		{ allowParens: true },
+		{
+			allowParens: true,
+		},
 	],
 	"@stylistic/no-extra-parens": [
 		OFF,
@@ -152,14 +185,18 @@ export default {
 	],
 	"@stylistic/no-mixed-operators": [
 		OFF,
-		{ allowSamePrecedence: true },
+		{
+			allowSamePrecedence: true,
+		},
 	],
 	"@stylistic/no-mixed-spaces-and-tabs": [
 		ERROR,
 	],
 	"@stylistic/no-multi-spaces": [
 		ERROR,
-		{ ignoreEOLComments: false },
+		{
+			ignoreEOLComments: false,
+		},
 	],
 	"@stylistic/no-multiple-empty-lines": [
 		ERROR,
@@ -189,14 +226,35 @@ export default {
 	"@stylistic/object-curly-newline": [
 		ERROR,
 		{
-			"ObjectExpression": { multiline: false, minProperties: 1 },
-			"ObjectPattern": { multiline: false, minProperties: 1 },
-			"ImportDeclaration": { multiline: false, minProperties: 1 },
-			"ExportDeclaration": { multiline: false, minProperties: 1 },
-			"TSTypeLiteral": { multiline: false, minProperties: 1 },
-			"TSInterfaceBody": { multiline: false, minProperties: 1 },
-			"TSEnumBody": { multiline: false, minProperties: 1 },
-    }
+			"ObjectExpression": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ObjectPattern": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ImportDeclaration": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ExportDeclaration": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"TSTypeLiteral": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"TSInterfaceBody": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"TSEnumBody": {
+				multiline: false,
+				minProperties: 1,
+			},
+		},
 	],
 	"@stylistic/object-curly-spacing": [
 		ERROR,
@@ -204,7 +262,9 @@ export default {
 	],
 	"@stylistic/object-property-newline": [
 		ERROR,
-		{ allowAllPropertiesOnSameLine: false },
+		{
+			allowAllPropertiesOnSameLine: false,
+		},
 	],
 	"@stylistic/one-var-declaration-per-line": [
 		ERROR,
@@ -213,7 +273,11 @@ export default {
 	"@stylistic/operator-linebreak": [
 		ERROR,
 		"before",
-		{ overrides: { "=": "none" } },
+		{
+			overrides: {
+				"=": "none",
+			},
+		},
 	],
 	"@stylistic/padded-blocks": [
 		ERROR,
@@ -247,7 +311,10 @@ export default {
 	],
 	"@stylistic/semi-spacing": [
 		ERROR,
-		{ before: false, after: true },
+		{
+			before: false,
+			after: true,
+		},
 	],
 	"@stylistic/semi-style": [
 		ERROR,
@@ -300,7 +367,10 @@ export default {
 	],
 	"@stylistic/switch-colon-spacing": [
 		ERROR,
-		{ after: true, before: false },
+		{
+			after: true,
+			before: false,
+		},
 	],
 	"@stylistic/template-curly-spacing": [
 		ERROR,
@@ -313,7 +383,9 @@ export default {
 	"@stylistic/wrap-iife": [
 		ERROR,
 		"outside",
-		{ functionPrototypeMethods: false },
+		{
+			functionPrototypeMethods: false,
+		},
 	],
 	"@stylistic/wrap-regex": [
 		ERROR,

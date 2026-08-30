@@ -1,5 +1,9 @@
-import { defineConfig } from "eslint/config";
-import { includeIgnoreFile } from "@eslint/config-helpers";
+import {
+	defineConfig,
+} from "eslint/config";
+import {
+	includeIgnoreFile,
+} from "@eslint/config-helpers";
 import path from "path";
 import globals from "globals";
 

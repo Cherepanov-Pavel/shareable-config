@@ -1,4 +1,6 @@
-import { propertyGroups } from "./property-groups.js";
+import {
+	propertyGroups,
+} from "./property-groups.js";
 
 export default {
 	plugins: [
@@ -24,7 +26,9 @@ export default {
 					name: "media",
 				},
 			],
-			{ severity: "error" },
+			{
+				severity: "error",
+			},
 		],
 		"order/properties-order": [
 			propertyGroups.map((group) => {

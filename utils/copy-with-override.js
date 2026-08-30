@@ -1,8 +1,16 @@
-import { readFile } from "fs/promises";
-import { getHeader } from "../utils/file-header.js";
-import { outputFile } from "fs-extra";
+import {
+	readFile,
+} from "fs/promises";
+import {
+	getHeader,
+} from "../utils/file-header.js";
+import {
+	outputFile,
+} from "fs-extra";
 
-export async function copyFile({ destFile, srcFileData, fileLabel }) {
+export async function copyFile({
+	destFile, srcFileData, fileLabel,
+}) {
 	// Если файла нет — просто создаём его
 	try {
 		await readFile(destFile, "utf8");
@@ -23,12 +31,23 @@ export async function copyFile({ destFile, srcFileData, fileLabel }) {
 		return {};
 	}
 
-	return { destFileData, match };
+	return {
+		destFileData,
+		match,
+	};
 }
 
-export async function copyWithOverride({ destFile, srcFileData, fileLabel = "" }) {
+export async function copyWithOverride({
+	destFile, srcFileData, fileLabel = "",
+}) {
 	try {
-		const { destFileData, match } = await copyFile({ destFile, srcFileData, fileLabel });
+		const {
+			destFileData, match,
+		} = await copyFile({
+			destFile,
+			srcFileData,
+			fileLabel,
+		});
 		if (!destFileData) {
 			return;
 		}

@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 
 import path from "path";
-import { fileURLToPath } from "url";
-import { readFile } from "fs/promises";
-import { copyWithOverride } from "./utils/copy-with-override.js";
-import { getEnvs } from "./utils/env.js";
+import {
+	fileURLToPath,
+} from "url";
+import {
+	readFile,
+} from "fs/promises";
+import {
+	copyWithOverride,
+} from "./utils/copy-with-override.js";
+import {
+	getEnvs,
+} from "./utils/env.js";
 
 const fileName = ".gitignore";
 const destFile = path.join(process.cwd(), fileName);
@@ -42,7 +50,9 @@ async function getGitignoreFileData(framework) {
 }
 
 try {
-	const { repositoryFramework } = await getEnvs();
+	const {
+		repositoryFramework,
+	} = await getEnvs();
 	const srcFileData = await getGitignoreFileData(repositoryFramework);
 	await copyWithOverride({
 		destFile,

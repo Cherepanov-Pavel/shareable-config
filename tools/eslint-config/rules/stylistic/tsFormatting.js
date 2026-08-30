@@ -1,4 +1,6 @@
-import { ERROR } from "../severity.js";
+import {
+	ERROR,
+} from "../severity.js";
 
 /* == formatting rules for typescript == */
 export default {

@@ -1,4 +1,6 @@
-import { ERROR, OFF, WARN } from "../severity.js";
+import {
+	ERROR, OFF, WARN,
+} from "../severity.js";
 
 export const commonRules = {
 	"@typescript-eslint/adjacent-overload-signatures": ERROR,

@@ -1,13 +1,27 @@
 #!/usr/bin/env node
 
 import path from "path";
-import { readFile } from "fs/promises";
-import { getSrcJSONFileData } from "../utils/file.js";
-import { mergeWithOverride } from "../utils/merge.js";
-import { getHeader } from "../utils/file-header.js";
-import { getEnvs } from "../utils/env.js";
-import { outputFile } from "fs-extra";
-import { eslintFiles } from "../utils/lint.js";
+import {
+	readFile,
+} from "fs/promises";
+import {
+	getSrcJSONFileData,
+} from "../utils/file.js";
+import {
+	mergeWithOverride,
+} from "../utils/merge.js";
+import {
+	getHeader,
+} from "../utils/file-header.js";
+import {
+	getEnvs,
+} from "../utils/env.js";
+import {
+	outputFile,
+} from "fs-extra";
+import {
+	eslintFiles,
+} from "../utils/lint.js";
 
 const fileName = "extensions.json";
 const destFile = path.join(process.cwd(), `.vscode/${fileName}`);

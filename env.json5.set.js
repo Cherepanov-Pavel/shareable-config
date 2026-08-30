@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
-import { askFramework, askTypescript } from "./utils/communication.js";
-import { getEnvs, setEnvs } from "./utils/env.js";
+import {
+	askFramework, askTypescript,
+} from "./utils/communication.js";
+import {
+	getEnvs, setEnvs,
+} from "./utils/env.js";
 
 let envs = {};
 try {

@@ -1,9 +1,15 @@
-import { fileURLToPath } from "url";
+import {
+	fileURLToPath,
+} from "url";
 import path from "path";
-import { readFile } from "fs/promises";
+import {
+	readFile,
+} from "fs/promises";
 import JSON5 from "json5";
 
-export async function getSrcFileData({ fileName }) {
+export async function getSrcFileData({
+	fileName,
+}) {
 	const dirname = path.dirname(fileURLToPath(import.meta.url));
 	const src = path.join(dirname, "..", ".vscode", fileName);
 	const srcFileData = await readFile(src, "utf8");
@@ -16,7 +22,9 @@ export async function getSrcJSONFileData({
 	isTs = false,
 	removeDuplicateKeys = false,
 }) {
-	const srcFileData = await getSrcFileData({ fileName });
+	const srcFileData = await getSrcFileData({
+		fileName,
+	});
 
 	// Если есть нет typescript, нет лишних проблем, возвращаем
 	if (!srcFileData.includes("// typescript")) {

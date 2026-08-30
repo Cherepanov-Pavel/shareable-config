@@ -1,4 +1,6 @@
-import { ERROR, OFF, WARN } from "../severity.js";
+import {
+	ERROR, OFF, WARN,
+} from "../severity.js";
 
 export const suggestionRules = {
 	"accessor-pairs": [
@@ -13,7 +15,9 @@ export const suggestionRules = {
 	],
 	"camelcase": [
 		ERROR,
-		{ properties: "never" },
+		{
+			properties: "never",
+		},
 	],
 	"capitalized-comments": [
 		OFF,
@@ -50,7 +54,9 @@ export const suggestionRules = {
 	"eqeqeq": [
 		ERROR,
 		"always",
-		{ null: "always" },
+		{
+			null: "always",
+		},
 	],
 	"func-name-matching": [
 		WARN,
@@ -62,7 +68,9 @@ export const suggestionRules = {
 	"func-style": [
 		ERROR,
 		"declaration",
-		{ allowArrowFunctions: true },
+		{
+			allowArrowFunctions: true,
+		},
 	],
 	"grouped-accessor-pairs": [
 		ERROR,
@@ -98,7 +106,9 @@ export const suggestionRules = {
 	"logical-assignment-operators": [
 		ERROR,
 		"always",
-		{ enforceForIfStatements: true },
+		{
+			enforceForIfStatements: true,
+		},
 	],
 	"max-classes-per-file": [
 		ERROR,
@@ -120,15 +130,21 @@ export const suggestionRules = {
 	// }],
 	"max-nested-callbacks": [
 		WARN,
-		{ max: 5 },
+		{
+			max: 5,
+		},
 	],
 	"max-params": [
 		WARN,
-		{ max: 5 },
+		{
+			max: 5,
+		},
 	],
 	"max-statements": [
 		WARN,
-		{ max: 20 },
+		{
+			max: 20,
+		},
 	],
 	"multiline-comment-style": [
 		OFF,
@@ -176,11 +192,15 @@ export const suggestionRules = {
 	],
 	"no-else-return": [
 		ERROR,
-		{ allowElseIf: false },
+		{
+			allowElseIf: false,
+		},
 	],
 	"no-empty": [
 		ERROR,
-		{ allowEmptyCatch: true },
+		{
+			allowEmptyCatch: true,
+		},
 	],
 	"no-empty-function": [
 		ERROR,
@@ -237,7 +257,10 @@ export const suggestionRules = {
 	],
 	"no-labels": [
 		ERROR,
-		{ allowLoop: false, allowSwitch: false },
+		{
+			allowLoop: false,
+			allowSwitch: false,
+		},
 	],
 	"no-lone-blocks": [
 		ERROR,
@@ -292,14 +315,18 @@ export const suggestionRules = {
 	],
 	"no-plusplus": [
 		ERROR,
-		{ allowForLoopAfterthoughts: true },
+		{
+			allowForLoopAfterthoughts: true,
+		},
 	],
 	"no-proto": [
 		ERROR,
 	],
 	"no-redeclare": [
 		ERROR,
-		{ builtinGlobals: true },
+		{
+			builtinGlobals: true,
+		},
 	],
 	"no-regex-spaces": [
 		ERROR,
@@ -315,7 +342,10 @@ export const suggestionRules = {
 	],
 	"no-restricted-imports": [
 		OFF,
-		{ paths: [], patterns: [] },
+		{
+			paths: [],
+			patterns: [],
+		},
 	],
 	"no-restricted-properties": [
 		ERROR,
@@ -449,7 +479,9 @@ export const suggestionRules = {
 	],
 	"no-useless-computed-key": [
 		ERROR,
-		{ enforceForClassMembers: true },
+		{
+			enforceForClassMembers: true,
+		},
 	],
 	"no-useless-concat": [
 		ERROR,
@@ -476,7 +508,9 @@ export const suggestionRules = {
 	],
 	"no-void": [
 		ERROR,
-		{ allowAsStatement: true },
+		{
+			allowAsStatement: true,
+		},
 	],
 	"no-warning-comments": [
 		OFF,
@@ -543,7 +577,9 @@ export const suggestionRules = {
 	],
 	"prefer-regex-literals": [
 		ERROR,
-		{ disallowRedundantWrapping: true },
+		{
+			disallowRedundantWrapping: true,
+		},
 	],
 	"prefer-rest-params": [
 		ERROR,

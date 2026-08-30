@@ -1,4 +1,6 @@
-import { ERROR, OFF } from "../severity.js";
+import {
+	ERROR, OFF,
+} from "../severity.js";
 
 export const compatibilityRules = {
 	"constructor-super": OFF, // ts(2335) & ts(2377)

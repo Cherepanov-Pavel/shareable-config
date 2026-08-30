@@ -1,9 +1,13 @@
-import { ERROR, WARN } from "../severity.js";
+import {
+	ERROR, WARN,
+} from "../severity.js";
 
 export const possibleProblemRules = {
 	"array-callback-return": [
 		WARN,
-		{ checkForEach: true },
+		{
+			checkForEach: true,
+		},
 	],
 	"constructor-super": [
 		ERROR,
@@ -13,7 +17,9 @@ export const possibleProblemRules = {
 	],
 	"getter-return": [
 		ERROR,
-		{ allowImplicit: true },
+		{
+			allowImplicit: true,
+		},
 	],
 	"no-async-promise-executor": [
 		ERROR,
@@ -156,7 +162,9 @@ export const possibleProblemRules = {
 	],
 	"no-unsafe-optional-chaining": [
 		ERROR,
-		{ disallowArithmeticOperators: true },
+		{
+			disallowArithmeticOperators: true,
+		},
 	],
 	"no-unused-private-class-members": [
 		ERROR,
@@ -166,7 +174,11 @@ export const possibleProblemRules = {
 	],
 	"no-use-before-define": [
 		ERROR,
-		{ classes: true, functions: false, variables: true },
+		{
+			classes: true,
+			functions: false,
+			variables: true,
+		},
 	],
 	"no-useless-backreference": [
 		ERROR,
@@ -179,6 +191,8 @@ export const possibleProblemRules = {
 	],
 	"valid-typeof": [
 		ERROR,
-		{ requireStringLiterals: true },
+		{
+			requireStringLiterals: true,
+		},
 	],
 };

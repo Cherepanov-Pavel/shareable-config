@@ -1,4 +1,6 @@
-import { INDENT_SIZE } from "../../eslint-config/rules/constants.js";
+import {
+	INDENT_SIZE,
+} from "../../eslint-config/rules/constants.js";
 
 const MAX_EMPTY_LINES = 1;
 // const MAX_LINE_LENGTH = 80;

@@ -1,7 +1,13 @@
-import { OFF } from "../severity.js";
+import {
+	OFF,
+} from "../severity.js";
 
-import { suggestionRules } from "../javascript/suggestions.js";
-import { possibleProblemRules } from "../javascript/possible-problems.js";
+import {
+	suggestionRules,
+} from "../javascript/suggestions.js";
+import {
+	possibleProblemRules,
+} from "../javascript/possible-problems.js";
 
 export const extensionsRules = {
 	"class-methods-use-this": OFF,

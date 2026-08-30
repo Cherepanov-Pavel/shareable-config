@@ -1,10 +1,20 @@
-import { ERROR, OFF } from "../severity.js";
-import { MAX_LEN } from "../constants.js";
+import {
+	ERROR, OFF,
+} from "../severity.js";
+import {
+	MAX_LEN,
+} from "../constants.js";
 
-import { possibleProblemRules } from "../javascript/possible-problems.js";
-import { suggestionRules } from "../javascript/suggestions.js";
+import {
+	possibleProblemRules,
+} from "../javascript/possible-problems.js";
+import {
+	suggestionRules,
+} from "../javascript/suggestions.js";
 
-import { jsFormatting } from "../stylistic/index.js";
+import {
+	jsFormatting,
+} from "../stylistic/index.js";
 
 export const extensionRules = {
 	"vue/no-constant-condition": possibleProblemRules["no-constant-condition"],

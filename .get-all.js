@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
-import { spawnSync } from "child_process";
-import { readFile } from "fs/promises";
+import {
+	spawnSync,
+} from "child_process";
+import {
+	readFile,
+} from "fs/promises";
 
 const commands = [
 	"get-editorconfig",
@@ -21,7 +25,9 @@ commands.forEach((cmd) => {
 		"-p",
 		pkg.name,
 		cmd,
-	], { stdio: "inherit" });
+	], {
+		stdio: "inherit",
+	});
 	if (result.status !== 0) {
 		console.error(`\nОшибка при выполнении команды: ${cmd}`);
 		hasError = true;

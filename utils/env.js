@@ -1,7 +1,11 @@
-import { readFile } from "fs/promises";
+import {
+	readFile,
+} from "fs/promises";
 import path from "path";
 import JSON5 from "json5";
-import { outputFile } from "fs-extra";
+import {
+	outputFile,
+} from "fs-extra";
 
 const envFileSrc = path.join(process.cwd(), "frontend-configs.env.json5");
 

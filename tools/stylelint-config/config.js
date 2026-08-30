@@ -1,5 +1,9 @@
-import path, { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import path, {
+	dirname,
+} from "node:path";
+import {
+	fileURLToPath,
+} from "node:url";
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 const concat = (...arrays) => {

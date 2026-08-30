@@ -1,9 +1,19 @@
-import { defineConfig } from "eslint/config";
+import {
+	defineConfig,
+} from "eslint/config";
 import jsonc from "eslint-plugin-jsonc";
-import { ERROR } from "../rules/severity.js";
-import { jsFormatting } from "../rules/stylistic/index.js";
-import { possibleProblemRules } from "../rules/javascript/possible-problems.js";
-import { suggestionRules } from "../rules/javascript/suggestions.js";
+import {
+	ERROR,
+} from "../rules/severity.js";
+import {
+	jsFormatting,
+} from "../rules/stylistic/index.js";
+import {
+	possibleProblemRules,
+} from "../rules/javascript/possible-problems.js";
+import {
+	suggestionRules,
+} from "../rules/javascript/suggestions.js";
 import stylisticPlugin from "@stylistic/eslint-plugin";
 
 const JSON_BUT_JSONC_FILES = [
@@ -48,11 +58,23 @@ const COMMON_RULES = {
 	"jsonc/object-curly-newline": [
 		jsFormatting["@stylistic/object-curly-newline"][0],
 		{
-			"ObjectExpression": { multiline: false, minProperties: 1 },
-			"ObjectPattern": { multiline: false, minProperties: 1 },
-			"ImportDeclaration": { multiline: false, minProperties: 1 },
-			"ExportDeclaration": { multiline: false, minProperties: 1 },
-		}
+			"ObjectExpression": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ObjectPattern": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ImportDeclaration": {
+				multiline: false,
+				minProperties: 1,
+			},
+			"ExportDeclaration": {
+				multiline: false,
+				minProperties: 1,
+			},
+		},
 		// Object.fromEntries(
 		// 	[
 		// 		"ObjectExpression",
@@ -68,13 +90,13 @@ const COMMON_RULES = {
 		{
 			"arraysInObjects": true,
 			"objectsInObjects": true,
-			"emptyObjects": jsFormatting["@stylistic/object-curly-spacing"][1]
-		}
+			"emptyObjects": jsFormatting["@stylistic/object-curly-spacing"][1],
+		},
 	],
 	"jsonc/object-property-newline": jsFormatting["@stylistic/object-property-newline"],
 	"jsonc/quote-props": ERROR,
 	"jsonc/quotes": jsFormatting["@stylistic/quotes"],
-	"jsonc/space-unary-ops": ERROR
+	"jsonc/space-unary-ops": ERROR,
 };
 const JSON_RULES = {
 	"jsonc/no-comments": ERROR,

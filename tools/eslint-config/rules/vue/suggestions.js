@@ -1,5 +1,9 @@
-import { possibleProblemRules } from "../javascript/possible-problems.js";
-import { ERROR, OFF } from "../severity.js";
+import {
+	possibleProblemRules,
+} from "../javascript/possible-problems.js";
+import {
+	ERROR, OFF,
+} from "../severity.js";
 
 export const suggestionRules = {
 	"vue/match-component-import-name": [

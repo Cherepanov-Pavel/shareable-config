@@ -1,5 +1,9 @@
-import { INDENT_SIZE } from "../constants.js";
-import { ERROR, OFF } from "../severity.js";
+import {
+	INDENT_SIZE,
+} from "../constants.js";
+import {
+	ERROR, OFF,
+} from "../severity.js";
 
 export const formattingRules = {
 	"vue/block-tag-newline": [

@@ -1,9 +1,15 @@
 #!/usr/bin/env node
 
 import path from "path";
-import { fileURLToPath } from "url";
-import { copyWithOverride } from "./utils/copy-with-override.js";
-import { readFile } from "fs/promises";
+import {
+	fileURLToPath,
+} from "url";
+import {
+	copyWithOverride,
+} from "./utils/copy-with-override.js";
+import {
+	readFile,
+} from "fs/promises";
 
 const fileName = ".editorconfig";
 const destFile = path.join(process.cwd(), fileName);

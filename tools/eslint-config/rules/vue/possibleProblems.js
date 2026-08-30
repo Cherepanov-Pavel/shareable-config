@@ -1,4 +1,6 @@
-import { ERROR, OFF, WARN } from "../severity.js";
+import {
+	ERROR, OFF, WARN,
+} from "../severity.js";
 
 export const possibleProblemRules = {
 	"vue/attribute-hyphenation": [
@@ -311,7 +313,9 @@ export const possibleProblemRules = {
 	"vue/v-on-event-hyphenation": [
 		ERROR,
 		"never",
-		{ autofix: true },
+		{
+			autofix: true,
+		},
 	],
 	// https://github.com/vuejs/eslint-plugin-vue/issues/2571
 	"vue/v-on-handler-style": [

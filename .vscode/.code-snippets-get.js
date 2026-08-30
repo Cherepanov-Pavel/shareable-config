@@ -1,13 +1,27 @@
 #!/usr/bin/env node
 
 import path from "path";
-import { readFile } from "fs/promises";
-import { outputFile } from "fs-extra";
-import { mergeWithOverride } from "../utils/merge.js";
-import { getHeader } from "../utils/file-header.js";
-import { getSrcJSONFileData } from "../utils/file.js";
-import { getEnvs } from "../utils/env.js";
-import { eslintFiles } from "../utils/lint.js";
+import {
+	readFile,
+} from "fs/promises";
+import {
+	outputFile,
+} from "fs-extra";
+import {
+	mergeWithOverride,
+} from "../utils/merge.js";
+import {
+	getHeader,
+} from "../utils/file-header.js";
+import {
+	getSrcJSONFileData,
+} from "../utils/file.js";
+import {
+	getEnvs,
+} from "../utils/env.js";
+import {
+	eslintFiles,
+} from "../utils/lint.js";
 
 const fileNames = [
 	"vue.code-snippets",
