@@ -14,3 +14,9 @@
 <template>
 	test
 </template>
+
+<style>
+.class {
+	color: red;
+}
+</style>

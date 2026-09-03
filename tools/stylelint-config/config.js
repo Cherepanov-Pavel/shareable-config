@@ -14,15 +14,13 @@ export default {
 	extends: concat(
 		[
 			"stylelint-config-standard",
-			"stylelint-config-standard-scss",
-			"stylelint-config-standard-vue/scss",
+			"stylelint-config-standard-vue",
 		],
 		[
 			"./rules/base.js",
 			"./rules/stylistic.js",
 			"./rules/order.js",
 			"./rules/conflicts.js",
-			"./rules/scss.js",
 		].map((string) => {
 			return path.resolve(currentDir, string);
 		}),

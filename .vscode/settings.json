@@ -43,10 +43,9 @@
 		"jsonc",
 		"json5",
 	],
-	// "stylelint.validate": [
-	//   "css",
-	//   "scss",
-	//   "vue"
-	// ],
+	"stylelint.validate": [
+		"css",
+		"vue",
+	],
 	"cSpell.language": "en,ru",
 }
