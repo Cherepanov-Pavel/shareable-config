@@ -101,6 +101,7 @@ export default {
 		INDENT_SIZE,
 		{
 			tabLength: TAB_WIDTH,
+			MemberExpression: 0,
 		},
 	],
 	"@stylistic/indent-binary-ops": [
