@@ -53,7 +53,7 @@ export const possibleProblemRules = {
 		ERROR,
 	],
 	"no-debugger": [
-		ERROR,
+		WARN,
 	],
 	"no-dupe-args": [
 		ERROR,

@@ -1,7 +1,7 @@
 {
 	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
-	"version": "1.0.21",
+	"version": "1.0.22",
 	"type": "module",
 	"devEngines": {
 		"packageManager": {
