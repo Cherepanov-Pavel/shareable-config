@@ -19,8 +19,6 @@ import stylisticPlugin from "@stylistic/eslint-plugin";
 const JSON_BUT_JSONC_FILES = [
 	"**/.vscode/*.json",
 	"**/.vscode/*.code-snippets",
-];
-const JSON_BUT_JSONC_FILES_WITHOUT_COMMA_DANGLE = [
 	"**/tsconfig*.json",
 ];
 const COMMON_RULES = {
@@ -111,12 +109,7 @@ const JSON_JSONC_RULES = {
 	"jsonc/no-infinity": ERROR,
 	"jsonc/no-multi-str": suggestionRules["no-multi-str"],
 };
-const JSON_JSONC_RULES_WITHOUT_COMMA_DANGLE = {
-	"jsonc/comma-dangle": [
-		ERROR,
-		"never",
-	],
-};
+
 
 export default defineConfig([
 	{
@@ -132,7 +125,6 @@ export default defineConfig([
 		],
 		ignores: [
 			...JSON_BUT_JSONC_FILES,
-			...JSON_BUT_JSONC_FILES_WITHOUT_COMMA_DANGLE,
 			"package-lock.json",
 		],
 		language: "jsonc/json",
@@ -152,17 +144,6 @@ export default defineConfig([
 		rules: {
 			...COMMON_RULES,
 			...JSON_JSONC_RULES,
-		},
-	},
-	{
-		files: [
-			...JSON_BUT_JSONC_FILES_WITHOUT_COMMA_DANGLE,
-		],
-		language: "jsonc/jsonc",
-		rules: {
-			...COMMON_RULES,
-			...JSON_JSONC_RULES,
-			...JSON_JSONC_RULES_WITHOUT_COMMA_DANGLE,
 		},
 	},
 
