@@ -3,6 +3,9 @@
 // 	1,
 // 	2,
 // ];
+/* TODO:
+wqrwq
+*/
 </script>
 
 <i18n>
@@ -13,10 +16,17 @@
 
 <template>
 	test
+	<!-- TODO:
+	qwrqw
+	-->
 </template>
 
 <style>
 .class {
 	color: red;
 }
+
+/* TODO:
+fef
+*/
 </style>
