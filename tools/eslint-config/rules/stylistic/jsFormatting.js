@@ -166,7 +166,7 @@ export default {
 	"@stylistic/newline-per-chained-call": [
 		ERROR,
 		{
-			ignoreChainWithDepth: 2,
+			ignoreChainWithDepth: 1,
 		},
 	],
 	"@stylistic/no-confusing-arrow": [
