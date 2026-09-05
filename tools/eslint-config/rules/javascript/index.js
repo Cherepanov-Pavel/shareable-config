@@ -1,4 +1,7 @@
 import {
+	darkRules,
+} from "./dark-fantasies.js";
+import {
 	possibleProblemRules,
 } from "./possible-problems.js";
 import {
@@ -8,4 +11,5 @@ import {
 export const jsRules = {
 	...possibleProblemRules,
 	...suggestionRules,
+	...darkRules,
 };

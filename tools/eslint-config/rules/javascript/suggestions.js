@@ -432,9 +432,6 @@ export const suggestionRules = {
 	"no-shadow-restricted-names": [
 		ERROR,
 	],
-	"no-ternary": [
-		OFF,
-	],
 	"no-throw-literal": [
 		ERROR,
 	],
