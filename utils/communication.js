@@ -7,10 +7,12 @@ export async function askTypescript() {
 			output: process.stdout,
 		});
 		rl.question(
-			"Вы используете typescript? (Enter - нет, любые символы + Enter - да):",
+			"Do you use TypeScript? (Enter — no, any characters + Enter — yes):",
 			(answer) => {
 				rl.close();
-				resolve(Boolean(answer.trim().toLowerCase()));
+				resolve(Boolean(
+					answer,
+				));
 			},
 		);
 	});
@@ -23,10 +25,32 @@ export async function askFramework() {
 			output: process.stdout,
 		});
 		rl.question(
-			"Какой фреймворк вы используете? (vue/nuxt/quasar, нажмите Enter, чтобы скопировать только framework-less): ",
+			"Which framework do you use? (vue/nuxt/quasar, press Enter to copy only the framework-less): ",
 			(answer) => {
 				rl.close();
-				resolve(answer.trim().toLowerCase());
+				resolve(
+					answer
+					.trim()
+					.toLowerCase(),
+				);
+			},
+		);
+	});
+}
+
+export async function askOptionsApi() {
+	return new Promise((resolve) => {
+		const rl = readline.createInterface({
+			input: process.stdin,
+			output: process.stdout,
+		});
+		rl.question(
+			"Do you use the Vue options API? (Enter — no, any characters + Enter — yes):",
+			(answer) => {
+				rl.close();
+				resolve(Boolean(
+					answer,
+				));
 			},
 		);
 	});

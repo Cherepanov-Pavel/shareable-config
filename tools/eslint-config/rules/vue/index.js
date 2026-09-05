@@ -6,13 +6,23 @@ import {
 } from "./extension.js";
 import {
 	possibleProblemRules,
-} from "./possibleProblems.js";
+} from "./possible-problems.js";
 import {
 	suggestionRules,
 } from "./suggestions.js";
 import {
 	formattingRules,
 } from "./formatting.js";
+import {
+	getEnvs,
+} from "../../../../utils/env.js";
+import {
+	optionsApiRules,
+} from "./options-api.js";
+
+const {
+	isRepositoryUseOptionsApi,
+} = getEnvs();
 
 export const vueRules = {
 	...baseRules,
@@ -20,4 +30,10 @@ export const vueRules = {
 	...possibleProblemRules,
 	...suggestionRules,
 	...formattingRules,
+	...(() => {
+		if (isRepositoryUseOptionsApi) {
+			return optionsApiRules;
+		}
+		return {};
+	})(),
 };

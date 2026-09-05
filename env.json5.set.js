@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import {
-	askFramework, askTypescript,
+	askFramework, askOptionsApi, askTypescript,
 } from "./utils/communication.js";
 import {
 	getEnvs, setEnvs,
@@ -14,5 +14,6 @@ try {
 
 envs.isRepositoryUseTypescript = await askTypescript();
 envs.repositoryFramework = await askFramework();
+envs.isRepositoryUseOptionsApi = await askOptionsApi();
 
 await setEnvs(envs);

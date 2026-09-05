@@ -14,10 +14,7 @@ export const suggestionRules = {
 		ERROR,
 	],
 	"camelcase": [
-		ERROR,
-		{
-			properties: "never",
-		},
+		OFF,
 	],
 	"capitalized-comments": [
 		OFF,
