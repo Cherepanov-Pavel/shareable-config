@@ -138,6 +138,6 @@ export const commonRules = {
 	"@typescript-eslint/triple-slash-reference": ERROR,
 	// '@typescript-eslint/type-annotation-spacing': ERROR,
 	"@typescript-eslint/typedef": ERROR,
-	"@typescript-eslint/unbound-method": ERROR,
+	"@typescript-eslint/unbound-method": OFF,
 	"@typescript-eslint/unified-signatures": ERROR,
 };
