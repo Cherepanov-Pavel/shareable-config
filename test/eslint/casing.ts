@@ -47,7 +47,7 @@ Following JavaScript conventions, camelCase is more natural.
 {
 	selector: "default",
 	format: [
-		"camelCase",
+		"strictCamelCase",
 	],
 	leadingUnderscore: "forbid",
 	trailingUnderscore: "forbid",
@@ -96,7 +96,7 @@ often be avoided by choosing a more descriptive name or refactoring the code.
 {
 	selector: "import",
 	format: [
-		"camelCase",
+		"strictCamelCase",
 		"PascalCase",
 	],
 },

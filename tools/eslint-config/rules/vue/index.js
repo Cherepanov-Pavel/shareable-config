@@ -22,7 +22,7 @@ import {
 
 const {
 	isRepositoryUseOptionsApi,
-} = getEnvs();
+} = await getEnvs();
 
 export const vueRules = {
 	...baseRules,

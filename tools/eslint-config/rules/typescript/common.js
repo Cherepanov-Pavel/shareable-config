@@ -27,7 +27,7 @@ export const commonRules = {
 		{
 			selector: "default",
 			format: [
-				"camelCase",
+				"strictCamelCase",
 			],
 			leadingUnderscore: "forbid",
 			trailingUnderscore: "forbid",
@@ -35,7 +35,7 @@ export const commonRules = {
 		{
 			selector: "import",
 			format: [
-				"camelCase",
+				"strictCamelCase",
 				"PascalCase",
 			],
 			leadingUnderscore: "forbid",
