@@ -442,14 +442,7 @@ export const suggestionRules = {
 		OFF,
 	],
 	"no-underscore-dangle": [
-		ERROR,
-		{
-			allow: [],
-			allowAfterSuper: false,
-			allowAfterThis: true,
-			allowFunctionParams: false,
-			allowInObjectDestructuring: false,
-		},
+		OFF,
 	],
 	"no-unneeded-ternary": [
 		ERROR,
