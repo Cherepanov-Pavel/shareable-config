@@ -14,7 +14,7 @@ export const suggestionRules = {
 		ERROR,
 	],
 	"camelcase": [
-		OFF,
+		ERROR,
 	],
 	"capitalized-comments": [
 		OFF,
@@ -442,7 +442,7 @@ export const suggestionRules = {
 		OFF,
 	],
 	"no-underscore-dangle": [
-		OFF,
+		ERROR,
 	],
 	"no-unneeded-ternary": [
 		ERROR,

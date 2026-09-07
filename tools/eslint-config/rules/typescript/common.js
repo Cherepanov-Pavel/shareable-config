@@ -22,6 +22,15 @@ export const commonRules = {
 	// '@typescript-eslint/member-delimiter-style': ERROR,
 	"@typescript-eslint/member-ordering": ERROR,
 	"@typescript-eslint/method-signature-style": ERROR,
+	"no-underscore-dangle": [
+		OFF,
+	],
+	"camelcase": [
+		OFF,
+	],
+	"vue/camelcase": [
+		OFF,
+	],
 	"@typescript-eslint/naming-convention": [
 		ERROR,
 		{

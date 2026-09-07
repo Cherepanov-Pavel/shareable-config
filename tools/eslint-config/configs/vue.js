@@ -60,8 +60,8 @@ export default {
 	rules: {
 		...jsRules,
 		...jsFormatting,
+		...vueRules,
 		...(isTs ? tsRules : {}),
 		...(isTs ? tsFormatting : {}),
-		...vueRules,
 	},
 };
