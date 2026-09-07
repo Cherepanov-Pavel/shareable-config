@@ -22,39 +22,49 @@ export const commonRules = {
 	// '@typescript-eslint/member-delimiter-style': ERROR,
 	"@typescript-eslint/member-ordering": ERROR,
 	"@typescript-eslint/method-signature-style": ERROR,
+	"no-underscore-dangle": [
+		OFF,
+	],
+	"camelcase": [
+		OFF,
+	],
+	"vue/camelcase": [
+		OFF,
+	],
 	"@typescript-eslint/naming-convention": [
 		ERROR,
 		{
 			selector: "default",
-			// UPPER_CASE for, like example, consts from env files
 			format: [
-				"camelCase",
-				"UPPER_CASE",
+				"strictCamelCase",
 			],
 			leadingUnderscore: "forbid",
 			trailingUnderscore: "forbid",
 		},
 		{
 			selector: "import",
-			// PascalCase for components import
 			format: [
-				"camelCase",
+				"strictCamelCase",
 				"PascalCase",
 			],
-		},
-		{
-			selector: "variable",
-			// UPPER_CASE for, like example, consts from env files
-			format: [
-				"camelCase",
-				"UPPER_CASE",
-			],
+			leadingUnderscore: "forbid",
+			trailingUnderscore: "forbid",
 		},
 		{
 			selector: "typeLike",
 			format: [
 				"PascalCase",
 			],
+			leadingUnderscore: "forbid",
+			trailingUnderscore: "forbid",
+		},
+		{
+			selector: "enumMember",
+			format: [
+				"PascalCase",
+			],
+			leadingUnderscore: "forbid",
+			trailingUnderscore: "forbid",
 		},
 		{
 			selector: "objectLiteralProperty",

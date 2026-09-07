@@ -15,9 +15,6 @@ export const suggestionRules = {
 	],
 	"camelcase": [
 		ERROR,
-		{
-			properties: "never",
-		},
 	],
 	"capitalized-comments": [
 		OFF,
@@ -446,13 +443,6 @@ export const suggestionRules = {
 	],
 	"no-underscore-dangle": [
 		ERROR,
-		{
-			allow: [],
-			allowAfterSuper: false,
-			allowAfterThis: true,
-			allowFunctionParams: false,
-			allowInObjectDestructuring: false,
-		},
 	],
 	"no-unneeded-ternary": [
 		ERROR,

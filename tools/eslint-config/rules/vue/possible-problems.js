@@ -38,21 +38,11 @@ export const possibleProblemRules = {
 		"PascalCase",
 		{
 			registeredComponentsOnly: false,
-			ignores: [],
 		},
-	],
-	"vue/component-options-name-casing": [
-		ERROR,
-		"PascalCase",
 	],
 	"vue/custom-event-name-casing": [
 		ERROR,
 		"camelCase",
-		{
-			ignores: [
-				"/^[a-z]+(?:-[a-z]+)*:[a-z]+((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?$/u",
-			],
-		},
 	],
 	"vue/define-emits-declaration": [
 		ERROR,
@@ -67,15 +57,6 @@ export const possibleProblemRules = {
 	],
 	"vue/html-end-tags": [
 		ERROR,
-	],
-	"vue/match-component-file-name": [
-		ERROR,
-		{
-			extensions: [
-				"vue",
-			],
-			shouldMatchCase: true,
-		},
 	],
 	"vue/multi-word-component-names": [
 		ERROR,
