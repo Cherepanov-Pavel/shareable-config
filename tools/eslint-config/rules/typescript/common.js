@@ -117,6 +117,7 @@ export const commonRules = {
 	"@typescript-eslint/no-unsafe-member-access": WARN,
 	"@typescript-eslint/no-unsafe-return": OFF,
 	"@typescript-eslint/no-useless-empty-export": ERROR,
+	"@typescript-eslint/no-useless-default-assignment": ERROR,
 	"@typescript-eslint/no-var-requires": ERROR,
 	"@typescript-eslint/non-nullable-type-assertion-style": ERROR,
 	"@typescript-eslint/parameter-properties": ERROR,
