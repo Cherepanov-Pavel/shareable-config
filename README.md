@@ -61,7 +61,7 @@ import {
 
 Before:
 ```js
-import baseConfig from './tools/stylelint-config';
+import baseConfig from './modules/stylelint-config';
 ```
 
 After:

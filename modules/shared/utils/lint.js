@@ -1,11 +1,11 @@
 import {
-	exec,
+	execFile,
 } from "node:child_process";
 import {
 	promisify,
 } from "node:util";
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
 //  filePaths: string | string[]
 export async function eslintFiles(filePaths) {
 	const paths = Array.isArray(filePaths)
@@ -15,7 +15,10 @@ export async function eslintFiles(filePaths) {
 		];
 
 	const promises = paths.map(async (path) => {
-		return execAsync(`eslint ${path} --fix`);
+		return execFileAsync("eslint", [
+			path,
+			"--fix",
+		]);
 	});
 
 	return Promise.all(promises);
