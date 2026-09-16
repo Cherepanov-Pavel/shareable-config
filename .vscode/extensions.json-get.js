@@ -6,22 +6,22 @@ import {
 } from "fs/promises";
 import {
 	getSrcJSONFileData,
-} from "../utils/file.js";
+} from "../modules/shared/utils/file.js";
 import {
 	mergeWithOverride,
-} from "../utils/merge.js";
+} from "../modules/shared/utils//merge.js";
 import {
 	getHeader,
-} from "../utils/file-header.js";
+} from "../modules/shared/utils//file-header.js";
 import {
 	getEnvs,
-} from "../utils/env.js";
+} from "../modules/shared/utils//env.js";
 import {
 	outputFile,
 } from "fs-extra";
 import {
 	eslintFiles,
-} from "../utils/lint.js";
+} from "../modules/shared/utils/lint.js";
 
 const fileName = "extensions.json";
 const destFile = path.join(process.cwd(), `.vscode/${fileName}`);

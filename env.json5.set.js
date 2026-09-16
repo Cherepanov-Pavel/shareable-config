@@ -2,10 +2,10 @@
 
 import {
 	askFramework, askOptionsApi, askTypescript,
-} from "./utils/communication.js";
+} from "./modules/shared/utils/communication.js";
 import {
 	getEnvs, setEnvs,
-} from "./utils/env.js";
+} from "./modules/shared/utils/env.js";
 
 let envs = {};
 try {

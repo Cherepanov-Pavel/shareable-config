@@ -4,7 +4,12 @@ import {
 	tsConfig,
 	vueConfig,
 	jsonConfig,
-} from "./tools/eslint-config/index.js";
+} from "./modules/eslint-config";
+import {
+	OFF,
+	WARN,
+	ERROR,
+} from "./modules/eslint-config/constants/severity.js";
 
 const eslintConfig = [
 	...globalConfig,
@@ -20,7 +25,7 @@ export function override() {
 	// eslintConfig.push({
 	//   files: ['**/*.js'],
 	//   rules: {
-	//     'no-dupe-keys': 'off',
+	//     'no-dupe-keys': OFF,
 	//   },
 	// });
 }

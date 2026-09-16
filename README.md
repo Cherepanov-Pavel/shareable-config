@@ -2,18 +2,18 @@
 
 👉 **If you want to integrate these configs into Quasar, be sure to read the [Quasar integration specifics](#quasar-integration-notes) section below!**
 
-**This repository is intended to standardize and centralize formatting and linting across all of my projects.**  
+**This repository is intended to standardize and centralize formatting and linting across all of my projects.**
 You can always override any rules to suit a specific project's needs.
 
 ---
 
 ## Quick Start
 
-**IMPORTANT!**  
-Before installing this package, remove `eslint`, `stylelint`, `@stylistic/*`, `@typescript-eslint/*` and any other linting/formatting-related packages from your project.  
+**IMPORTANT!**
+Before installing this package, remove `eslint`, `stylelint`, `@stylistic/*`, `@typescript-eslint/*` and any other linting/formatting-related packages from your project.
 The correct versions of those dependencies will be installed automatically when you install this package.
 
-**IMPORTANT!**  
+**IMPORTANT!**
 As you'll see further down in this README, the project is flexible and supports overrides at every level.
 
 1. **Open the target project.**
@@ -37,11 +37,11 @@ As you'll see further down in this README, the project is flexible and supports 
 Before:
 ```js
 import {
-  globalConfig,
-  jsConfig,
-  tsConfig,
-  vueConfig,
-} from './tools/eslint-config/index.js';
+	...
+} from "./modules/eslint-config";
+import {
+	...
+} from "./modules/eslint-config/constants/severity.js";
 ```
 
 After:
@@ -51,17 +51,23 @@ import {
   jsConfig,
   tsConfig,
   vueConfig,
-} from '@cherepanov.pavel/shareable-config/tools/eslint-config/index.js';
+} from '@cherepanov.pavel/shareable-config/eslint-config';
+import {
+  globalConfig,
+  jsConfig,
+  tsConfig,
+  vueConfig,
+} from '@cherepanov.pavel/shareable-config/eslint-config/constants/severity.js';
 ```
 
 Before:
 ```js
-import baseConfig from './tools/stylelint-config/config.js';
+import baseConfig from './tools/stylelint-config';
 ```
 
 After:
 ```js
-import baseConfig from '@cherepanov.pavel/shareable-config/tools/stylelint-config/config.js';
+import baseConfig from '@cherepanov.pavel/shareable-config/stylelint-config';
 ```
 
 5. **Override rules via the `override` function in your own configs where needed.**
@@ -177,8 +183,8 @@ After:
 
 ## Summary
 
-Use this repository as a single source for configs.  
-Only override what you need using the override mechanism.  
+Use this repository as a single source for configs.
+Only override what you need using the override mechanism.
 Receive updates without losing your custom changes.
 
 ---

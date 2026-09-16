@@ -6,7 +6,7 @@ import {
 } from "url";
 import {
 	copyWithOverride,
-} from "./utils/copy-with-override.js";
+} from "./modules/shared/utils/copy-with-override.js";
 import {
 	readFile,
 } from "fs/promises";

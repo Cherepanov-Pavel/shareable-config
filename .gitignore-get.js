@@ -9,10 +9,10 @@ import {
 } from "fs/promises";
 import {
 	copyWithOverride,
-} from "./utils/copy-with-override.js";
+} from "./modules/shared/copy-with-override.js";
 import {
 	getEnvs,
-} from "./utils/env.js";
+} from "./modules/shared/env.js";
 
 const fileName = ".gitignore";
 const destFile = path.join(process.cwd(), fileName);
