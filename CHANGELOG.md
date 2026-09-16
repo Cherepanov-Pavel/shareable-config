@@ -44,8 +44,9 @@ import baseConfig from
 with:
 
 ```js
-import baseConfig from
-	"@cherepanov.pavel/shareable-config/stylelint-config";
+import {
+	baseConfig
+} from "@cherepanov.pavel/shareable-config/stylelint-config";
 ```
 
 #### ESLint constants

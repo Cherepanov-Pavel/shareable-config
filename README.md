@@ -61,12 +61,16 @@ import {
 
 Before:
 ```js
-import baseConfig from './modules/stylelint-config';
+import {
+	baseConfig,
+} from "./modules/stylelint-config";
 ```
 
 After:
 ```js
-import baseConfig from '@cherepanov.pavel/shareable-config/stylelint-config';
+import {
+	baseConfig
+} from '@cherepanov.pavel/shareable-config/stylelint-config';
 ```
 
 5. **Override rules via the `override` function in your own configs where needed.**
