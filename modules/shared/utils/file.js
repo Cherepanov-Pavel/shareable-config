@@ -1,37 +1,16 @@
-import {
-	fileURLToPath,
-} from "url";
-import path from "path";
-import {
-	readFile,
-} from "fs/promises";
 import JSON5 from "json5";
 
-export async function getSrcFileData({
-	fileName,
-}) {
-	const dirname = path.dirname(fileURLToPath(import.meta.url));
-	const src = path.join(dirname, "..", ".vscode", fileName);
-	const srcFileData = await readFile(src, "utf8");
-
-	return srcFileData;
-}
-
 export async function getSrcJSONFileData({
-	fileName,
+	fileData,
 	isTs = false,
 	removeDuplicateKeys = false,
 }) {
-	const srcFileData = await getSrcFileData({
-		fileName,
-	});
-
-	// Если есть нет typescript, нет лишних проблем, возвращаем
-	if (!srcFileData.includes("// typescript")) {
-		return srcFileData;
+	// Если нет typescript, нет лишних проблем, возвращаем
+	if (!fileData.includes("// typescript")) {
+		return fileData;
 	}
 
-	const lines = srcFileData.split("\n");
+	const lines = fileData.split("\n");
 	const result = [];
 	let nextLineIsTypescript = false;
 	let nextLineIsTypescriptMultiline = false;

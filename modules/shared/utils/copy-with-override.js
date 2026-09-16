@@ -3,7 +3,7 @@ import {
 } from "fs/promises";
 import {
 	getHeader,
-} from "../../../utils/file-header.js";
+} from "./file-header.js";
 import {
 	outputFile,
 } from "fs-extra";

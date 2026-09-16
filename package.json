@@ -42,7 +42,7 @@
 	},
 	"exports": {
 		"./eslint-config": "./modules/eslint-config/index.js",
-		"./eslint-config/constants/": "./modules/eslint-config/constants/",
+		"./eslint-config/constants/*": "./modules/eslint-config/constants/*",
 		"./stylelint-config": "./modules/stylelint-config/index.js",
 		"./utils": "./modules/utils/index.js"
 	},

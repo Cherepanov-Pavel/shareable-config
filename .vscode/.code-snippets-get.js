@@ -34,8 +34,9 @@ try {
 	} = await getEnvs();
 
 	fileNames.forEach(async (fileName) => {
+		const srcFile = path.join(import.meta.dirname, fileName);
 		const srcFileData = await getSrcJSONFileData({
-			fileName,
+			fileData: await readFile(srcFile, "utf8"),
 			isTs,
 			removeDuplicateKeys: fileName === "vue.code-snippets",
 		});

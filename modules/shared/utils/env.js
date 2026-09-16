@@ -7,7 +7,7 @@ import {
 	outputFile,
 } from "fs-extra";
 
-const envFileSrc = path.join(process.cwd(), "frontend-configs.env.json5");
+export const envFileSrc = path.join(process.cwd(), "frontend-configs.env.json5");
 
 export async function getEnvs() {
 	const srcFileData = await readFile(envFileSrc, "utf8");

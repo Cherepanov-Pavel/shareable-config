@@ -53,10 +53,9 @@ import {
   vueConfig,
 } from '@cherepanov.pavel/shareable-config/eslint-config';
 import {
-  globalConfig,
-  jsConfig,
-  tsConfig,
-  vueConfig,
+ 	OFF,
+	WARN,
+	ERROR,
 } from '@cherepanov.pavel/shareable-config/eslint-config/constants/severity.js';
 ```
 
@@ -84,7 +83,7 @@ import baseConfig from '@cherepanov.pavel/shareable-config/stylelint-config';
 - `extensions.json`
 - `settings.json`
 
-After installing the package, run:
+Once you have completed the Quick Start steps, run:
 ```sh
 npx -p "@cherepanov.pavel/shareable-config" set-env
 ```

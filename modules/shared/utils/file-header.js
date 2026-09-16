@@ -1,8 +1,10 @@
+/* eslint-disable prefer-template */
 import {
 	readFile,
 } from "fs/promises";
 
-const pkg = JSON.parse(await readFile(new URL("../package.json", import.meta.url), "utf8"));
+const pkgJsonFileUrl = new URL("../../../package.json", import.meta.url);
+const pkg = JSON.parse(await readFile(pkgJsonFileUrl, "utf8"));
 
 export function getHeader(comment = "//") {
 	const lines = [
@@ -12,7 +14,11 @@ export function getHeader(comment = "//") {
 		"File may contain override sections, see project README for more details",
 	];
 
-	return `${lines.map((line) => {
-		return `${comment} ${line}`.trim();
-	}).join("\n")}\n`;
+	return (
+		lines.map((line) => {
+			return `${comment} ${line}`.trim();
+		})
+		.join("\n")
+		+ "\n"
+	);
 }

@@ -1,7 +1,7 @@
 import {
 	WARN,
 	OFF,
-} from "../eslint-config/rules/severity.js";
+} from "../eslint-config/constants/severity.js";
 
 
 // Returns overrides that disable all warning-level rules in the provided ESLint configuration.

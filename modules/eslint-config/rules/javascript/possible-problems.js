@@ -1,6 +1,6 @@
 import {
 	ERROR, WARN,
-} from "../../constants/severity";
+} from "../../constants/severity.js";
 
 export const possibleProblemRules = {
 	"array-callback-return": [

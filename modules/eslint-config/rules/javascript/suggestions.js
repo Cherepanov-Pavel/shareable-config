@@ -1,6 +1,6 @@
 import {
 	ERROR, OFF, WARN,
-} from "../../constants/severity";
+} from "../../constants/severity.js";
 
 export const suggestionRules = {
 	"accessor-pairs": [
