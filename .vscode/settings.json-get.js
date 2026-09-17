@@ -6,22 +6,22 @@ import {
 } from "fs/promises";
 import {
 	getSrcJSONFileData,
-} from "../utils/file.js";
+} from "../modules/shared/utils/file.js";
 import {
 	mergeWithOverride,
-} from "../utils/merge.js";
+} from "../modules/shared/utils/merge.js";
 import {
 	getHeader,
-} from "../utils/file-header.js";
+} from "../modules/shared/utils/file-header.js";
 import {
 	getEnvs,
-} from "../utils/env.js";
+} from "../modules/shared/utils/env.js";
 import {
 	outputFile,
 } from "fs-extra";
 import {
 	eslintFiles,
-} from "../utils/lint.js";
+} from "../modules/shared/utils/lint.js";
 
 const fileName = "settings.json";
 const destFile = path.join(process.cwd(), `.vscode/${fileName}`);
@@ -30,8 +30,9 @@ try {
 	const {
 		isRepositoryUseTypescript: isTs,
 	} = await getEnvs();
-	const baseContent = await getSrcJSONFileData({
-		fileName,
+	const srcFile = path.join(import.meta.dirname, fileName);
+	const srcFileData = await getSrcJSONFileData({
+		fileData: await readFile(srcFile, "utf8"),
 		isTs,
 	});
 	let overrideContent;
@@ -42,9 +43,9 @@ try {
 
 	let result;
 	if (overrideContent) {
-		result = await mergeWithOverride(baseContent, overrideContent);
+		result = await mergeWithOverride(srcFileData, overrideContent);
 	} else {
-		result = baseContent;
+		result = srcFileData;
 	}
 
 	await outputFile(destFile, `${getHeader()}${result}`);

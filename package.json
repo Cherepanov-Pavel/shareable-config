@@ -1,7 +1,7 @@
 {
 	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
-	"version": "1.0.26",
+	"version": "2.0.0",
 	"type": "module",
 	"devEngines": {
 		"packageManager": {
@@ -27,9 +27,8 @@
 		".gitignore",
 		".gitignore-get.js",
 		".vscode/",
-		"tools/",
-		"utils/",
-		"jsconfig.json"
+		"jsconfig.json",
+		"modules/"
 	],
 	"bin": {
 		"set-env": "./env.json5.set.js",
@@ -40,6 +39,12 @@
 		"get-extensions": "./.vscode/extensions.json-get.js",
 		"get-settings": "./.vscode/settings.json-get.js",
 		"get-code-snippets": "./.vscode/.code-snippets-get.js"
+	},
+	"exports": {
+		"./eslint-config": "./modules/eslint-config/index.js",
+		"./eslint-config/constants/*": "./modules/eslint-config/constants/*",
+		"./stylelint-config": "./modules/stylelint-config/index.js",
+		"./utils": "./modules/utils/index.js"
 	},
 	"scripts": {
 		"lint": "run-p -lc lint:js lint:css",

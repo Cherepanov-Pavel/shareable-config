@@ -9,10 +9,10 @@ import {
 } from "fs/promises";
 import {
 	copyWithOverride,
-} from "./utils/copy-with-override.js";
+} from "./modules/shared/utils/copy-with-override.js";
 import {
 	getEnvs,
-} from "./utils/env.js";
+} from "./modules/shared/utils/env.js";
 
 const fileName = ".gitignore";
 const destFile = path.join(process.cwd(), fileName);
@@ -30,12 +30,17 @@ async function getGitignoreFileData(framework) {
 		return commonData.trim();
 	}
 
-	const sections = srcFileData.split(/^#\s*/mu).slice(1);
+	const sections = srcFileData.split(/^#\s*/mu)
+	.slice(1);
 	const matchedSection = sections.find((section) => {
 		const [
 			header,
 		] = section.split("\n");
-		return header.trim().toLowerCase() === framework;
+		return (
+			header
+			.trim()
+			.toLowerCase()
+		) === framework;
 	});
 
 	if (matchedSection) {
@@ -43,7 +48,11 @@ async function getGitignoreFileData(framework) {
 			header,
 			...body
 		] = matchedSection.split("\n");
-		return `${commonData.trim()}\n\n# ${header}\n${body.join("\n").trim()}`.trim();
+		return `${commonData.trim()}\n\n# ${header}\n${
+			body
+			.join("\n")
+			.trim()
+		}`.trim();
 	}
 	// Если не найдено — только общий контент
 	return commonData.trim();

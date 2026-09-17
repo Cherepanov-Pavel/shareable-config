@@ -2,10 +2,13 @@
 
 import {
 	askFramework, askOptionsApi, askTypescript,
-} from "./utils/communication.js";
+} from "./modules/shared/utils/communication.js";
 import {
-	getEnvs, setEnvs,
-} from "./utils/env.js";
+	getEnvs, setEnvs, envFileSrc,
+} from "./modules/shared/utils/env.js";
+import {
+	eslintFiles,
+} from "./modules/shared/utils/lint.js";
 
 let envs = {};
 try {
@@ -17,3 +20,5 @@ envs.repositoryFramework = await askFramework();
 envs.isRepositoryUseOptionsApi = await askOptionsApi();
 
 await setEnvs(envs);
+
+await eslintFiles(envFileSrc);
