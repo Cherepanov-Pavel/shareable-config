@@ -232,6 +232,7 @@ export const suggestionRules = {
 			boolean: true,
 			number: true,
 			string: true,
+			disallowTemplateShorthand: true,
 		},
 	],
 	"no-implicit-globals": [
