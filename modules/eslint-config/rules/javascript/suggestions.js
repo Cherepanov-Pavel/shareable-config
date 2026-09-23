@@ -66,7 +66,7 @@ export const suggestionRules = {
 		ERROR,
 		"declaration",
 		{
-			allowArrowFunctions: true,
+			allowTypeAnnotation: true,
 		},
 	],
 	"grouped-accessor-pairs": [
