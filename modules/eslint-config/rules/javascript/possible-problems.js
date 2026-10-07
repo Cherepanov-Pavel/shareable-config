@@ -77,7 +77,7 @@ export const possibleProblemRules = {
 		ERROR,
 	],
 	"no-empty-pattern": [
-		ERROR,
+		WARN,
 	],
 	"no-ex-assign": [
 		ERROR,
