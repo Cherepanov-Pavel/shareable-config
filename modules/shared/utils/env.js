@@ -8,7 +8,7 @@ import {
 } from "fs-extra";
 import {
 	eslintFiles,
-} from "./lint";
+} from "./lint.js";
 
 const envFileSrc = path.join(process.cwd(), "frontend-configs.env.json5");
 
