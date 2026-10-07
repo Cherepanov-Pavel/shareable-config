@@ -47,13 +47,14 @@ import {
 After:
 ```js
 import {
-  globalConfig,
-  jsConfig,
-  tsConfig,
-  vueConfig,
+	globalConfig,
+	jsConfig,
+	tsConfig,
+	vueConfig,
+	jsonConfig,
 } from '@cherepanov.pavel/shareable-config/eslint-config';
 import {
- 	OFF,
+	OFF,
 	WARN,
 	ERROR,
 } from '@cherepanov.pavel/shareable-config/eslint-config/constants/severity.js';
