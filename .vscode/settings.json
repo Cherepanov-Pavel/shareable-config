@@ -25,6 +25,7 @@
 	// typescript
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 
+	"css.validate": false,
 	"json.validate.enable": false,
 	"editor.formatOnSave": false,
 	"editor.codeActionsOnSave": {
