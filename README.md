@@ -19,7 +19,7 @@ As you'll see further down in this README, the project is flexible and supports 
 1. **Open the target project.**
 2. **Install the package:**
   ```sh
-  npm i @cherepanov.pavel/shareable-config
+  npm i @cherepanov.pavel/shareable-config -D
   ```
 
 3. **Copy the config files:**
