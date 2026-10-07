@@ -9,10 +9,7 @@ import {
 export default {
 	"@stylistic/array-bracket-newline": [
 		ERROR,
-		{
-			multiline: true,
-			minItems: 1,
-		},
+		"always",
 	],
 	"@stylistic/array-bracket-spacing": [
 		ERROR,
@@ -226,36 +223,7 @@ export default {
 	],
 	"@stylistic/object-curly-newline": [
 		ERROR,
-		{
-			"ObjectExpression": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ObjectPattern": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ImportDeclaration": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ExportDeclaration": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"TSTypeLiteral": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"TSInterfaceBody": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"TSEnumBody": {
-				multiline: false,
-				minProperties: 1,
-			},
-		},
+		"always",
 	],
 	"@stylistic/object-curly-spacing": [
 		ERROR,

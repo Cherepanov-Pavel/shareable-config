@@ -1,5 +1,7 @@
 /*
-"@stylistic/object-curly-newline": [
+"@stylistic/object-curly-newline"
+was
+[
 	ERROR,
 	{
 		"ObjectExpression": { multiline: false, minProperties: 1 },
@@ -11,6 +13,12 @@
 		"TSEnumBody": { multiline: false, minProperties: 1 },
 	}
 ],
+but now
+[
+	ERROR,
+	"always",
+]
+because of https://github.com/eslint-stylistic/eslint-stylistic/issues/1297
 "@stylistic/object-curly-spacing": [
 	ERROR,
 	"never",
@@ -23,7 +31,8 @@
 /*
 Regarding these rules, the arguments are the same as in array-newline
 */
-const someEmptyObjectExpression = {};
+const someEmptyObjectExpression = {
+};
 const someObjectExpression = {
 	b: 3,
 };
@@ -34,7 +43,8 @@ const someManyElementsObjExpression = {
 };
 
 // eslint-disable-next-line no-empty-pattern
-const {} = someEmptyObjectExpression;
+const {
+} = someEmptyObjectExpression;
 const {
 	b,
 } = someObjectExpression;

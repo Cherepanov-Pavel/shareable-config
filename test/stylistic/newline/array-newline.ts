@@ -1,8 +1,16 @@
 /*
-"@stylistic/array-bracket-newline": [
+"@stylistic/array-bracket-newline"
+was
+[
 	ERROR,
 	{ multiline: true, minItems: 1 },
 ],
+but now
+[
+	ERROR,
+	"always",
+]
+because of https://github.com/eslint-stylistic/eslint-stylistic/issues/1297
 "@stylistic/array-bracket-spacing": [
 	ERROR,
 	"never",
@@ -31,7 +39,11 @@ However, since such an option is not available,
 and considering the benefits for Git diffs and `git blame`,
 I consider this approach to be a reasonable compromise.
 */
-const emptyArr = [];
+const emptyArr = [
+];
+const emptyArrWithComment = [
+	// qfqw
+];
 const arr = [
 	1,
 ];

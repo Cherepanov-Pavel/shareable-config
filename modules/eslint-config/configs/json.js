@@ -57,24 +57,7 @@ const COMMON_RULES = {
 	"jsonc/no-useless-escape": suggestionRules["no-useless-escape"],
 	"jsonc/object-curly-newline": [
 		jsFormatting["@stylistic/object-curly-newline"][0],
-		{
-			"ObjectExpression": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ObjectPattern": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ImportDeclaration": {
-				multiline: false,
-				minProperties: 1,
-			},
-			"ExportDeclaration": {
-				multiline: false,
-				minProperties: 1,
-			},
-		},
+		jsFormatting["@stylistic/object-curly-newline"][1],
 		// Object.fromEntries(
 		// 	[
 		// 		"ObjectExpression",
