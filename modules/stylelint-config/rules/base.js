@@ -1,6 +1,9 @@
 export default {
 	rules: {
-		"color-hex-alpha": "never",
+		// invalid
+		"color-no-invalid-hex": true,
+
+		"color-hex-alpha": null,
 		"color-hex-length": "long",
 		"color-named": "never",
 		"declaration-no-important": true,

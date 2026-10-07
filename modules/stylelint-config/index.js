@@ -6,9 +6,9 @@ import {
 } from "node:url";
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
-const concat = (...arrays) => {
+function concat(...arrays) {
 	return [].concat(...arrays);
-};
+}
 
 export const baseConfig = {
 	extends: concat(

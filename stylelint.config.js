@@ -1,6 +1,6 @@
 import {
 	baseConfig,
-} from "./modules/stylelint-config";
+} from "./modules/stylelint-config/index.js";
 
 const stylelintConfig = {
 	extends: [
