@@ -1,15 +1,19 @@
-node_modules
-.idea
+/node_modules/
+/.idea/
 *.local
 
 # vue
-dist
+/dist/
 
 # nuxt
-.output
-.nuxt
+/.output/
+/.nuxt/
 
 # quasar
-dist
-.quasar
+/dist/
+/.quasar/
 quasar.config.*.temporary.compiled*
+
+# astro
+/dist/
+/.astro/

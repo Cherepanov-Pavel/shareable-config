@@ -24,14 +24,13 @@ async function getGitignoreFileData(framework) {
 
 	const [
 		commonData,
-	] = srcFileData.split(/^#\s*\w+/mu);
+		...sections
+	] = srcFileData.split(/^# /mu);
 
 	if (!framework) {
-		return commonData.trim();
+		return commonData;
 	}
 
-	const sections = srcFileData.split(/^#\s*/mu)
-	.slice(1);
 	const matchedSection = sections.find((section) => {
 		const [
 			header,
@@ -39,7 +38,6 @@ async function getGitignoreFileData(framework) {
 		return (
 			header
 			.trim()
-			.toLowerCase()
 		) === framework;
 	});
 
@@ -48,14 +46,19 @@ async function getGitignoreFileData(framework) {
 			header,
 			...body
 		] = matchedSection.split("\n");
-		return `${commonData.trim()}\n\n# ${header}\n${
-			body
-			.join("\n")
-			.trim()
-		}`.trim();
+		return (
+			// eslint-disable-next-line prefer-template
+			`${commonData.trim()}\n\n`
+			+ `# ${header.trim()}\n`
+			+ (
+				body
+				.join("\n")
+				.trim()
+			)
+		);
 	}
-	// Если не найдено — только общий контент
-	return commonData.trim();
+	// Если не найдено, только общий контент
+	return commonData;
 }
 
 try {
