@@ -1,7 +1,6 @@
 import {
 	cancel, isCancel, confirm, select,
 } from "@clack/prompts";
-import readline from "readline";
 import {
 	supportedFrameworks,
 } from "../constants/index.js";
@@ -16,7 +15,14 @@ export async function askTypescript() {
 export async function askFramework() {
 	return unwrapPrompt(select({
 		message: "Which framework do you use?",
-		options: Object.values(supportedFrameworks),
+		options: (
+			Object.values(supportedFrameworks)
+			.map((value) => {
+				return {
+					value,
+				};
+			})
+		),
 	}));
 }
 
