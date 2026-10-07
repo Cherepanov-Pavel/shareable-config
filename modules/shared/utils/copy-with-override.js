@@ -17,7 +17,8 @@ export async function copyFile({
 	} catch {
 		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
 		console.info(`${fileLabel} пересоздан`);
-		return {};
+		return {
+		};
 	}
 
 	// Если файл есть — разбираем оба файла
@@ -28,7 +29,8 @@ export async function copyFile({
 	if (!match) {
 		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
 		console.info(`${fileLabel} пересоздан`);
-		return {};
+		return {
+		};
 	}
 
 	return {
