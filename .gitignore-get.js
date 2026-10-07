@@ -25,7 +25,7 @@ async function getGitignoreFileData(framework) {
 	const [
 		commonData,
 		...sections
-	] = srcFileData.split(/^#\s*/mu);
+	] = srcFileData.split(/^# /mu);
 
 	if (!framework) {
 		return commonData;
