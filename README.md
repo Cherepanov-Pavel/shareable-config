@@ -185,6 +185,12 @@ After:
 
 ---
 
+## cSpell
+
+When using cSpell, add project-specific words to `project-words.md` in your project root (one word per line), not to `cSpell.words` in your user or workspace settings. The generated `.vscode/settings.json` configures cSpell to use this shared project dictionary. If you use the quick-fix context menu, choose **Add "word" to dictionary: project-words**.
+
+---
+
 ## Summary
 
 Use this repository as a single source for configs.
