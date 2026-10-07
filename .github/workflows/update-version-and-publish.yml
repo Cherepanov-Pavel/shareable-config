@@ -22,7 +22,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Set npm version
-        run: npm install -g npm@12.0.2
+        run: npm install -g npm@11.19.0
 
       - run: npm ci
 
