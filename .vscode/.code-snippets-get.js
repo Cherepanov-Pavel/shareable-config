@@ -29,7 +29,7 @@ import {
 } from "../modules/shared/utils/messages.js";
 
 
-const fileNames = (await readdir(".")).filter((file) => {
+const fileNames = (await readdir(import.meta.dirname)).filter((file) => {
 	return file.endsWith(".code-snippets");
 });
 
