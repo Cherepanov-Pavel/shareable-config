@@ -1,0 +1,19 @@
+{
+	"template for empty astro file": {
+		"scope": "astro",
+		"prefix": "t astro file",
+		"body": [
+			"---",
+			"---",
+			"",
+			"<script>",
+			"</script>",
+			"",
+			"<div>",
+			"</div>",
+			"",
+			"<style>",
+			"</style>",
+		],
+	},
+}
