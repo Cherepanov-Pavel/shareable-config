@@ -13,16 +13,21 @@ export async function askTypescript() {
 }
 
 export async function askFramework() {
+	const options = (
+		Object.values(supportedFrameworks)
+		.map((value) => {
+			return {
+				value,
+			};
+		})
+	);
+	options.push({
+		value: "",
+		label: "None of the listed ones (copy only the framework-less)",
+	});
 	return unwrapPrompt(select({
 		message: "Which framework do you use?",
-		options: (
-			Object.values(supportedFrameworks)
-			.map((value) => {
-				return {
-					value,
-				};
-			})
-		),
+		options,
 	}));
 }
 
