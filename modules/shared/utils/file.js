@@ -1,7 +1,7 @@
 import JSON5 from "json5";
 import {
 	supportedFrameworks,
-} from "../constants.js";
+} from "../constants/index.js";
 
 export async function getSrcJSONFileData({
 	fileData,
