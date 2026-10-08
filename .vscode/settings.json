@@ -4,6 +4,8 @@
 	"editor.linkedEditing": true,
 	"editor.suggestSelection": "recentlyUsed",
 	"git.blame.editorDecoration.enabled": true,
+	"javascript.preferences.quoteStyle": "double",
+	"typescript.preferences.quoteStyle": "double",
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
