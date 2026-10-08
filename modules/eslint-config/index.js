@@ -13,3 +13,5 @@ export {
 export {
 	default as tsConfig,
 } from "./configs/typescript.js";
+
+// need to get astroConfig from https://github.com/Cherepanov-Pavel/starter-kit
