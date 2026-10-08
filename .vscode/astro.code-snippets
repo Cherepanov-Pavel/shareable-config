@@ -4,6 +4,7 @@
 		"prefix": "t astro file",
 		"body": [
 			"---",
+			"\t$0",
 			"---",
 			"",
 			"<script>",

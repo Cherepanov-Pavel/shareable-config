@@ -4,6 +4,7 @@
 		"prefix": "t vue file",
 		"body": [
 			"<script setup>",
+			"\t$0",
 			"</script>",
 			"",
 			"<template>",
@@ -15,6 +16,7 @@
 		// typescript multiline
 		"body": [
 			"<script setup lang=\"ts\">",
+			"\t$0",
 			"</script>",
 			"",
 			"<template>",
