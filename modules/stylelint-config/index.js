@@ -6,17 +6,15 @@ import {
 } from "node:url";
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
-function concat(...arrays) {
-	return [].concat(...arrays);
-}
 
 export const baseConfig = {
-	extends: concat(
-		[
+	extends: [
+		...[
+			"stylelint-config-html/astro",
 			"stylelint-config-standard",
 			"stylelint-config-standard-vue",
 		],
-		[
+		...[
 			"./rules/base.js",
 			"./rules/stylistic.js",
 			"./rules/order.js",
@@ -24,7 +22,7 @@ export const baseConfig = {
 		].map((string) => {
 			return path.resolve(currentDir, string);
 		}),
-	),
+	],
 	plugins: [
 		"@stylistic/stylelint-plugin",
 	],

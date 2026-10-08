@@ -6,18 +6,18 @@ const stylelintConfig = {
 	extends: [
 		baseConfig,
 	],
-	// Можно добавить другие опции stylelint, например:
+	// You can add other stylelint options here, for example:
 	// rules: { ... }
 };
 
 export function override() {
-	// Пример: отключить правило color-no-invalid-hex
+	// Example: disable rule color-no-invalid-hex
 	// stylelintConfig.rules = {
 	//   ...(stylelintConfig.rules || {}),
 	//   'color-no-invalid-hex': null,
 	// };
 
-	// Пример: добавить ещё один конфиг
+	// Example: add one more config
 	// stylelintConfig.extends.push('stylelint-config-recommended');
 }
 override();

@@ -48,6 +48,7 @@
 	"stylelint.validate": [
 		"css",
 		"vue",
+		"astro",
 	],
 	"cSpell.language": "en,ru",
 	"cSpell.words": [
