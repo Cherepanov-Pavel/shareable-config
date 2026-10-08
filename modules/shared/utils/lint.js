@@ -1,15 +1,10 @@
-/*
-change with execFile carefully later. Cover with tests
-*/
 import {
-	exec,
-} from "node:child_process";
-import {
-	promisify,
-} from "node:util";
+	ESLint,
+} from "eslint";
 
-const execAsync = promisify(exec);
-
+const eslint = new ESLint({
+	fix: true,
+});
 //  filePaths: string | string[]
 export async function eslintFiles(filePaths) {
 	const paths = Array.isArray(filePaths)
@@ -19,7 +14,11 @@ export async function eslintFiles(filePaths) {
 		];
 
 	const promises = paths.map(async (path) => {
-		return execAsync(`eslint ${path} --fix`);
+		const results = await eslint.lintFiles([
+			path,
+		]);
+
+		await ESLint.outputFixes(results);
 	});
 
 	return Promise.all(promises);
