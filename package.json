@@ -1,7 +1,7 @@
 {
 	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
-	"version": "2.0.17",
+	"version": "2.0.18",
 	"type": "module",
 	"devEngines": {
 		"packageManager": {
@@ -72,6 +72,7 @@
 		"postcss-html": "^2.0.0",
 		"stylelint": "^17.14.1",
 		"stylelint-config-html": "^2.0.0",
+		"stylelint-config-recess-order": "^7.8.0",
 		"stylelint-config-standard": "^40.0.0",
 		"stylelint-config-standard-vue": "^2.0.0",
 		"stylelint-order": "^8.1.1",

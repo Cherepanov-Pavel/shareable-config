@@ -1,6 +1,4 @@
-import {
-	propertyGroups,
-} from "./property-groups.js";
+import propertyGroups from "stylelint-config-recess-order/groups";
 
 export default {
 	plugins: [
