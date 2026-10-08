@@ -3,6 +3,7 @@
 import path from "path";
 import {
 	readFile,
+	readdir,
 } from "fs/promises";
 import {
 	outputFile,
@@ -27,10 +28,10 @@ import {
 	getUpdatedWithOverrideMessage,
 } from "../modules/shared/utils/messages.js";
 
-const fileNames = [
-	"vue.code-snippets",
-	"all-files.code-snippets",
-];
+
+const fileNames = (await readdir(".")).filter((file) => {
+	return file.endsWith(".code-snippets");
+});
 
 try {
 	const {
