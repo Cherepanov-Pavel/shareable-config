@@ -1,45 +1,63 @@
 import JSON5 from "json5";
+import {
+	supportedFrameworks,
+} from "../constants";
 
 export async function getSrcJSONFileData({
 	fileData,
 	isTs = false,
+	repositoryFramework = "",
 	removeDuplicateKeys = false,
 }) {
-	// Если нет typescript, нет лишних проблем, возвращаем
-	if (!fileData.includes("// typescript")) {
+	const frameworks = Object.values(supportedFrameworks);
+	const markers = [
+		...frameworks,
+		"typescript",
+	];
+	const isFileHaveMarker = markers.some((marker) => {
+		return fileData.includes(`// ${marker}`);
+	});
+	// If there are no typescript and framework comments,
+	// there are no unnecessary problems, we return the source file.
+	if (!isFileHaveMarker) {
 		return fileData;
 	}
 
 	const lines = fileData.split("\n");
-	const result = [];
+	const result = [
+	];
 	let nextLineIsTypescript = false;
 	let nextLineIsTypescriptMultiline = false;
+	let nextLineFramework;
 
 	lines.forEach((line) => {
-		// если следующая строка typescript only
-		if (line.includes("// typescript")) {
-			// если несколько следующих строк typescript only
+		const isLineWithTsComment = line.includes("// typescript");
+		if (isLineWithTsComment) {
 			if (line.includes("// typescript multiline")) {
-				// проверяем это конец multiline typescript комментария, или начало, и в соответствии
-				// с этим ставим флаг
 				nextLineIsTypescriptMultiline = !(line.includes("// typescript multiline end"));
 			} else {
-				nextLineIsTypescript = true; // Следующая строка будет typescript-only
+				nextLineIsTypescript = true;
 			}
-			// флаги проставлены, с этой строкой больше нечего делать, выходим
 			return;
 		}
 
-		if (nextLineIsTypescript || nextLineIsTypescriptMultiline) {
-			// Включаем строку только если нужен typescript
-			if (isTs) {
-				result.push(line);
-			}
-			nextLineIsTypescript = false; // Сбрасываем флаг
-		} else {
-			// Обычная строка - всегда включаем
+		const lineFramework = frameworks.find((framework) => {
+			return line.includes(`// ${framework}`);
+		});
+		if (lineFramework) {
+			nextLineFramework = lineFramework;
+			return;
+		}
+
+		const isTypescriptAllowed = isTs || (!nextLineIsTypescript && !nextLineIsTypescriptMultiline);
+		const isFrameworkAllowed = repositoryFramework === nextLineFramework || !nextLineFramework;
+
+		if (isTypescriptAllowed && isFrameworkAllowed) {
 			result.push(line);
 		}
+
+		nextLineIsTypescript = false;
+		nextLineFramework = undefined;
 	});
 
 	const stringResult = result.join("\n");

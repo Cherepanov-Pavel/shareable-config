@@ -22,6 +22,10 @@ import {
 import {
 	eslintFiles,
 } from "../modules/shared/utils/lint.js";
+import {
+	getRecreatedMessage,
+	getUpdatedWithOverrideMessage,
+} from "../modules/shared/utils/messages.js";
 
 const fileNames = [
 	"vue.code-snippets",
@@ -59,11 +63,11 @@ try {
 		await outputFile(destFile, `${getHeader()}${result}`);
 		await eslintFiles(destFile);
 		if (isDestFileHaveOverride) {
-			console.info(`${fileName} обновлён с учётом override`);
+			console.info(getUpdatedWithOverrideMessage(fileName));
 		} else {
-			console.info(`${fileName} пересоздан`);
+			console.info(getRecreatedMessage(fileName));
 		}
 	});
 } catch (err) {
-	console.error("Ошибка:", err.message);
+	console.error(err.message);
 }

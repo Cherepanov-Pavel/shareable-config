@@ -7,9 +7,10 @@
 		// typescript
 		"yoavbls.pretty-ts-errors",
 		"vue.volar",
-		"ms-azuretools.vscode-containers",
-		// "redhat.vscode-yaml",
+		// astro
+		"astro-build.astro-vscode",
 		"savh.json5-kit",
+		"ms-azuretools.vscode-containers",
 
 		"editorconfig.editorconfig",
 		"dbaeumer.vscode-eslint",

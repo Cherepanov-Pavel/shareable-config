@@ -72,5 +72,5 @@ try {
 		fileLabel: fileName,
 	});
 } catch (err) {
-	console.error("Ошибка:", err.message);
+	console.error(err.message);
 }

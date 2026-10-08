@@ -7,6 +7,10 @@ import {
 import {
 	outputFile,
 } from "fs-extra";
+import {
+	getRecreatedMessage,
+	getUpdatedWithOverrideMessage,
+} from "./messages.js";
 
 export async function copyFile({
 	destFile, srcFileData, fileLabel,
@@ -16,7 +20,7 @@ export async function copyFile({
 		await readFile(destFile, "utf8");
 	} catch {
 		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
-		console.info(`${fileLabel} пересоздан`);
+		console.info(getRecreatedMessage(fileLabel));
 		return {
 		};
 	}
@@ -28,7 +32,7 @@ export async function copyFile({
 	const match = destFileData.match(overrideRegex);
 	if (!match) {
 		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
-		console.info(`${fileLabel} пересоздан`);
+		console.info(getRecreatedMessage(fileLabel));
 		return {
 		};
 	}
@@ -59,7 +63,7 @@ export async function copyWithOverride({
 		const newContent = `${srcFileData.trimEnd()}\n\n${preserved.trimStart()}`;
 
 		await outputFile(destFile, `${getHeader("#")}${newContent}`);
-		console.info(`${fileLabel} обновлён с учётом override`);
+		console.info(getUpdatedWithOverrideMessage(fileLabel));
 	} catch (err) {
 		console.error(`Ошибка копирования ${fileLabel}:`, err.message);
 	}
