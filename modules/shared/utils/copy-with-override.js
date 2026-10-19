@@ -1,68 +1,50 @@
-import {
-	readFile,
-} from "fs/promises";
+/* eslint-disable prefer-template */
 import {
 	getHeader,
 } from "./file-header.js";
 import {
-	outputFile,
-} from "fs-extra";
-import {
-	getRecreatedMessage,
-	getUpdatedWithOverrideMessage,
+	getRecreatedMessage, getUpdatedWithOverrideMessage,
 } from "./messages.js";
-
-export async function copyFile({
-	destFile, srcFileData, fileLabel,
-}) {
-	// Если файла нет — просто создаём его
-	try {
-		await readFile(destFile, "utf8");
-	} catch {
-		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
-		console.info(getRecreatedMessage(fileLabel));
-		return {
-		};
-	}
-
-	// Если файл есть — разбираем оба файла
-	const destFileData = await readFile(destFile, "utf8");
-	// Ищем строку override (без учёта регистра)
-	const overrideRegex = /^# override.*$/imu;
-	const match = destFileData.match(overrideRegex);
-	if (!match) {
-		await outputFile(destFile, `${getHeader("#")}${srcFileData}`);
-		console.info(getRecreatedMessage(fileLabel));
-		return {
-		};
-	}
-
-	return {
-		destFileData,
-		match,
-	};
-}
+import {
+	readFile, writeFile,
+} from "fs/promises";
 
 export async function copyWithOverride({
-	destFile, srcFileData, fileLabel = "",
+	destFile,
+	srcFileData,
+	fileLabel = "",
+	overrideRegexp = "^# override.*$",
+	comment = "#",
 }) {
 	try {
-		const {
-			destFileData, match,
-		} = await copyFile({
-			destFile,
-			srcFileData,
-			fileLabel,
-		});
-		if (!destFileData) {
+		let destFileData;
+		try {
+			destFileData = await readFile(destFile, "utf8");
+		} catch {
+			await writeFile(destFile, `${getHeader(comment)}${srcFileData}`);
+			console.info(getRecreatedMessage(fileLabel));
 			return;
 		}
+		const destFileOverrideMatch = destFileData.match(new RegExp(overrideRegexp, "imu"));
+		if (!destFileOverrideMatch) {
+			await writeFile(destFile, `${getHeader(comment)}${srcFileData}`);
+			console.info(getRecreatedMessage(fileLabel));
+			return;
+		}
+		const destFileSliced = destFileData.slice(destFileOverrideMatch.index);
 
-		const overrideIndex = destFileData.indexOf(match[0]);
-		const preserved = destFileData.slice(overrideIndex);
-		const newContent = `${srcFileData.trimEnd()}\n\n${preserved.trimStart()}`;
+		const srcFileOverrideMatch = srcFileData.match(new RegExp(overrideRegexp, "imu"));
+		const srcFileSliced = (
+			srcFileData
+			.slice(0, srcFileOverrideMatch?.index ?? Infinity)
+		);
+		const newContent = (
+			srcFileSliced.trimEnd()
+			+ "\n\n"
+			+ destFileSliced.trimStart()
+		);
 
-		await outputFile(destFile, `${getHeader("#")}${newContent}`);
+		await writeFile(destFile, `${getHeader(comment)}${newContent}`);
 		console.info(getUpdatedWithOverrideMessage(fileLabel));
 	} catch (err) {
 		console.error(`Ошибка копирования ${fileLabel}:`, err.message);

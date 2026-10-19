@@ -1,24 +1,13 @@
-/* eslint-disable prefer-template */
-import {
-	readFile,
-} from "fs/promises";
-
-const pkgJsonFileUrl = new URL("../../../package.json", import.meta.url);
-const pkg = JSON.parse(await readFile(pkgJsonFileUrl, "utf8"));
+import pkgJson from "@/package.json" with {type: "json"};
 
 export function getHeader(comment = "//") {
-	const lines = [
+	return `${[
 		"This file is generated with",
-		String(pkg.repository?.url || ""),
-		`Version: ${pkg.version || ""}`,
+		String(pkgJson.repository?.url || ""),
+		`Version: ${pkgJson.version || ""}`,
 		"File may contain override sections, see project README for more details",
-	];
-
-	return (
-		lines.map((line) => {
-			return `${comment} ${line}`.trim();
-		})
-		.join("\n")
-		+ "\n"
-	);
+	].map((line) => {
+		return `${comment} ${line}`.trim();
+	})
+	.join("\n")}\n`;
 }

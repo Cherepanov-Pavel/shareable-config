@@ -17,3 +17,6 @@ quasar.config.*.temporary.compiled*
 # astro
 /dist/
 /.astro/
+
+# @cherepanov.pavel/shareable-config
+/cherepanov.pavel-shareable-config-*.tgz

@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "nodenext",
+		"moduleResolution": "nodenext",
+		"types": [
+			"node",
+		],
+		"allowJs": true,
+		"noEmit": true,
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"erasableSyntaxOnly": true,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"paths": {
+			"@/*": [
+				"./*",
+			],
+		},
+	},
+	"exclude": [
+		"node_modules",
+	],
+}

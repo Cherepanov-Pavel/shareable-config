@@ -1,7 +1,7 @@
 {
 	"name": "@cherepanov.pavel/shareable-config",
 	"description": "setup for new repositories",
-	"version": "2.0.18-experimental",
+	"version": "2.0.19",
 	"type": "module",
 	"devEngines": {
 		"packageManager": {
@@ -18,6 +18,7 @@
 		"url": "https://github.com/Cherepanov-Pavel/shareable-config"
 	},
 	"files": [
+		"eslint.config.ts",
 		"env.json5",
 		"env.json5.set.js",
 		".editorconfig",
@@ -33,6 +34,7 @@
 	"bin": {
 		"set-env": "./env.json5.set.js",
 		"get-all": "./.get-all.js",
+		"get-eslint": "./eslint.config.ts-get.js",
 		"get-editorconfig": "./.editorconfig-get.js",
 		"get-gitattributes": "./.gitattributes-get.js",
 		"get-gitignore": "./.gitignore-get.js",
@@ -52,30 +54,39 @@
 		"lint:js": "eslint",
 		"lint:js:fix": "npm run lint:js -- --fix",
 		"lint:css": "stylelint \"./**/*.{css,vue,astro}\" --ignore-path .gitignore --formatter verbose",
-		"lint:css:fix": "npm run lint:css -- --fix"
+		"lint:css:fix": "npm run lint:css -- --fix",
+		"prepack": "vite build",
+		"vite-node": "vite-node --config vite.config.ts",
+		"tarball": "npm run vite-node -- ./test/projects/create-lib-tarball.ts",
+		"test-project": "npm run vite-node -- ./test/projects/create-astro-project.ts"
 	},
 	"dependencies": {
-		"@clack/prompts": "^1.8.1",
-		"@eslint/compat": "2.1.0",
+		"@clack/prompts": "1.8.1",
 		"@stylistic/eslint-plugin": "5.10.0",
-		"@stylistic/stylelint-plugin": "5.2.1",
-		"@typescript-eslint/eslint-plugin": "^8.66.0",
-		"@typescript-eslint/parser": "^8.66.0",
-		"eslint": "^10.9.1",
-		"eslint-plugin-jsonc": "^3.4.2",
-		"eslint-plugin-vue": "^10.10.0",
-		"fs-extra": "^11.4.0",
-		"globals": "^17.9.0",
-		"jiti": "^2.7.0",
-		"json5": "^2.2.3",
-		"npm-run-all2": "^9.0.3",
-		"postcss-html": "^2.0.0",
-		"stylelint": "^17.14.1",
-		"stylelint-config-html": "^2.0.0",
-		"stylelint-config-recess-order": "^7.8.0",
-		"stylelint-config-standard": "^40.0.0",
-		"stylelint-config-standard-vue": "^2.0.0",
-		"stylelint-order": "^8.1.1",
-		"vue-eslint-parser": "^10.4.1"
+		"@stylistic/stylelint-plugin": "5.3.1",
+		"@typescript-eslint/eslint-plugin": "8.71.2",
+		"@typescript-eslint/parser": "8.71.2",
+		"eslint": "10.12.0",
+		"eslint-plugin-jsonc": "3.4.2",
+		"eslint-plugin-vue": "10.11.1",
+		"fs-extra": "11.4.1",
+		"globals": "17.13.0",
+		"jiti": "2.7.0",
+		"json5": "2.2.3",
+		"npm-run-all2": "9.0.3",
+		"stylelint": "^17.16.0",
+		"stylelint-config-html": "2.0.0",
+		"stylelint-config-recess-order": "7.8.0",
+		"stylelint-config-standard": "40.0.0",
+		"stylelint-config-standard-vue": "2.0.0",
+		"stylelint-order": "8.1.2",
+		"vue-eslint-parser": "10.4.1"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^11.0.4",
+		"@types/node": "^26.6.5",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.4",
+		"vite-node": "^6.0.0"
 	}
 }
