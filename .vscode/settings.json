@@ -9,7 +9,7 @@
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"frontend-configs.env.json5": "eslint.config.*s, stylelint.config.*s, .editorconfig",
+		"shareable-config.env.json5": "eslint.config.*s, stylelint.config.*s, .editorconfig",
 		".env.*.local": ".env.*",
 		".gitignore": ".gitattributes, lefthook.yml",
 		// ".gitlab-ci.yml": "Dockerfile, .releaserc.template.yaml",
@@ -26,6 +26,8 @@
 	"typescript.tsdk": "./node_modules/typescript/lib",
 	// typescript
 	"typescript.enablePromptUseWorkspaceTsdk": true,
+	// typescript
+	"typescript.preferences.importModuleSpecifierEnding": "minimal",
 
 	"css.validate": false,
 	"json.validate.enable": false,

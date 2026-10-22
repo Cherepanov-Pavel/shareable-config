@@ -4,14 +4,12 @@ import {
 	tsConfig,
 	vueConfig,
 	jsonConfig,
-	// @ts-expect-error library is not fully typed yet
-} from "./modules/eslint-config";
+} from "./dist/modules/eslint-config";
 import {
 	OFF,
 	WARN,
 	ERROR,
-	// @ts-expect-error library is not fully typed yet
-} from "./modules/eslint-config/constants/severity.js";
+} from "./dist/modules/eslint-config/constants/severity.js";
 
 const eslintConfig = [
 	...globalConfig,
@@ -33,4 +31,5 @@ function override() {
 }
 override();
 
+export type EslintConfig = typeof eslintConfig;
 export default eslintConfig;
