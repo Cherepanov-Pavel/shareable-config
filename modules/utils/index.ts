@@ -1,6 +1,3 @@
-import type {
-	EslintConfig,
-} from "@/eslint.config";
 import {
 	WARN,
 	OFF,
@@ -16,9 +13,9 @@ import {
 // 	],
 // 	rules: getDisabledWarningRules(eslintConfig),
 // });
-export function getDisabledWarningRules(eslintConfig: EslintConfig) {
+export function getDisabledWarningRules(eslintConfig: any) {
 	const warningRules = new Set();
-	eslintConfig.forEach((config) => {
+	eslintConfig.forEach((config: any) => {
 		if (!config.rules) {
 			return;
 		}

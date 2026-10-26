@@ -31,5 +31,4 @@ function override() {
 }
 override();
 
-export type EslintConfig = typeof eslintConfig;
 export default eslintConfig;
