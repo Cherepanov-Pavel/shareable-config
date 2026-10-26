@@ -24,7 +24,8 @@ export async function mergeWithOverride(baseContent, overrideContent) {
 
 function findOverrideBlocks(overrideContent) {
 	const lines = overrideContent.split("\n");
-	const overrideBlocks = [];
+	const overrideBlocks = [
+	];
 	let currentBlock = null;
 	let braceCount = 0;
 
@@ -37,7 +38,8 @@ function findOverrideBlocks(overrideContent) {
 				lines: [
 					line,
 				],
-				path: [],
+				path: [
+				],
 				isObjectOverride: false,
 			};
 			let braceCount2 = 0;
@@ -153,7 +155,8 @@ function findEndOfArrOrObj(startIdx, lines, block) {
 
 function pasteOverrideInsideEndOfPath(block, result) {
 	if (block.path.length) {
-		const resultArr = [];
+		const resultArr = [
+		];
 		const lines = result.split("\n");
 		let pathCount = 0;
 		for (let i = 0; i < lines.length; i++) {

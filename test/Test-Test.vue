@@ -6,6 +6,12 @@
 /* TODO:
 wqrwq
 */
+
+const newCount = 1;
+
+const emit = defineEmits<{
+	change: [id: number]; // named tuple syntax
+}>();
 </script>
 
 <i18n>
@@ -24,6 +30,12 @@ wqrwq
 	>
 		Выберите фреймворк:
 	</label>
+	<button
+		type="button"
+		@click="emit('change', parseInt(String(newCount) || '1'))"
+	>
+		test
+	</button>
 </template>
 
 <style>
@@ -43,3 +55,13 @@ wqrwq
 fef
 */
 </style>
+
+<!-- TODO:
+test it
+-->
+<!-- <button
+		type="button"
+		@click="emit('change', parseInt(String(newCount) || "1"))"
+	>
+		test
+	</button> -->

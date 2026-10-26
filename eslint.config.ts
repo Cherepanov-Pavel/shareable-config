@@ -4,12 +4,12 @@ import {
 	tsConfig,
 	vueConfig,
 	jsonConfig,
-} from "./modules/eslint-config";
+} from "./dist/modules/eslint-config";
 import {
 	OFF,
 	WARN,
 	ERROR,
-} from "./modules/eslint-config/constants/severity.js";
+} from "./dist/modules/eslint-config/constants/severity";
 
 const eslintConfig = [
 	...globalConfig,
@@ -19,7 +19,7 @@ const eslintConfig = [
 	...jsonConfig,
 ];
 
-export function override() {
+function override() {
 	// you can override some part of config here, by eslintConfig.push()
 	// for the example, uncomment this line:
 	// eslintConfig.push({
@@ -31,4 +31,5 @@ export function override() {
 }
 override();
 
+export type EslintConfig = typeof eslintConfig;
 export default eslintConfig;

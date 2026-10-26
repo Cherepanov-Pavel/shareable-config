@@ -1,0 +1,32 @@
+{
+	"include": [
+		"**/*.*s",
+		"**/.*.ts",
+		".*/**/*.ts",
+		// ".gitignore-get.ts",
+		// ".gitattributes-get.ts",
+		// ".editorconfig-get.ts",
+		// ".vscode/.code-snippets-get.ts",
+		// ".vscode/extensions.json-get.ts",
+		// ".vscode/settings.json-get.ts",
+	],
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"noEmit": true,
+		"strict": true,
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"paths": {
+			"@/*": [
+				"./*",
+			],
+		},
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+	],
+}
