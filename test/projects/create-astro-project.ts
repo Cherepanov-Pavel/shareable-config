@@ -53,3 +53,16 @@ await execFileAsync("npm", [
 ], {
 	cwd: nextTestProjectDir,
 });
+
+const packageJsonPath = join(nextTestProjectDir, "package.json");
+const packageJson = JSON.parse(await readFile(packageJsonPath, "utf8"));
+packageJson.scripts = {
+	...packageJson.scripts,
+	setup: "npx -p \"@cherepanov.pavel/shareable-config\" setup",
+	update: "npx -p \"@cherepanov.pavel/shareable-config\" update",
+};
+await writeFile(
+	packageJsonPath,
+	JSON.stringify(packageJson, undefined, 2),
+	"utf8",
+);

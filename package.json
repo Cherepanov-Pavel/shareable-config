@@ -24,6 +24,7 @@
 	"bin": {
 		"setup": "./dist/setup.js",
 		"update": "./dist/update.js",
+		"get-all": "./dist/update.js",
 		"set-env": "./dist/env.json5.set.js",
 		"get-eslint": "./dist/eslint.config.ts-get.js",
 		"get-stylelint": "./dist/stylelint.config.ts-get.js",
@@ -39,7 +40,10 @@
 			"import": "./dist/modules/eslint-config/index.js",
 			"types": "./dist/modules/eslint-config/index.d.ts"
 		},
-		"./eslint-config/constants/*": "./modules/eslint-config/constants/*",
+		"./eslint-config/constants/*": {
+			"import": "./dist/modules/eslint-config/constants/*.js",
+			"types": "./dist/modules/eslint-config/constants/*.d.ts"
+		},
 		"./stylelint-config": {
 			"import": "./dist/modules/stylelint-config/index.js",
 			"types": "./dist/modules/stylelint-config/index.d.ts"

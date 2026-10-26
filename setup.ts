@@ -8,17 +8,10 @@ import {
 } from "child_process";
 
 const pkgJson = getPkgJson();
-const includedCommands = [
+const commands = [
 	"set-env",
 	"update",
 ];
-const commands = (
-	(Object.keys(pkgJson.bin))
-	.filter((command) => {
-		return includedCommands.includes(command);
-	})
-);
-
 for (const command of commands) {
 	const result = spawnSync("npx", [
 		"-p",

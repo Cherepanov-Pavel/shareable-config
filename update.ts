@@ -12,6 +12,10 @@ const excludedCommands = [
 	"setup",
 	"update",
 	"set-env",
+	/* TODO:
+	remove after 3.0.0
+	*/
+	"get-all",
 ];
 // type AllCommands = keyof typeof pkgJson.bin;
 // type Command = Exclude<AllCommands, typeof excludedCommands[number]>;

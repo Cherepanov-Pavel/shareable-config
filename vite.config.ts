@@ -14,6 +14,9 @@ import {
 	generatedFilePathList,
 } from "./modules/shared/constants/file.ts";
 import pkgJson from "./package.json" with {type: "json"};
+import {
+	readdirSync,
+} from "node:fs";
 
 
 export default defineConfig({
@@ -21,9 +24,10 @@ export default defineConfig({
 		rolldownOptions: {
 			plugins: [
 				dts({
-					entry: [
-						"**/*.ts",
-					],
+					generator: "tsc",
+					// entry: [
+					// 	"**/*.ts",
+					// ],
 				}),
 			],
 			output: {
@@ -41,21 +45,37 @@ export default defineConfig({
 						return (
 							path
 							.replace("dist/", "")
-							.replace(/".js^"/u, ".ts")
+							.replace(/\.js$/u, ".ts")
 						);
 					})
 				),
 				...(
 					Object.values(pkgJson.exports)
-					.filter((libExport) => {
-						return typeof libExport !== "string";
-					})
-					.map((libExport) => {
-						return (
+					.flatMap((libExport) => {
+						const replacedImport = (
 							libExport.import
-							.replace("/dist/", "")
-							.replace(/".js^"/u, ".ts")
+							.replace("dist/", "")
 						);
+						const isPathHaveWildcard = libExport.import.includes("*");
+						if (!isPathHaveWildcard) {
+							return (
+								replacedImport
+								.replace(/\.js/u, ".ts")
+							);
+						}
+						const dirName = replacedImport.replace(/\/\*\.\p{Letter}+$/u, "");
+						const files = (
+							readdirSync(dirName, {
+								withFileTypes: true,
+							})
+							.filter((dirent) => {
+								return dirent.isFile();
+							})
+						);
+
+						return files.map((file) => {
+							return join(dirName, file.name);
+						});
 					})
 				),
 			],

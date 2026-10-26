@@ -9,7 +9,7 @@ import {
 	OFF,
 	WARN,
 	ERROR,
-} from "./dist/modules/eslint-config/constants/severity.js";
+} from "./dist/modules/eslint-config/constants/severity";
 
 const eslintConfig = [
 	...globalConfig,

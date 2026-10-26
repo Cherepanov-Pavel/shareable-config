@@ -2,16 +2,16 @@ import jsonc from "eslint-plugin-jsonc";
 import {
 	ERROR,
 } from "../constants/severity.js";
+import stylisticPlugin from "@stylistic/eslint-plugin";
+import {
+	jsRules,
+} from "@/modules/eslint-config/rules/javascript";
 import {
 	jsFormatting,
-} from "../rules/stylistic/index.js";
-import {
-	possibleProblemRules,
-} from "../rules/javascript/possible-problems.js";
-import {
-	suggestionRules,
-} from "../rules/javascript/suggestions.js";
-import stylisticPlugin from "@stylistic/eslint-plugin";
+} from "@/modules/eslint-config/rules/stylistic/jsFormatting";
+import type {
+	Linter,
+} from "eslint";
 
 const jsonButJsoncFiles = [
 	"**/.vscode/*.json",
@@ -45,13 +45,13 @@ const commonRules = {
 		jsFormatting["@stylistic/indent"][1],
 	],
 	"jsonc/key-spacing": jsFormatting["@stylistic/key-spacing"],
-	"jsonc/no-dupe-keys": possibleProblemRules["no-dupe-keys"],
+	"jsonc/no-dupe-keys": jsRules["no-dupe-keys"],
 	"jsonc/no-floating-decimal": jsFormatting["@stylistic/no-floating-decimal"],
-	"jsonc/no-irregular-whitespace": possibleProblemRules["no-irregular-whitespace"],
-	"jsonc/no-octal-escape": suggestionRules["no-octal-escape"],
-	"jsonc/no-octal": suggestionRules["no-octal"],
+	"jsonc/no-irregular-whitespace": jsRules["no-irregular-whitespace"],
+	"jsonc/no-octal-escape": jsRules["no-octal-escape"],
+	"jsonc/no-octal": jsRules["no-octal"],
 	"jsonc/no-sparse-arrays": ERROR,
-	"jsonc/no-useless-escape": suggestionRules["no-useless-escape"],
+	"jsonc/no-useless-escape": jsRules["no-useless-escape"],
 	"jsonc/object-curly-newline": [
 		jsFormatting["@stylistic/object-curly-newline"][0],
 		jsFormatting["@stylistic/object-curly-newline"][1],
@@ -87,11 +87,11 @@ const jsonRules = {
 };
 const jsonJsoncRules = {
 	"jsonc/no-infinity": ERROR,
-	"jsonc/no-multi-str": suggestionRules["no-multi-str"],
+	"jsonc/no-multi-str": jsRules["no-multi-str"],
 };
 
 
-export default [
+const jsonConfig = [
 	{
 		plugins: {
 			"@stylistic": stylisticPlugin,
@@ -144,4 +144,6 @@ export default [
 			"jsonc/vue-custom-block/no-parsing-error": ERROR,
 		},
 	},
-];
+] as Linter.Config[];
+
+export default jsonConfig;
