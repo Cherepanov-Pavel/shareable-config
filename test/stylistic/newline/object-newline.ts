@@ -31,6 +31,10 @@ because of https://github.com/eslint-stylistic/eslint-stylistic/issues/1297
 /*
 Regarding these rules, the arguments are the same as in array-newline
 */
+
+/*
+UPD: because of bugs, this rule disabled. I will enable list-style when stylistic will be 6 version
+*/
 const someEmptyObjectExpression = {
 };
 const someObjectExpression = {
@@ -70,7 +74,7 @@ interface SecondPoint {
 
 // TSEnumBody
 enum Color {
-	red = "red",
-	green = "green",
-	blue = "blue",
+	Red = "red",
+	Green = "green",
+	Blue = "blue",
 }

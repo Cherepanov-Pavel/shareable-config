@@ -7,8 +7,7 @@ import {
 
 export const jsFormatting = {
 	"@stylistic/array-bracket-newline": [
-		ERROR,
-		"always",
+		OFF,
 	],
 	"@stylistic/array-bracket-spacing": [
 		ERROR,
@@ -229,10 +228,10 @@ export const jsFormatting = {
 		"never",
 	],
 	"@stylistic/object-property-newline": [
-		ERROR,
-		{
-			allowAllPropertiesOnSameLine: false,
-		},
+		OFF,
+		// {
+		// 	allowAllPropertiesOnSameLine: false,
+		// },
 	],
 	"@stylistic/one-var-declaration-per-line": [
 		ERROR,

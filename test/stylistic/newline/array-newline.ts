@@ -39,8 +39,13 @@ However, since such an option is not available,
 and considering the benefits for Git diffs and `git blame`,
 I consider this approach to be a reasonable compromise.
 */
-const emptyArr = [
-];
+
+/*
+UPD: because of bugs, this rule disabled. I will enable list-style when stylistic will be 6 version
+*/
+type Type = any[];
+
+const emptyArr: Type = [];
 const emptyArrWithComment = [
 	// qfqw
 ];
