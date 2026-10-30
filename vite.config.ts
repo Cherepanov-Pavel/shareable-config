@@ -25,15 +25,10 @@ export default defineConfig({
 			plugins: [
 				dts({
 					generator: "tsc",
-					// entry: [
-					// 	"**/*.ts",
-					// ],
 				}),
 			],
 			output: {
-				entryFileNames: "[name].js",
 				preserveModules: true,
-				preserveModulesRoot: ".",
 			},
 		},
 		emptyOutDir: true,
@@ -82,9 +77,6 @@ export default defineConfig({
 			formats: [
 				"es",
 			],
-			fileName: (format, entryName) => {
-				return `${entryName}.js`;
-			},
 		},
 		ssr: true,
 	},
