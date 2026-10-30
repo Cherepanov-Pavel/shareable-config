@@ -1,5 +1,5 @@
 import {
-	execFileAsync,
+	spawnAsync,
 } from "@/modules/shared/utils/node.ts";
 import {
 	getLibTarballName,
@@ -12,7 +12,7 @@ import {
 	join,
 } from "node:path";
 
-await execFileAsync("npm", [
+await spawnAsync("npm", [
 	"run",
 	"tarball",
 ]);
@@ -32,7 +32,7 @@ const counter = counterFileContent === "" ? 0 : Number(counterFileContent);
 await writeFile(counterFile, String(counter + 1), "utf8");
 
 const nextTestProjectDirName = `test-project-${counter}`;
-await execFileAsync("npm", [
+await spawnAsync("npm", [
 	"--yes",
 	"create",
 	"astro@latest",
@@ -47,7 +47,7 @@ await execFileAsync("npm", [
 
 const nextTestProjectDir = join(astroDir, nextTestProjectDirName);
 
-await execFileAsync("npm", [
+await spawnAsync("npm", [
 	"i",
 	join(process.cwd(), getLibTarballName()),
 ], {

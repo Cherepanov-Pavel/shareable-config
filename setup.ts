@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+/* eslint-disable no-await-in-loop */
 
+import {
+	spawnAsync,
+} from "@/modules/shared/utils/node";
 import {
 	getPkgJson,
 } from "@/modules/shared/utils/package-json";
-import {
-	spawnSync,
-} from "child_process";
 
 const pkgJson = getPkgJson();
 const commands = [
@@ -13,14 +14,13 @@ const commands = [
 	"update",
 ];
 for (const command of commands) {
-	const result = spawnSync("npx", [
-		"-p",
-		pkgJson.name,
-		command,
-	], {
-		stdio: "inherit",
-	});
-	if (result.status !== 0) {
+	try {
+		await spawnAsync("npx", [
+			"-p",
+			pkgJson.name,
+			command,
+		]);
+	} catch {
 		console.error(`\nAn unexpected error occurred while executing the command: ${command}\n`);
 		process.exit(1);
 	}

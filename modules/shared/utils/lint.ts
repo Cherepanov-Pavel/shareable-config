@@ -1,16 +1,9 @@
-// import {
-// 	execFileAsync,
-// } from "@/modules/shared/utils/node.ts";
 import {
-	exec,
-} from "node:child_process";
-import {
-	promisify,
-} from "node:util";
+	spawnAsync,
+} from "@/modules/shared/utils/node";
 import {
 	spinner as initSpinner,
 } from "@clack/prompts";
-const execAsync = promisify(exec);
 
 const spinner = initSpinner();
 
@@ -23,7 +16,10 @@ export async function eslintFiles(filePaths: string | string[]) {
 			filePaths,
 		];
 	const results = paths.map(async (path) => {
-		return execAsync(`eslint ${path} --fix`);
+		return spawnAsync("eslint", [
+			path,
+			"--fix",
+		]);
 	});
 	await Promise.all(results);
 
