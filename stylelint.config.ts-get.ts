@@ -28,9 +28,16 @@ const destFileName = `${baseFileName}.${isTs ? "ts" : "js"}`;
 
 const src = path.join(import.meta.dirname, srcFileName);
 const srcFileData = await readFile(src, "utf8");
-const srcFileDataReplacedImports = srcFileData.replace(
-	/from "\.\/dist\/modules\/stylelint-config(?<subpath>[^"]*)"/gu,
-	"from \"@cherepanov.pavel/shareable-config/stylelint-config$<subpath>\"",
+const srcFileDataReplacedImports = (
+	srcFileData
+	.replace(
+		/from "\.\/dist\/modules(?<subpath>[^"]*)"/gu,
+		"from \"@cherepanov.pavel/shareable-config$<subpath>\"",
+	)
+	.replace(
+		"/index.js",
+		"",
+	)
 );
 
 const destFile = path.join(process.cwd(), destFileName);
