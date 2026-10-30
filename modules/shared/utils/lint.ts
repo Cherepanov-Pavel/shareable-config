@@ -16,10 +16,17 @@ export async function eslintFiles(filePaths: string | string[]) {
 			filePaths,
 		];
 	const results = paths.map(async (path) => {
-		return spawnAsync("eslint", [
-			path,
-			"--fix",
-		]);
+		return spawnAsync(
+			"npx",
+			[
+				"eslint",
+				path,
+				"--fix",
+			],
+			{
+				stdio: "ignore",
+			},
+		);
 	});
 	await Promise.all(results);
 

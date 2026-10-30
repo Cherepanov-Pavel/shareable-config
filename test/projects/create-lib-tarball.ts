@@ -1,11 +1,11 @@
 import {
-	execFileAsync,
+	spawnAsync,
 } from "@/modules/shared/utils/node.ts";
 import {
 	getLibTarballName,
 } from "@/modules/shared/utils/tar.ts";
 
-await execFileAsync(
+await spawnAsync(
 	"npm",
 	[
 		"pack",
