@@ -220,7 +220,7 @@ export const jsFormatting = {
 		"beside",
 	],
 	"@stylistic/object-curly-newline": [
-		ERROR,
+		OFF,
 		"always",
 	],
 	"@stylistic/object-curly-spacing": [
@@ -228,10 +228,10 @@ export const jsFormatting = {
 		"never",
 	],
 	"@stylistic/object-property-newline": [
-		OFF,
-		// {
-		// 	allowAllPropertiesOnSameLine: false,
-		// },
+		ERROR,
+		{
+			allowAllPropertiesOnSameLine: false,
+		},
 	],
 	"@stylistic/one-var-declaration-per-line": [
 		ERROR,
