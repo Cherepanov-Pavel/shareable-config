@@ -8,7 +8,7 @@ import {
 	readFile,
 } from "fs/promises";
 
-const baseFileName = ".gitignore";
+const baseFileName = ".gitattributes";
 const srcFileName = `${baseFileName}.example`;
 const destFileName = baseFileName;
 
