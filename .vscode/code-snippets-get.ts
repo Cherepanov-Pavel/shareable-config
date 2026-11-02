@@ -43,7 +43,7 @@ try {
 		const srcFileData = await getSrcJsonFileData({
 			fileData: await readFile(srcFile, "utf8"),
 			isTs,
-			removeDuplicateKeys: fileName === "vue.code-snippets",
+			removeDuplicateKeys: fileName === "vue.code-snippets.example",
 		});
 
 		const destFileName = fileName.replace(".example", "");
@@ -63,12 +63,14 @@ try {
 		}
 
 		await outputFile(destFile, `${getHeader()}${result}`);
-		await eslintFiles(destFile);
+
 		if (isDestFileHaveOverride) {
 			console.info(getUpdatedWithOverrideMessage(destFileName));
 		} else {
 			console.info(getRecreatedMessage(destFileName));
 		}
+
+		await eslintFiles(destFile);
 	}
 	/* eslint-enable no-await-in-loop */
 } catch (err: any) {

@@ -5,11 +5,13 @@ import {
 	vueConfig,
 	jsonConfig,
 } from "./dist/modules/eslint-config";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
 	OFF,
 	WARN,
 	ERROR,
 } from "./dist/modules/eslint-config/constants/severity";
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 const eslintConfig = [
 	...globalConfig,

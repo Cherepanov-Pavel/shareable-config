@@ -23,9 +23,6 @@ export async function eslintFiles(filePaths: string | string[]) {
 				path,
 				"--fix",
 			],
-			{
-				stdio: "ignore",
-			},
 		);
 	});
 	await Promise.all(results);

@@ -9,11 +9,24 @@ export async function spawnAsync(
 	args: SpawnArgs[1],
 	options: SpawnArgs[2] = {},
 ): Promise<number> {
+	const additionalArgs: string[] = [];
+	const isNpmCommand = command === "npm" || command === "npx";
+	if (isNpmCommand) {
+		additionalArgs.push("--loglevel=warn");
+	}
+
 	return new Promise((resolve, reject) => {
-		const child = spawn(command, args, {
-			stdio: "inherit",
-			...options,
-		});
+		const child = spawn(
+			command,
+			[
+				...additionalArgs,
+				...args,
+			],
+			{
+				stdio: "inherit",
+				...options,
+			},
+		);
 
 		child.on("error", (error) => {
 			reject(error);

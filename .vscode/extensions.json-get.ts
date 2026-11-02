@@ -57,12 +57,14 @@ try {
 	}
 
 	await outputFile(destFile, `${getHeader()}${result}`);
-	await eslintFiles(destFile);
+
 	if (overrideContent) {
 		console.info(getUpdatedWithOverrideMessage(destFileName));
 	} else {
 		console.info(getRecreatedMessage(destFileName));
 	}
+
+	await eslintFiles(destFile);
 } catch (err: any) {
 	console.error(err.message);
 }
