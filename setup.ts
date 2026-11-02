@@ -21,7 +21,11 @@ for (const command of commands) {
 			command,
 		]);
 	} catch {
-		console.error(`\nAn unexpected error occurred while executing the command: ${command}\n`);
-		process.exit(1);
+		console.error(
+			`\nAn unexpected error occurred while executing the command: ${command}\n`,
+		);
+		process.exit(
+			1,
+		);
 	}
 }

@@ -2,7 +2,8 @@ import {
 	INDENT_SIZE,
 } from "@/modules/eslint-config/constants/rules";
 import {
-	ERROR, OFF,
+	ERROR,
+	OFF,
 } from "@/modules/eslint-config/constants/severity";
 
 export const vueFormattingRules = {

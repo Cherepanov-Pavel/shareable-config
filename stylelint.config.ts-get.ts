@@ -26,8 +26,14 @@ when we look at the library in node_modules.
 const srcFileName = "stylelint.config.ts.example";
 const destFileName = `${baseFileName}.${isTs ? "ts" : "js"}`;
 
-const src = path.join(import.meta.dirname, srcFileName);
-const srcFileData = await readFile(src, "utf8");
+const src = path.join(
+	import.meta.dirname,
+	srcFileName,
+);
+const srcFileData = await readFile(
+	src,
+	"utf8",
+);
 const srcFileDataReplacedImports = (
 	srcFileData
 	.replace(
@@ -40,7 +46,10 @@ const srcFileDataReplacedImports = (
 	)
 );
 
-const destFile = path.join(process.cwd(), destFileName);
+const destFile = path.join(
+	process.cwd(),
+	destFileName,
+);
 
 await copyWithOverride({
 	destFile,
@@ -50,4 +59,6 @@ await copyWithOverride({
 	comment: "//",
 });
 
-await eslintFiles(destFile);
+await eslintFiles(
+	destFile,
+);

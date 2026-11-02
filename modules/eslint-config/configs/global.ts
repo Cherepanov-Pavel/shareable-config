@@ -7,10 +7,15 @@ import {
 import path from "path";
 import globals from "globals";
 
-const gitignorePath = path.join(process.cwd(), ".gitignore");
+const gitignorePath = path.join(
+	process.cwd(),
+	".gitignore",
+);
 
 export default defineConfig([
-	includeIgnoreFile(gitignorePath),
+	includeIgnoreFile(
+		gitignorePath,
+	),
 	{
 		name: "Additional .gitignore patterns",
 		ignores: [

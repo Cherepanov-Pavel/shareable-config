@@ -1,10 +1,18 @@
 import tsPlugin from "@typescript-eslint/eslint-plugin";
 import stylisticPlugin from "@stylistic/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
-import { jsFormatting } from "@/modules/eslint-config/rules/stylistic/jsFormatting";
-import { tsFormatting } from "@/modules/eslint-config/rules/stylistic/tsFormatting";
-import { jsRules } from "@/modules/eslint-config/rules/javascript";
-import { tsRules } from "@/modules/eslint-config/rules/typescript";
+import {
+	jsFormatting,
+} from "@/modules/eslint-config/rules/stylistic/jsFormatting";
+import {
+	tsFormatting,
+} from "@/modules/eslint-config/rules/stylistic/tsFormatting";
+import {
+	jsRules,
+} from "@/modules/eslint-config/rules/javascript";
+import {
+	tsRules,
+} from "@/modules/eslint-config/rules/typescript";
 
 export default {
 	files: [

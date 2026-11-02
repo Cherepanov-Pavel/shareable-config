@@ -21,16 +21,27 @@ import type {
 const baseFileName = ".gitignore";
 const srcFileName = `${baseFileName}.example`;
 const destFileName = baseFileName;
-const destFile = path.join(process.cwd(), destFileName);
+const destFile = path.join(
+	process.cwd(),
+	destFileName,
+);
 
 async function getGitignoreFileData(framework: Env["repositoryFramework"]) {
-	const src = path.join(import.meta.dirname, srcFileName);
-	const srcFileData = await readFile(src, "utf8");
+	const src = path.join(
+		import.meta.dirname,
+		srcFileName,
+	);
+	const srcFileData = await readFile(
+		src,
+		"utf8",
+	);
 
 	const [
 		commonData,
 		...sections
-	] = srcFileData.split(/^# /mu);
+	] = srcFileData.split(
+		/^# /mu,
+	);
 
 	if (!framework) {
 		return commonData;
@@ -39,7 +50,9 @@ async function getGitignoreFileData(framework: Env["repositoryFramework"]) {
 	const matchedSection = sections.find((section) => {
 		const [
 			header,
-		] = section.split("\n");
+		] = section.split(
+			"\n",
+		);
 		return (
 			header.trim() as SupportedFrameworks
 		) === framework;
@@ -49,7 +62,9 @@ async function getGitignoreFileData(framework: Env["repositoryFramework"]) {
 		const [
 			header,
 			...body
-		] = matchedSection.split("\n");
+		] = matchedSection.split(
+			"\n",
+		);
 		return (
 			`${commonData.trim()}\n\n`
 			+ `# ${header.trim()}\n`
@@ -68,12 +83,16 @@ try {
 	const {
 		repositoryFramework,
 	} = await getEnvs();
-	const srcFileData = await getGitignoreFileData(repositoryFramework);
+	const srcFileData = await getGitignoreFileData(
+		repositoryFramework,
+	);
 	await copyWithOverride({
 		destFile,
 		srcFileData,
 		fileLabel: destFileName,
 	});
 } catch (err: any) {
-	console.error(err.message);
+	console.error(
+		err.message,
+	);
 }

@@ -4,7 +4,9 @@ import type {
 	Env,
 } from "@/modules/shared/types/env.js";
 import {
-	askFramework, askOptionsApi, askTypescript,
+	askFramework,
+	askOptionsApi,
+	askTypescript,
 } from "@/modules/shared/utils/communication.js";
 import {
 	setEnvs,
@@ -16,4 +18,6 @@ const envs: Env = {
 	isRepositoryUseOptionsApi: await askOptionsApi(),
 };
 
-await setEnvs(envs);
+await setEnvs(
+	envs,
+);

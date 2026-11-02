@@ -20,19 +20,25 @@ export function getDisabledWarningRules(eslintConfig: any) {
 			return;
 		}
 		(
-			Object.entries(config.rules)
+			Object.entries(
+				config.rules,
+			)
 			.forEach(([
 				ruleName,
 				ruleConfig,
 			]) => {
 				const severity = (() => {
-					if (Array.isArray(ruleConfig)) {
+					if (Array.isArray(
+						ruleConfig,
+					)) {
 						return ruleConfig[0];
 					}
 					return ruleConfig;
 				})();
 				if (severity === WARN) {
-					warningRules.add(ruleName);
+					warningRules.add(
+						ruleName,
+					);
 				}
 			})
 		);

@@ -28,8 +28,12 @@ import {
 } from "@/modules/shared/utils/env";
 
 
-const fileNames = (await readdir(import.meta.dirname)).filter((file) => {
-	return file.endsWith(".code-snippets.example");
+const fileNames = (await readdir(
+	import.meta.dirname,
+)).filter((file) => {
+	return file.endsWith(
+		".code-snippets.example",
+	);
 });
 
 try {
@@ -39,40 +43,76 @@ try {
 
 	/* eslint-disable no-await-in-loop */
 	for (const fileName of fileNames) {
-		const srcFile = path.join(import.meta.dirname, fileName);
+		const srcFile = path.join(
+			import.meta.dirname,
+			fileName,
+		);
 		const srcFileData = await getSrcJsonFileData({
-			fileData: await readFile(srcFile, "utf8"),
+			fileData: await readFile(
+				srcFile,
+				"utf8",
+			),
 			isTs,
 			removeDuplicateKeys: fileName === "vue.code-snippets.example",
 		});
 
-		const destFileName = fileName.replace(".example", "");
-		const destFile = path.join(process.cwd(), ".vscode", destFileName);
+		const destFileName = fileName.replace(
+			".example",
+			"",
+		);
+		const destFile = path.join(
+			process.cwd(),
+			".vscode",
+			destFileName,
+		);
 		let destFileData;
 		let isDestFileHaveOverride;
 		try {
-			destFileData = await readFile(destFile, "utf8");
-			isDestFileHaveOverride = destFileData.includes("// override");
+			destFileData = await readFile(
+				destFile,
+				"utf8",
+			);
+			isDestFileHaveOverride = destFileData.includes(
+				"// override",
+			);
 		} catch (err) {}
 
 		let result;
 		if (isDestFileHaveOverride) {
-			result = await mergeWithOverride(srcFileData, destFileData);
+			result = await mergeWithOverride(
+				srcFileData,
+				destFileData,
+			);
 		} else {
 			result = srcFileData;
 		}
 
-		await outputFile(destFile, `${getHeader()}${result}`);
+		await outputFile(
+			destFile,
+			`${getHeader()}${result}`,
+		);
 
 		if (isDestFileHaveOverride) {
-			console.info(getUpdatedWithOverrideMessage(destFileName));
+			console.info(
+				getUpdatedWithOverrideMessage(
+					destFileName,
+				),
+			);
 		} else {
-			console.info(getRecreatedMessage(destFileName));
+			console.info(
+				getRecreatedMessage(
+					destFileName,
+				),
+			);
 		}
 
-		await eslintFiles(destFile);
+		await eslintFiles(
+			destFile,
+		);
 	}
 	/* eslint-enable no-await-in-loop */
 } catch (err: any) {
-	console.error(err.message);
+	console.error(
+		err.message,
+	);
 }

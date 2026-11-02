@@ -1,5 +1,6 @@
 import {
-	ERROR, OFF,
+	ERROR,
+	OFF,
 } from "@/modules/eslint-config/constants/severity";
 import {
 	jsRules,

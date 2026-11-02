@@ -18,7 +18,6 @@
 		"url": "https://github.com/Cherepanov-Pavel/shareable-config"
 	},
 	"files": [
-		"modules/",
 		"dist/"
 	],
 	"bin": {

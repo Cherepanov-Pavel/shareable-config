@@ -1,5 +1,6 @@
 import {
-	ERROR, WARN,
+	ERROR,
+	WARN,
 } from "@/modules/eslint-config/constants/severity";
 
 

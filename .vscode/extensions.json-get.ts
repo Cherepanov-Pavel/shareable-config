@@ -30,41 +30,78 @@ import {
 const baseFileName = "extensions.json";
 const srcFileName = `${baseFileName}.example`;
 const destFileName = baseFileName;
-const destFile = path.join(process.cwd(), ".vscode", destFileName);
+const destFile = path.join(
+	process.cwd(),
+	".vscode",
+	destFileName,
+);
 
 try {
 	const {
 		isRepositoryUseTypescript: isTs,
 		repositoryFramework,
 	} = await getEnvs();
-	const srcFile = path.join(import.meta.dirname, srcFileName);
+	const srcFile = path.join(
+		import.meta.dirname,
+		srcFileName,
+	);
 	const srcFileData = await getSrcJsonFileData({
-		fileData: await readFile(srcFile, "utf8"),
+		fileData: await readFile(
+			srcFile,
+			"utf8",
+		),
 		isTs,
 		repositoryFramework,
 	});
 	let overrideContent;
 	try {
-		const fileData = await readFile(destFile, "utf8");
-		overrideContent = fileData.includes("// override") ? fileData : undefined;
+		const fileData = await readFile(
+			destFile,
+			"utf8",
+		);
+		overrideContent = (
+			fileData.includes(
+				"// override",
+			)
+				? fileData
+				: undefined
+		);
 	} catch (err) {}
 
 	let result;
 	if (overrideContent) {
-		result = await mergeWithOverride(srcFileData, overrideContent);
+		result = await mergeWithOverride(
+			srcFileData,
+			overrideContent,
+		);
 	} else {
 		result = srcFileData;
 	}
 
-	await outputFile(destFile, `${getHeader()}${result}`);
+	await outputFile(
+		destFile,
+		`${getHeader()}${result}`,
+	);
 
 	if (overrideContent) {
-		console.info(getUpdatedWithOverrideMessage(destFileName));
+		console.info(
+			getUpdatedWithOverrideMessage(
+				destFileName,
+			),
+		);
 	} else {
-		console.info(getRecreatedMessage(destFileName));
+		console.info(
+			getRecreatedMessage(
+				destFileName,
+			),
+		);
 	}
 
-	await eslintFiles(destFile);
+	await eslintFiles(
+		destFile,
+	);
 } catch (err: any) {
-	console.error(err.message);
+	console.error(
+		err.message,
+	);
 }

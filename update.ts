@@ -21,9 +21,13 @@ const excludedCommands = [
 // type AllCommands = keyof typeof pkgJson.bin;
 // type Command = Exclude<AllCommands, typeof excludedCommands[number]>;
 const commands = (
-	(Object.keys(pkgJson.bin))
+	Object.keys(
+		pkgJson.bin,
+	)
 	.filter((command) => {
-		return !excludedCommands.includes(command);
+		return !excludedCommands.includes(
+			command,
+		);
 	})
 );
 // const {
@@ -38,8 +42,12 @@ for (const command of commands) {
 			command,
 		]);
 	} catch {
-		console.error(`\nОшибка при выполнении команды: ${command}\n`);
-		process.exit(1);
+		console.error(
+			`\nОшибка при выполнении команды: ${command}\n`,
+		);
+		process.exit(
+			1,
+		);
 	}
 }
 // commands.forEach((cmd) => {

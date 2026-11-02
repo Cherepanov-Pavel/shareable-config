@@ -2,7 +2,8 @@ import {
 	MAX_LEN,
 } from "@/modules/eslint-config/constants/rules";
 import {
-	ERROR, OFF,
+	ERROR,
+	OFF,
 } from "@/modules/eslint-config/constants/severity";
 import {
 	jsRules,

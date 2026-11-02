@@ -11,10 +11,19 @@ import {
 const baseFileName = ".editorconfig";
 const srcFileName = `${baseFileName}.example`;
 const destFileName = baseFileName;
-const destFile = path.join(process.cwd(), destFileName);
+const destFile = path.join(
+	process.cwd(),
+	destFileName,
+);
 
-const srcFile = path.join(import.meta.dirname, srcFileName);
-const srcFileData = await readFile(srcFile, "utf8");
+const srcFile = path.join(
+	import.meta.dirname,
+	srcFileName,
+);
+const srcFileData = await readFile(
+	srcFile,
+	"utf8",
+);
 
 await copyWithOverride({
 	destFile,
