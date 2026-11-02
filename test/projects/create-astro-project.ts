@@ -50,6 +50,7 @@ const nextTestProjectDir = join(astroDir, nextTestProjectDirName);
 await spawnAsync("npm", [
 	"i",
 	join(process.cwd(), getLibTarballName()),
+	"--loglevel=verbose",
 ], {
 	cwd: nextTestProjectDir,
 });
