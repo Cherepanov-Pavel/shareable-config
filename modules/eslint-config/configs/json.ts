@@ -12,6 +12,9 @@ import {
 import type {
 	Linter,
 } from "eslint";
+import {
+	oldJsFormatting,
+} from "../rules/stylistic/jsFormatting";
 
 const jsonButJsoncFiles = [
 	"**/.vscode/*.json",
@@ -35,9 +38,9 @@ const commonRules = {
 	"jsonc/no-template-literals": ERROR,
 	"jsonc/no-undefined-value": ERROR,
 	"jsonc/no-unicode-codepoint-escapes": ERROR,
-	"jsonc/array-bracket-newline": jsFormatting["@stylistic/array-bracket-newline"],
-	"jsonc/array-bracket-spacing": jsFormatting["@stylistic/array-bracket-spacing"],
-	"jsonc/array-element-newline": jsFormatting["@stylistic/array-element-newline"],
+	"jsonc/array-bracket-newline": oldJsFormatting["@stylistic/array-bracket-newline"],
+	"jsonc/array-bracket-spacing": oldJsFormatting["@stylistic/array-bracket-spacing"],
+	"jsonc/array-element-newline": oldJsFormatting["@stylistic/array-element-newline"],
 	"jsonc/comma-dangle": jsFormatting["@stylistic/comma-dangle"],
 	"jsonc/comma-style": jsFormatting["@stylistic/comma-style"],
 	"jsonc/indent": [
@@ -53,8 +56,8 @@ const commonRules = {
 	"jsonc/no-sparse-arrays": ERROR,
 	"jsonc/no-useless-escape": jsRules["no-useless-escape"],
 	"jsonc/object-curly-newline": [
-		jsFormatting["@stylistic/object-curly-newline"][0],
-		jsFormatting["@stylistic/object-curly-newline"][1],
+		oldJsFormatting["@stylistic/object-curly-newline"][0],
+		oldJsFormatting["@stylistic/object-curly-newline"][1],
 		// Object.fromEntries(
 		// 	[
 		// 		"ObjectExpression",
@@ -65,15 +68,15 @@ const commonRules = {
 		// )
 	],
 	"jsonc/object-curly-spacing": [
-		jsFormatting["@stylistic/object-curly-spacing"][0],
-		jsFormatting["@stylistic/object-curly-spacing"][1],
+		oldJsFormatting["@stylistic/object-curly-spacing"][0],
+		oldJsFormatting["@stylistic/object-curly-spacing"][1],
 		{
 			"arraysInObjects": true,
 			"objectsInObjects": true,
-			"emptyObjects": jsFormatting["@stylistic/object-curly-spacing"][1],
+			"emptyObjects": oldJsFormatting["@stylistic/object-curly-spacing"][1],
 		},
 	],
-	"jsonc/object-property-newline": jsFormatting["@stylistic/object-property-newline"],
+	"jsonc/object-property-newline": oldJsFormatting["@stylistic/object-property-newline"],
 	"jsonc/quote-props": ERROR,
 	"jsonc/quotes": jsFormatting["@stylistic/quotes"],
 	"jsonc/space-unary-ops": ERROR,

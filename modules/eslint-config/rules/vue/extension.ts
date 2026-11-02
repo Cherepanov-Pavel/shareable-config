@@ -9,6 +9,7 @@ import {
 } from "@/modules/eslint-config/rules/javascript";
 import {
 	jsFormatting,
+	oldJsFormatting,
 } from "@/modules/eslint-config/rules/stylistic/jsFormatting";
 
 export const vueExtensionRules = {
@@ -27,9 +28,9 @@ export const vueExtensionRules = {
 	"vue/object-shorthand": jsRules["object-shorthand"],
 	"vue/prefer-template": jsRules["prefer-template"],
 
-	"vue/array-bracket-newline": jsFormatting["@stylistic/array-bracket-newline"],
-	"vue/array-bracket-spacing": jsFormatting["@stylistic/array-bracket-spacing"],
-	"vue/array-element-newline": jsFormatting["@stylistic/array-element-newline"],
+	"vue/array-bracket-newline": oldJsFormatting["@stylistic/array-bracket-newline"],
+	"vue/array-bracket-spacing": oldJsFormatting["@stylistic/array-bracket-spacing"],
+	"vue/array-element-newline": oldJsFormatting["@stylistic/array-element-newline"],
 	"vue/arrow-spacing": jsFormatting["@stylistic/arrow-spacing"],
 	"vue/block-spacing": jsFormatting["@stylistic/block-spacing"],
 	"vue/brace-style": jsFormatting["@stylistic/brace-style"],
@@ -42,9 +43,9 @@ export const vueExtensionRules = {
 	"vue/keyword-spacing": jsFormatting["@stylistic/keyword-spacing"],
 	"vue/multiline-ternary": jsFormatting["@stylistic/multiline-ternary"],
 	"vue/no-extra-parens": jsFormatting["@stylistic/no-extra-parens"],
-	"vue/object-curly-newline": jsFormatting["@stylistic/object-curly-newline"],
-	"vue/object-curly-spacing": jsFormatting["@stylistic/object-curly-spacing"],
-	"vue/object-property-newline": jsFormatting["@stylistic/object-property-newline"],
+	"vue/object-curly-newline": oldJsFormatting["@stylistic/object-curly-newline"],
+	"vue/object-curly-spacing": oldJsFormatting["@stylistic/object-curly-spacing"],
+	"vue/object-property-newline": oldJsFormatting["@stylistic/object-property-newline"],
 	"vue/operator-linebreak": jsFormatting["@stylistic/operator-linebreak"],
 	"vue/quote-props": jsFormatting["@stylistic/quote-props"],
 	"vue/html-quotes": jsFormatting["@stylistic/quotes"],

@@ -1,13 +1,17 @@
 import {
-	INDENT_SIZE, MAX_LEN, TAB_WIDTH,
+	INDENT_SIZE,
+	MAX_LEN,
+	TAB_WIDTH,
 } from "@/modules/eslint-config/constants/rules";
 import {
-	ERROR, OFF,
+	ERROR,
+	OFF,
 } from "@/modules/eslint-config/constants/severity";
 
-export const jsFormatting = {
+export const oldJsFormatting = {
 	"@stylistic/array-bracket-newline": [
-		OFF,
+		ERROR,
+		"always",
 	],
 	"@stylistic/array-bracket-spacing": [
 		ERROR,
@@ -18,6 +22,35 @@ export const jsFormatting = {
 		{
 			multiline: true,
 			minItems: 1,
+		},
+	],
+	"@stylistic/object-curly-newline": [
+		OFF,
+		"always",
+	],
+	"@stylistic/object-curly-spacing": [
+		ERROR,
+		"never",
+	],
+	"@stylistic/object-property-newline": [
+		ERROR,
+		{
+			allowAllPropertiesOnSameLine: false,
+		},
+	],
+};
+
+export const jsFormatting = {
+	"@stylistic/exp-list-style": [
+		ERROR,
+		{
+			singleLine: {
+				spacing: "never",
+				maxItems: 0,
+			},
+			multiLine: {
+				minItems: 1,
+			},
 		},
 	],
 	"@stylistic/arrow-parens": [
@@ -218,20 +251,6 @@ export const jsFormatting = {
 	"@stylistic/nonblock-statement-body-position": [
 		ERROR,
 		"beside",
-	],
-	"@stylistic/object-curly-newline": [
-		OFF,
-		"always",
-	],
-	"@stylistic/object-curly-spacing": [
-		ERROR,
-		"never",
-	],
-	"@stylistic/object-property-newline": [
-		ERROR,
-		{
-			allowAllPropertiesOnSameLine: false,
-		},
 	],
 	"@stylistic/one-var-declaration-per-line": [
 		ERROR,

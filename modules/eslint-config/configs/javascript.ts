@@ -3,7 +3,9 @@ import stylisticPlugin from "@stylistic/eslint-plugin";
 import {
 	jsRules,
 } from "../rules/javascript/index.js";
-import { jsFormatting } from "@/modules/eslint-config/rules/stylistic/jsFormatting";
+import {
+	jsFormatting,
+} from "@/modules/eslint-config/rules/stylistic/jsFormatting";
 
 export default {
 	files: [
