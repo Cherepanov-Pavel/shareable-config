@@ -1,6 +1,6 @@
-# Frontend Configs
+# Shareable config
 
-Shared ESLint, Stylelint, and editor settings for frontend projects. Use the generated files as a common baseline, then add project-specific overrides where needed.
+Shared ESLint, Stylelint, and editor settings for projects. Use the generated files as a common baseline, then add project-specific overrides where needed.
 
 > Using Quasar? See [Quasar integration](#quasar-integration).
 
