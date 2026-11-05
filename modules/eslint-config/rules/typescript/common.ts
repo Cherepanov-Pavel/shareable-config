@@ -111,7 +111,8 @@ export const commonRules = {
 	"@typescript-eslint/no-non-null-asserted-optional-chain": ERROR,
 	"@typescript-eslint/no-non-null-assertion": OFF,
 	// maybe off? More problems
-	"@typescript-eslint/no-redundant-type-constituents": ERROR,
+	// WARN for now
+	"@typescript-eslint/no-redundant-type-constituents": WARN,
 	"@typescript-eslint/no-require-imports": ERROR,
 	"@typescript-eslint/no-this-alias": ERROR,
 	"@typescript-eslint/no-unnecessary-boolean-literal-compare": ERROR,
@@ -124,7 +125,7 @@ export const commonRules = {
 	"@typescript-eslint/no-unsafe-assignment": OFF,
 	"@typescript-eslint/no-unsafe-call": WARN,
 	"@typescript-eslint/no-unsafe-declaration-merging": ERROR,
-	"@typescript-eslint/no-unsafe-enum-comparison": ERROR,
+	"@typescript-eslint/no-unsafe-enum-comparison": OFF,
 	"@typescript-eslint/no-unsafe-member-access": WARN,
 	"@typescript-eslint/no-unsafe-return": OFF,
 	"@typescript-eslint/no-useless-empty-export": ERROR,

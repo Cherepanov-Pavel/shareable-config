@@ -4,3 +4,10 @@ export enum SupportedFrameworks {
 	Quasar = "quasar",
 	Astro = "astro",
 }
+
+export const frameworksWithVueSupport = [
+	SupportedFrameworks.Vue,
+	SupportedFrameworks.Nuxt,
+	SupportedFrameworks.Quasar,
+	SupportedFrameworks.Astro,
+] as const;

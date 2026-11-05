@@ -26,6 +26,13 @@ import {
 import {
 	getEnvs,
 } from "@/modules/shared/utils/env";
+import {
+	frameworksWithVueSupport,
+	SupportedFrameworks,
+} from "@/modules/shared/constants/env";
+import type {
+	Env,
+} from "@/modules/shared/types/env";
 
 
 const fileNames = (await readdir(
@@ -39,10 +46,19 @@ const fileNames = (await readdir(
 try {
 	const {
 		isRepositoryUseTypescript: isTs,
+		repositoryFramework,
 	} = await getEnvs();
 
 	/* eslint-disable no-await-in-loop */
 	for (const fileName of fileNames) {
+		if (!isRepositoryFrameworkShouldHaveCodeSnippet({
+			repositoryFramework,
+			codeSnippetFileName: fileName,
+		})) {
+			continue;
+		}
+
+
 		const srcFile = path.join(
 			import.meta.dirname,
 			fileName,
@@ -115,4 +131,34 @@ try {
 	console.error(
 		err.message,
 	);
+}
+
+function isRepositoryFrameworkShouldHaveCodeSnippet({
+	repositoryFramework,
+	codeSnippetFileName,
+}: {
+	repositoryFramework: Env["repositoryFramework"];
+	codeSnippetFileName: string;
+}) {
+	const fileNameBase = codeSnippetFileName.split(
+		".",
+	)[0];
+
+	if (fileNameBase === "all-files") {
+		return true;
+	}
+
+	if (
+		fileNameBase === SupportedFrameworks.Vue
+	) {
+		return frameworksWithVueSupport.some(
+			(
+				framework,
+			) => {
+				return framework === repositoryFramework;
+			},
+		);
+	}
+
+	return repositoryFramework === fileNameBase;
 }
