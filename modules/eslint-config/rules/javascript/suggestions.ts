@@ -182,7 +182,7 @@ export const jsSuggestionRules = {
 		},
 	],
 	"no-continue": [
-		ERROR,
+		OFF,
 	],
 	"no-delete-var": [
 		ERROR,
