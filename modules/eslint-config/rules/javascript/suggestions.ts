@@ -48,7 +48,7 @@ export const jsSuggestionRules = {
 		"never",
 	],
 	"class-methods-use-this": [
-		ERROR,
+		OFF,
 	],
 	"complexity": [
 		OFF,
