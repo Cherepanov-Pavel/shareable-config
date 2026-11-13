@@ -91,7 +91,12 @@ export const commonRules = {
 	"@typescript-eslint/no-empty-interface": ERROR,
 	"@typescript-eslint/no-explicit-any": WARN,
 	"@typescript-eslint/no-extra-non-null-assertion": ERROR,
-	"@typescript-eslint/no-extraneous-class": ERROR,
+	"@typescript-eslint/no-extraneous-class": [
+		ERROR,
+		{
+			allowWithDecorator: true,
+		},
+	],
 	"@typescript-eslint/no-floating-promises": ERROR,
 	"@typescript-eslint/no-for-in-array": ERROR,
 	"@typescript-eslint/no-import-type-side-effects": ERROR,
