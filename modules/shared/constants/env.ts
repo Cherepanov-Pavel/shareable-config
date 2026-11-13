@@ -3,6 +3,7 @@ export enum SupportedFrameworks {
 	Nuxt = "nuxt",
 	Quasar = "quasar",
 	Astro = "astro",
+	Nest = "nest",
 }
 
 export const frameworksWithVueSupport = [
