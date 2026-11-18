@@ -41,6 +41,9 @@ export const commonRules = {
 	"vue/camelcase": [
 		OFF,
 	],
+	"new-cap": [
+		OFF,
+	],
 	"@typescript-eslint/naming-convention": [
 		ERROR,
 		{

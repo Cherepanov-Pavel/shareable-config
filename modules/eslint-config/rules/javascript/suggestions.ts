@@ -3,31 +3,6 @@ import {
 	OFF,
 	WARN,
 } from "@/modules/eslint-config/constants/severity";
-import {
-	SupportedFrameworks,
-} from "@/modules/shared/constants/env";
-import {
-	getEnvs,
-} from "@/modules/shared/utils/env";
-
-const {
-	repositoryFramework,
-} = await getEnvs();
-
-function getNewCap() {
-	if (repositoryFramework === SupportedFrameworks.Nest) {
-		return [
-			OFF,
-		];
-	}
-	return [
-		ERROR,
-		{
-			capIsNew: true,
-			newIsCap: true,
-		},
-	];
-}
 
 export const jsSuggestionRules = {
 	"accessor-pairs": [
@@ -173,7 +148,9 @@ export const jsSuggestionRules = {
 	"multiline-comment-style": [
 		OFF,
 	],
-	"new-cap": getNewCap(),
+	"new-cap": [
+		ERROR,
+	],
 	"no-alert": [
 		ERROR,
 	],

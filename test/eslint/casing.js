@@ -9,6 +9,9 @@
 "vue/camelcase": [
 	ERROR,
 ],
+"new-cap": [
+	ERROR,
+],
 because @typescript-eslint/naming-convention rule requires type aware linting
 */
 function do_something() {

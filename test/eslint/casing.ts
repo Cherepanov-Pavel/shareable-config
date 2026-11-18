@@ -8,7 +8,14 @@
 "vue/camelcase": [
 	OFF,
 ],
+"new-cap": [
+	OFF
+],
 because all the same manages @typescript-eslint/naming-convention rule.
+Additional note about new-cap:
+Since constructor functions are rarely used in modern codebases,
+and classes are used instead, it doesn’t make sense to keep this rule enabled.
+It can be overrided, if needed.
 */
 
 /*
